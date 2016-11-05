@@ -1,0 +1,549 @@
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.337 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.274 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mjava.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\db.cljs
+ at cljs.analyzer$parse_ns$fn__2055.invoke (analyzer.cljc:2755)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2706)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2697)
+    cljs.compiler$find_source.invoke (compiler.cljc:1415)
+    clojure.core$map$fn__4553.invoke (core.clj:2624)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:507)
+    clojure.core/seq (core.clj:137)
+    clojure.core$concat$fn__4215.invoke (core.clj:691)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:674)
+    clojure.core/next (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:909)
+    clojure.core$set.invoke (core.clj:3960)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:755)
+    cljs.closure$build.invoke (closure.clj:1893)
+    cljs.build.api$build.invoke (api.clj:207)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:22)
+    figwheel_sidecar.build_middleware.injection$hook$fn__17301.invoke (injection.clj:139)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__17628.invoke (notifications.clj:187)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__17704.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__17750.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$eval17765$figwheel_start_and_end_messages__17768$fn__17770.invoke (cljs_autobuild.clj:45)
+    figwheel_sidecar.components.cljs_autobuild.CLJSAutobuild$fn__17795$fn__17796.invoke (cljs_autobuild.clj:137)
+    figwheel_sidecar.utils$sync_exec$fn__2104$fn__2105.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2104.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4444.invoke (core.clj:1919)
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.031 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mjava.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\db.cljs
+ at cljs.analyzer$parse_ns$fn__2055.invoke (analyzer.cljc:2755)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2706)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2697)
+    cljs.compiler$find_source.invoke (compiler.cljc:1415)
+    clojure.core$map$fn__4553.invoke (core.clj:2624)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:507)
+    clojure.core/seq (core.clj:137)
+    clojure.core$concat$fn__4215.invoke (core.clj:691)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:674)
+    clojure.core/next (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:909)
+    clojure.core$set.invoke (core.clj:3960)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:755)
+    cljs.closure$build.invoke (closure.clj:1893)
+    cljs.build.api$build.invoke (api.clj:207)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:22)
+    figwheel_sidecar.build_middleware.injection$hook$fn__17301.invoke (injection.clj:139)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__17628.invoke (notifications.clj:187)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__17704.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__17750.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$eval17765$figwheel_start_and_end_messages__17768$fn__17770.invoke (cljs_autobuild.clj:45)
+    figwheel_sidecar.components.cljs_autobuild.CLJSAutobuild$fn__17795$fn__17796.invoke (cljs_autobuild.clj:137)
+    figwheel_sidecar.utils$sync_exec$fn__2104$fn__2105.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2104.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4444.invoke (core.clj:1919)
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.024 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mjava.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\db.cljs
+ at cljs.analyzer$parse_ns$fn__2055.invoke (analyzer.cljc:2755)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2706)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2697)
+    cljs.compiler$find_source.invoke (compiler.cljc:1415)
+    clojure.core$map$fn__4553.invoke (core.clj:2624)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:507)
+    clojure.core/seq (core.clj:137)
+    clojure.core$concat$fn__4215.invoke (core.clj:691)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:674)
+    clojure.core/next (core.clj:64)
+    clojure.core$reduce1.invoke (core.clj:909)
+    clojure.core$set.invoke (core.clj:3960)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:755)
+    cljs.closure$build.invoke (closure.clj:1893)
+    cljs.build.api$build.invoke (api.clj:207)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:22)
+    figwheel_sidecar.build_middleware.injection$hook$fn__17301.invoke (injection.clj:139)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__17628.invoke (notifications.clj:187)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__17704.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__17750.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$eval17765$figwheel_start_and_end_messages__17768$fn__17770.invoke (cljs_autobuild.clj:45)
+    figwheel_sidecar.components.cljs_autobuild.CLJSAutobuild$fn__17795$fn__17796.invoke (cljs_autobuild.clj:137)
+    figwheel_sidecar.utils$sync_exec$fn__2104$fn__2105.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2104.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4444.invoke (core.clj:1919)
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.019 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.148 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.391 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.288 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.33 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.287 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.273 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.261 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Use of undeclared Var reagent.core/after-render at line 10 app\dev\js\out\re_frame\interop.cljs
+WARNING: Use of undeclared Var reagent.ratom/add-on-dispose! at line 32 app\dev\js\out\re_frame\interop.cljs
+[31mCompiling "app/dev/js/front.js" failed.
+[0mERROR: Unmatched delimiter ] on file C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs, line 8, column 64
+[32mSuccessfully compiled "app/dev/js/front.js" in 2.332 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or Closure namespace "" at line 12 src_front\hs_deck_helper_cljs_front\core.cljs
+WARNING: Use of undeclared Var reagent/render at line 12 src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.119 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or Closure namespace "" at line 13 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+WARNING: Use of undeclared Var reagent/render at line 13 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.476 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or Closure namespace "" at line 13 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+WARNING: Use of undeclared Var reagent/render at line 13 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+WARNING: Use of undeclared Var hs-deck-helper-cljs-front.core/dispatch-syng at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.503 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Use of undeclared Var hs-deck-helper-cljs-front.core/dispatch-syng at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.437 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Use of undeclared Var hs-deck-helper-cljs-front.core/dispatch-async at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.397 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.33 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.357 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.393 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.132 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Wrong number of args (0) passed to hs-deck-helper-cljs-front.core/mount-root at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.497 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Wrong number of args (0) passed to hs-deck-helper-cljs-front.core/mount-root at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.433 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Use of undeclared Var hs-deck-helper-cljs-front.core/beer-count at line 7 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+WARNING: Wrong number of args (0) passed to hs-deck-helper-cljs-front.core/mount-root at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.48 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Wrong number of args (0) passed to hs-deck-helper-cljs-front.core/mount-root at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.383 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.335 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Wrong number of args (0) passed to hs-deck-helper-cljs-front.core/mount-root at line 17 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.366 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.31 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mERROR: EOF while reading, starting at line 15 and column 1 on file C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs, line 18, column 1
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.208 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.338 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.34 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Use of undeclared Var hs-deck-helper-cljs-front.core/root-componen at line 12 C:\Git\hs-deck-helper-cljs\src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.414 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.358 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.354 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.334 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mANALYSIS ERROR: let requires an even number of forms in binding vector at line 6 src_front\hs_deck_helper_cljs_front\core.cljs on file src_front\hs_deck_helper_cljs_front\core.cljs, line 6, column 3
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.19 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.339 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.372 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mANALYSIS ERROR: No such namespace: clojure.spec, could not locate clojure/spec.cljs, clojure/spec.cljc, or Closure namespace "clojure.spec" in file C:\Git\hs-deck-helper-cljs\src\hs_deck_helper_cljs\db.cljs on file null, line null, column null
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.224 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: No such namespace: api, could not locate api.cljs, api.cljc, or Closure namespace "" at line 17 C:\Git\hs-deck-helper-cljs\src\hs_deck_helper_cljs\events.cljs
+WARNING: Use of undeclared Var api/post-beer-count at line 17 C:\Git\hs-deck-helper-cljs\src\hs_deck_helper_cljs\events.cljs
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.1 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.416 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.364 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.337 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: Use of undeclared Var hs-deck-helper-cljs-front.core/beer-count at line 10 src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.362 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.341 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.336 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.34 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.314 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs\events.js
+notifying browser that file changed:  out\hs_deck_helper_cljs\db.js
+notifying browser that file changed:  out\hs_deck_helper_cljs\api.js
+notifying browser that file changed:  out\hs_deck_helper_cljs\subs.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.328 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.365 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.306 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.355 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.313 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.311 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.308 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.309 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.374 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.276 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\db.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.354 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.349 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.317 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mANALYSIS ERROR: let requires an even number of forms in binding vector at line 8 src_front\hs_deck_helper_cljs_front\core.cljs on file src_front\hs_deck_helper_cljs_front\core.cljs, line 8, column 3
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.173 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.313 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.338 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.374 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+[31mCompiling "app/dev/js/front.js" failed.
+[0mclojure.lang.ExceptionInfo: Library name must be specified as a symbol in :require / :require-macros; offending spec: [[reagent.core :as reagent] [re-frame.core :refer [subscribe dispatch dispatch-sync]] [hs-deck-helper-cljs-front.events :as events] [hs-deck-helper-cljs-front.subs :as subs]] at line 1 src_front\hs_deck_helper_cljs_front\core.cljs
+ at clojure.core$ex_info.invoke (core.clj:4593)
+    cljs.analyzer$error.invoke (analyzer.cljc:576)
+    cljs.analyzer$error.invoke (analyzer.cljc:574)
+    cljs.analyzer$basic_validate_ns_spec.invoke (analyzer.cljc:1705)
+    cljs.analyzer$parse_require_spec.invoke (analyzer.cljc:1751)
+    clojure.lang.AFn.applyToHelper (AFn.java:171)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invoke (core.clj:636)
+    clojure.core$partial$fn__4533.doInvoke (core.clj:2512)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$map$fn__4553.invoke (core.clj:2624)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.boundedLength (RT.java:1735)
+    clojure.lang.RestFn.applyTo (RestFn.java:130)
+    clojure.core$apply.invoke (core.clj:634)
+    cljs.analyzer$eval1756$fn__1758$fn__1763.invoke (analyzer.cljc:1938)
+    clojure.core.protocols/fn (protocols.clj:167)
+    clojure.core.protocols$fn__6478$G__6473__6487.invoke (protocols.clj:19)
+    clojure.core.protocols$seq_reduce.invoke (protocols.clj:31)
+    clojure.core.protocols/fn (protocols.clj:101)
+    clojure.core.protocols$fn__6452$G__6447__6465.invoke (protocols.clj:13)
+    clojure.core$reduce.invoke (core.clj:6519)
+    cljs.analyzer$eval1756$fn__1758.invoke (analyzer.cljc:1921)
+    clojure.lang.MultiFn.invoke (MultiFn.java:251)
+    cljs.analyzer$analyze_seq_STAR_.invoke (analyzer.cljc:2410)
+    cljs.analyzer$analyze_seq_STAR__wrap.invoke (analyzer.cljc:2415)
+    cljs.analyzer$analyze_seq.invoke (analyzer.cljc:2436)
+    cljs.analyzer$analyze_form.invoke (analyzer.cljc:2549)
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.029 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.293 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+WARNING: No such namespace: reagent, could not locate reagent.cljs, reagent.cljc, or Closure namespace "" at line 14 src_front\hs_deck_helper_cljs_front\core.cljs
+WARNING: Use of undeclared Var reagent/render at line 14 src_front\hs_deck_helper_cljs_front\core.cljs
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.353 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.334 seconds.[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.567 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.518 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.014 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src_front\hs_deck_helper_cljs_front\reader.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\reader.cljs
+ at cljs.analyzer$parse_ns$fn__2610.invoke (analyzer.cljc:3044)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2994)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2986)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__6631.invoke (core.clj:2727)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:525)
+    clojure.core$seq__6172.invokeStatic (core.clj:137)
+    clojure.core$concat$fn__6263.invoke (core.clj:717)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:703)
+    clojure.core$next__6156.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:936)
+    clojure.core$set.invokeStatic (core.clj:4064)
+    clojure.core$set.invoke (core.clj:4056)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__25593.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__26002.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25994.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__25832.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__25908.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__25954.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__26006.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__26047.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2664$fn__2665.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2664.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__6522.invoke (core.clj:2022)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (:-1)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (:-1)
+    java.lang.Thread.run (:-1)
+
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.012 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src_front\hs_deck_helper_cljs_front\reader.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\reader.cljs
+ at cljs.analyzer$parse_ns$fn__2610.invoke (analyzer.cljc:3044)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2994)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2986)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__6631.invoke (core.clj:2727)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:525)
+    clojure.core$seq__6172.invokeStatic (core.clj:137)
+    clojure.core$concat$fn__6263.invoke (core.clj:717)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:703)
+    clojure.core$next__6156.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:936)
+    clojure.core$set.invokeStatic (core.clj:4064)
+    clojure.core$set.invoke (core.clj:4056)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__25593.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__26002.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25994.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__25832.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__25908.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__25954.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__26006.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__26047.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2664$fn__2665.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2664.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__6522.invoke (core.clj:2022)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (:-1)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (:-1)
+    java.lang.Thread.run (:-1)
+
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.014 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/reader.cljs   line:1  column:1  ----[0m
+
+  [1mLibrary name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src_front\hs_deck_helper_cljs_front\reader.cljs[0m
+
+  [33m1[0m  [1m(ns hs-deck-helper-cljs-front.reader[0m
+  [0m [0m  [33m^--- Library name must be specified as a symbol in :require / :require-macros; offending spec: [] at line 1 src_front\hs_deck_helper_cljs_front\reader.cljs[0m
+  [36m2[0m  [36m  (:require []))[0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/reader.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.441 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\reader.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.496 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.53 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.815 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\reader.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.726 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.202 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.629 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.758 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\reader.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.606 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\reader.js

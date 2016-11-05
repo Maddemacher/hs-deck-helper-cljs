@@ -1,0 +1,2 @@
+;; Analyzed by ClojureScript 1.7.228
+{:name hs-deck-helper-cljs.subs, :doc nil, :excludes #{}, :use-macros nil, :require-macros nil, :uses {reg-sub re-frame.core}, :requires {re-frame.core re-frame.core}, :imports nil, :cljs.analyzer/constants {:seen #{:beer-count :get-beer-count}, :order [:get-beer-count :beer-count]}}

@@ -1,0 +1,1 @@
+{:rename-macros {}, :renames {}, :use-macros {}, :excludes nil, :name hs-deck-helper-cljs-front.subs, :imports nil, :requires {re-frame.core re-frame.core}, :uses {reg-sub re-frame.core}, :require-macros nil, :cljs.analyzer/constants {:seen #{:beer-count :get-beer-count}, :order [:get-beer-count :beer-count]}, :doc nil}

@@ -1,0 +1,15 @@
+{
+  "name": "hs-deck-helper-cljs",
+  "version": "0.0.0",
+  "description": "",
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-download-electron": "^2.1.4",
+    "closurecompiler-externs": "^1.0.4"
+  },
+  "license": "MIT",
+  "repository": "YOUR_OWN_REPOSITORY",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
