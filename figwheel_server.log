@@ -547,3 +547,970 @@ notifying browser that file changed:  out\hs_deck_helper_cljs_front\reader.js
 [0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
 [32mSuccessfully compiled "app/dev/js/front.js" in 0.606 seconds.[0m
 notifying browser that file changed:  out\hs_deck_helper_cljs_front\reader.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.072 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src_front\hs_deck_helper_cljs_front\regexps.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\regexps.cljs
+ at cljs.analyzer$parse_ns$fn__2610.invoke (analyzer.cljc:3044)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2994)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2986)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__6631.invoke (core.clj:2727)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:525)
+    clojure.core$seq__6172.invokeStatic (core.clj:137)
+    clojure.core$concat$fn__6263.invoke (core.clj:717)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:703)
+    clojure.core$next__6156.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:936)
+    clojure.core$set.invokeStatic (core.clj:4064)
+    clojure.core$set.invoke (core.clj:4056)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__25593.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__26002.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25994.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__25832.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__25908.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__25954.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__26006.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__26047.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2664$fn__2665.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2664.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__6522.invoke (core.clj:2022)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (:-1)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (:-1)
+    java.lang.Thread.run (:-1)
+
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:21  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+  [0m [0m  [33m                    ^--- Use of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def opposing-play (str transition-card "OPPOSING PLAY"))[0m
+  [36m6[0m  [36m[0m
+  [36m7[0m  [36m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/regexps.cljs   line:5  column:25  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+
+  [36m 1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m 2[0m  [36m[0m
+  [36m 3[0m  [36m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+  [36m 4[0m  [36m[0m
+  [33m 5[0m  [1m(def opposing-play (str transition-card "OPPOSING PLAY"))[0m
+  [0m  [0m  [33m                        ^--- Use of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+  [36m 6[0m  [36m[0m
+  [36m 7[0m  [36m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/regexps.cljs   line:7  column:25  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+
+  [36m 3[0m  [36m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+  [36m 4[0m  [36m[0m
+  [36m 5[0m  [36m(def opposing-play (str transition-card "OPPOSING PLAY"))[0m
+  [36m 6[0m  [36m[0m
+  [33m 7[0m  [1m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+  [0m  [0m  [33m                        ^--- Use of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m[0m
+  [36m10[0m  [36m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[31mFailed to compile "app/dev/js/front.js" in 1.781 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:10  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [33m10[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m  [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:21  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+  [0m [0m  [33m                    ^--- Use of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def opposing-play (str transition-card "OPPOSING PLAY"))[0m
+  [36m6[0m  [36m[0m
+  [36m7[0m  [36m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/regexps.cljs   line:5  column:25  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [36m3[0m  [36m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+  [36m4[0m  [36m[0m
+  [33m5[0m  [1m(def opposing-play (str transition-card "OPPOSING PLAY"))[0m
+  [0m [0m  [33m                        ^--- Use of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+  [36m6[0m  [36m[0m
+  [36m7[0m  [36m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+  [36m8[0m  [36m[0m
+  [36m9[0m  [36m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/regexps.cljs   line:7  column:25  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+
+  [36m3[0m  [36m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def opposing-play (str transition-card "OPPOSING PLAY"))[0m
+  [36m6[0m  [36m[0m
+  [33m7[0m  [1m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+  [0m [0m  [33m                        ^--- Use of undeclared Var hs-deck-helper-cljs-front.regexps/transition-card[0m
+  [36m8[0m  [36m[0m
+  [36m9[0m  [36m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.754 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:9  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [36m7[0m  [36m(def friendly-play (str transition-card "FRIENDLY PLAY"))[0m
+  [36m8[0m  [36m[0m
+  [33m9[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.601 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def card-draw (str transition-card "FRIENDLY HAND"))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.674 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def friendly-draw (str transition-card "FRIENDLY HAND"))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.113 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src_front\hs_deck_helper_cljs_front\resources.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\resources.cljs
+ at cljs.analyzer$parse_ns$fn__2610.invoke (analyzer.cljc:3044)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2994)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2986)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__6631.invoke (core.clj:2727)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:525)
+    clojure.core$seq__6172.invokeStatic (core.clj:137)
+    clojure.core$concat$fn__6263.invoke (core.clj:717)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:703)
+    clojure.core$next__6156.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:936)
+    clojure.core$set.invokeStatic (core.clj:4064)
+    clojure.core$set.invoke (core.clj:4056)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__25593.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__26002.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25994.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__25832.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__25908.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__25954.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__26006.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__26047.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2664$fn__2665.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2664.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__6522.invoke (core.clj:2022)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (:-1)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (:-1)
+    java.lang.Thread.run (:-1)
+
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/resources.cljs   line:3  column:25  ----[0m
+
+  [1mNo such namespace: nodejs, could not locate nodejs.cljs, nodejs.cljc, or Closure namespace ""[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.resources)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def hs-cards (js->clj (nodejs/require "../../resources/hearthStoneCardsIdName.json")))[0m
+  [0m [0m  [33m                        ^--- No such namespace: nodejs, could not locate nodejs.cljs, nodejs.cljc, or Closure namespace ""[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/resources.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/resources.cljs   line:3  column:25  ----[0m
+
+  [1mUse of undeclared Var nodejs/require[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.resources)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def hs-cards (js->clj (nodejs/require "../../resources/hearthStoneCardsIdName.json")))[0m
+  [0m [0m  [33m                        ^--- Use of undeclared Var nodejs/require[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/resources.cljs  ----[0m
+[31mFailed to compile "app/dev/js/front.js" in 1.81 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def friendly-draw (str transition-card "FRIENDLY HAND"))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.912 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def friendly-draw (str transition-card "FRIENDLY HAND"))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 1.072 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/regexps.cljs   line:3  column:44  ----[0m
+
+  [1mUnsupported escape character: \[[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.regexps)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def transition-card "TRANSITIONING card \[name=.* to ")[0m
+  [0m [0m  [33m                                           ^--- Unsupported escape character: \[[0m
+  [36m4[0m  [36m[0m
+  [36m5[0m  [36m(def friendly-draw (str transition-card "FRIENDLY HAND"))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/regexps.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.682 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\regexps.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.215 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/resources.cljs   line:3  column:25  ----[0m
+
+  [1mNo such namespace: node, could not locate node.cljs, node.cljc, or Closure namespace ""[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.resources)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def hs-cards (js->clj (node/require "../../resources/hearthStoneCardsIdName.json")))[0m
+  [0m [0m  [33m                        ^--- No such namespace: node, could not locate node.cljs, node.cljc, or Closure namespace ""[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/resources.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/resources.cljs   line:3  column:25  ----[0m
+
+  [1mUse of undeclared Var node/require[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.resources)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def hs-cards (js->clj (node/require "../../resources/hearthStoneCardsIdName.json")))[0m
+  [0m [0m  [33m                        ^--- Use of undeclared Var node/require[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/resources.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.658 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/resources.cljs   line:3  column:25  ----[0m
+
+  [1mNo such namespace: nodejs, could not locate nodejs.cljs, nodejs.cljc, or Closure namespace ""[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.resources)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def hs-cards (js->clj (nodejs/require "../../resources/hearthStoneCardsIdName.json")))[0m
+  [0m [0m  [33m                        ^--- No such namespace: nodejs, could not locate nodejs.cljs, nodejs.cljc, or Closure namespace ""[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/resources.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/resources.cljs   line:3  column:25  ----[0m
+
+  [1mUse of undeclared Var nodejs/require[0m
+
+  [36m1[0m  [36m(ns hs-deck-helper-cljs-front.resources)[0m
+  [36m2[0m  [36m[0m
+  [33m3[0m  [1m(def hs-cards (js->clj (nodejs/require "../../resources/hearthStoneCardsIdName.json")))[0m
+  [0m [0m  [33m                        ^--- Use of undeclared Var nodejs/require[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/resources.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.553 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.589 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.623 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.603 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.557 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.782 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.547 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.714 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.639 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.555 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.621 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.61 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.01 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src_front\hs_deck_helper_cljs_front\ipc.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src_front\hs_deck_helper_cljs_front\ipc.cljs
+ at cljs.analyzer$parse_ns$fn__2610.invoke (analyzer.cljc:3044)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2994)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:2986)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2976)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__6631.invoke (core.clj:2727)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.RT.seq (RT.java:525)
+    clojure.core$seq__6172.invokeStatic (core.clj:137)
+    clojure.core$concat$fn__6263.invoke (core.clj:717)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:703)
+    clojure.core$next__6156.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:936)
+    clojure.core$set.invokeStatic (core.clj:4064)
+    clojure.core$set.invoke (core.clj:4056)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__25593.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__26002.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__25994.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__25832.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__25908.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__25954.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__26006.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__26047.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2664$fn__2665.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2664.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__6522.invoke (core.clj:2022)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (:-1)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (:-1)
+    java.lang.Thread.run (:-1)
+
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.759 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.357 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:1  ----[0m
+
+  [1mParameter declaration "ipcRenderer/on" should be a vector[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(defn setup-listeners[0m
+  [0m  [0m  [33m^--- Parameter declaration "ipcRenderer/on" should be a vector[0m
+  [36m10[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.412 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:1  ----[0m
+
+  [1mParameter declaration "ipcRenderer/on" should be a vector[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(defn setup-listeners[0m
+  [0m  [0m  [33m^--- Parameter declaration "ipcRenderer/on" should be a vector[0m
+  [36m10[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.419 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:1  ----[0m
+
+  [1mParameter declaration "ipcRenderer/on" should be a vector[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(defn setup-listeners[0m
+  [0m  [0m  [33m^--- Parameter declaration "ipcRenderer/on" should be a vector[0m
+  [36m10[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.41 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:1  ----[0m
+
+  [1mParameter declaration "ipcRenderer/on" should be a vector[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(defn setup-listeners[0m
+  [0m  [0m  [33m^--- Parameter declaration "ipcRenderer/on" should be a vector[0m
+  [36m10[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.338 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:1  ----[0m
+
+  [1mParameter declaration "ipcRenderer/on" should be a vector[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [33m 9[0m  [1m(defn setup-listeners[0m
+  [0m  [0m  [33m^--- Parameter declaration "ipcRenderer/on" should be a vector[0m
+  [36m10[0m  [36m  (ipcRenderer/on ["synchronous-message"][0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on ["asynchronous-message"][0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:10  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn setup-listeners [][0m
+  [33m10[0m  [1m  (ipcRenderer/on "synchronous-message"[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m13[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:10  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/on[0m
+
+  [36m 7[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn setup-listeners [][0m
+  [33m10[0m  [1m  (ipcRenderer/on "synchronous-message"[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/on[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m13[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:12  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m 9[0m  [36m(defn setup-listeners [][0m
+  [36m10[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [33m12[0m  [1m  (ipcRenderer/on "asynchronous-message"[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m13[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+  [36m16[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:12  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/on[0m
+
+  [36m 9[0m  [36m(defn setup-listeners [][0m
+  [36m10[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m11[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [33m12[0m  [1m  (ipcRenderer/on "asynchronous-message"[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/on[0m
+  [36m13[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+  [36m16[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:16  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m13[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+  [33m16[0m  [1m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn send-message-async [msg][0m
+  [36m19[0m  [36m  (ipcRenderer/send "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:16  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/sendSync[0m
+
+  [36m12[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m13[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+  [33m16[0m  [1m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/sendSync[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn send-message-async [msg][0m
+  [36m19[0m  [36m  (ipcRenderer/send "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:19  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+  [36m16[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn send-message-async [msg][0m
+  [33m19[0m  [1m  (ipcRenderer/send "asynchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:19  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/send[0m
+
+  [36m15[0m  [36m(defn send-message-sync [msg][0m
+  [36m16[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn send-message-async [msg][0m
+  [33m19[0m  [1m  (ipcRenderer/send "asynchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/send[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.828 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m 6[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [33m 9[0m  [1m  (ipcRenderer/on "synchronous-message"[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/on[0m
+
+  [36m 6[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [33m 9[0m  [1m  (ipcRenderer/on "synchronous-message"[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/on[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:11  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [36m 9[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [33m11[0m  [1m  (ipcRenderer/on "asynchronous-message"[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:11  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/on[0m
+
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [36m 9[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [33m11[0m  [1m  (ipcRenderer/on "asynchronous-message"[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/on[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:15  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [33m15[0m  [1m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [36m18[0m  [36m  (ipcRenderer/send "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:15  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/sendSync[0m
+
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [33m15[0m  [1m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/sendSync[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [36m18[0m  [36m  (ipcRenderer/send "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:18  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [33m18[0m  [1m  (ipcRenderer/send "asynchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:18  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/send[0m
+
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [33m18[0m  [1m  (ipcRenderer/send "asynchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/send[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.692 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m 6[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [33m 9[0m  [1m  (ipcRenderer/on "synchronous-message"[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:9  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/on[0m
+
+  [36m 6[0m  [36m(def ipcRenderer (.-ipcRenderer electron))[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [33m 9[0m  [1m  (ipcRenderer/on "synchronous-message"[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/on[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:11  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [36m 9[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [33m11[0m  [1m  (ipcRenderer/on "asynchronous-message"[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:11  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/on[0m
+
+  [36m 8[0m  [36m(defn setup-listeners [][0m
+  [36m 9[0m  [36m  (ipcRenderer/on "synchronous-message"[0m
+  [36m10[0m  [36m              (fn [event, arg] (println arg)))[0m
+  [33m11[0m  [1m  (ipcRenderer/on "asynchronous-message"[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/on[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:15  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [33m15[0m  [1m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [36m18[0m  [36m  (ipcRenderer/send "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:15  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/sendSync[0m
+
+  [36m11[0m  [36m  (ipcRenderer/on "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [33m15[0m  [1m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/sendSync[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [36m18[0m  [36m  (ipcRenderer/send "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:18  column:4  ----[0m
+
+  [1mNo such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [33m18[0m  [1m  (ipcRenderer/send "asynchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- No such namespace: ipcRenderer, could not locate ipcRenderer.cljs, ipcRenderer.cljc, or Closure namespace ""[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:18  column:4  ----[0m
+
+  [1mUse of undeclared Var ipcRenderer/send[0m
+
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [36m15[0m  [36m  (ipcRenderer/sendSync "synchronous-message" msg))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m(defn send-message-async [msg][0m
+  [33m18[0m  [1m  (ipcRenderer/send "asynchronous-message" msg))[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var ipcRenderer/send[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.075 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.59 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.528 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.539 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\resources.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:14  column:23  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.resources/hs[0m
+
+  [36m10[0m  [36m(defn root-component [][0m
+  [36m11[0m  [36m  (let [beer-count (re-frame/subscribe [:get-beer-count])][0m
+  [36m12[0m  [36m    [:div.col-lg-12[0m
+  [36m13[0m  [36m     [:h1 (str "Current beer count " @beer-count)][0m
+  [33m14[0m  [1m     [:p (str "cards" resources/hs)][0m
+  [0m  [0m  [33m                      ^--- Use of undeclared Var hs-deck-helper-cljs-front.resources/hs[0m
+  [36m15[0m  [36m     [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+  [36m16[0m  [36m[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn mount-root [setting][0m
+  [36m19[0m  [36m  (r/render [root-component][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.61 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.545 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:15  column:9  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.ipc/console[0m
+
+  [36m11[0m  [36m  (.on ipcRenderer "asynchronous-message"[0m
+  [36m12[0m  [36m              (fn [event, arg] (println arg))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message-sync [msg][0m
+  [33m15[0m  [1m  (.log console "sending sync message to main")[0m
+  [0m  [0m  [33m        ^--- Use of undeclared Var hs-deck-helper-cljs-front.ipc/console[0m
+  [36m16[0m  [36m  (.sendSync ipcRenderer "synchronous-message" msg))[0m
+  [36m17[0m  [36m[0m
+  [36m18[0m  [36m(defn send-message-async [msg][0m
+  [36m19[0m  [36m  (.send ipcRenderer "asynchronous-message" msg))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.734 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.567 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.65 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js

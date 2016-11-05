@@ -3,12 +3,15 @@
             [re-frame.core :as re-frame :refer [subscribe dispatch dispatch-sync]]
             [hs-deck-helper-cljs-front.events :as events]
             [hs-deck-helper-cljs-front.subs :as subs]
+            [hs-deck-helper-cljs-front.resources :as resources]
+            [hs-deck-helper-cljs-front.ipc :as ipc]
             [hs-deck-helper-cljs-front.reader :as reader]))
 
 (defn root-component []
   (let [beer-count (re-frame/subscribe [:get-beer-count])]
     [:div.col-lg-12
      [:h1 (str "Current beer count " @beer-count)]
+     [:p (str "cards" resources/hs-cards)]
      [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))
 
 
@@ -18,6 +21,6 @@
 
 (defn init! [setting]
   (re-frame/dispatch-sync [:initialize-db])
+  (ipc/setup-listeners)
   (reader/setup-file-watcher "")
   (mount-root setting))
--
