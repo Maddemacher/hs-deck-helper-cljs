@@ -1,6 +1,7 @@
 (ns hs-deck-helper-cljs.ipc
   (:require [cljs.nodejs :as nodejs]))
 
+
 (def electron (nodejs/require "electron"))
 
 (def ipcMain (.-ipcMain electron))

@@ -4,9 +4,9 @@ goog.require('cljs.core');
 goog.require('hs_deck_helper_cljs_front.subs');
 goog.require('hs_deck_helper_cljs_front.resources');
 goog.require('hs_deck_helper_cljs_front.events');
+goog.require('hs_deck_helper_cljs_front.api');
 goog.require('reagent.core');
 goog.require('hs_deck_helper_cljs_front.ipc');
-goog.require('hs_deck_helper_cljs_front.reader');
 goog.require('re_frame.core');
 hs_deck_helper_cljs_front.core.root_component = (function hs_deck_helper_cljs_front$core$root_component(){
 var beer_count = re_frame.core.subscribe.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"get-beer-count","get-beer-count",-615432586)], null));
@@ -23,8 +23,6 @@ hs_deck_helper_cljs_front.core.init_BANG_ = (function hs_deck_helper_cljs_front$
 re_frame.core.dispatch_sync.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"initialize-db","initialize-db",230998432)], null));
 
 hs_deck_helper_cljs_front.ipc.setup_listeners.call(null);
-
-hs_deck_helper_cljs_front.reader.setup_file_watcher.call(null,"");
 
 return hs_deck_helper_cljs_front.core.mount_root.call(null,setting);
 });

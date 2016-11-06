@@ -2,10 +2,10 @@
   (:require [reagent.core :as r :refer [atom]]
             [re-frame.core :as re-frame :refer [subscribe dispatch dispatch-sync]]
             [hs-deck-helper-cljs-front.events :as events]
+            [hs-deck-helper-cljs-front.api :as api]
             [hs-deck-helper-cljs-front.subs :as subs]
             [hs-deck-helper-cljs-front.resources :as resources]
-            [hs-deck-helper-cljs-front.ipc :as ipc]
-            [hs-deck-helper-cljs-front.reader :as reader]))
+            [hs-deck-helper-cljs-front.ipc :as ipc]))
 
 (defn root-component []
   (let [beer-count (re-frame/subscribe [:get-beer-count])]
@@ -22,5 +22,4 @@
 (defn init! [setting]
   (re-frame/dispatch-sync [:initialize-db])
   (ipc/setup-listeners)
-  (reader/setup-file-watcher "")
   (mount-root setting))

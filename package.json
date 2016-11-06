@@ -10,6 +10,7 @@
   "license": "MIT",
   "repository": "YOUR_OWN_REPOSITORY",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "tail": "^1.2.1"
   }
 }

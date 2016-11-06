@@ -21309,6 +21309,47 @@ hs_deck_helper_cljs.ipc.send_message_async = function(a) {
   console.log("sending asynchronous message to renderer");
   return hs_deck_helper_cljs.ipc.ipcMain.send("asynchronous-message", a);
 };
+hs_deck_helper_cljs.events = {};
+hs_deck_helper_cljs.events.on_new_line = function(a) {
+  return console.log([cljs.core.str("New line: "), cljs.core.str(a)].join(""));
+};
+hs_deck_helper_cljs.reader = {};
+hs_deck_helper_cljs.reader.tail = cljs.nodejs.require.call(null, "tail").Tail;
+hs_deck_helper_cljs.reader.fs = cljs.nodejs.require.call(null, "fs");
+hs_deck_helper_cljs.reader.path = cljs.nodejs.require.call(null, "path");
+"undefined" === typeof hs_deck_helper_cljs.reader.tailer && (hs_deck_helper_cljs.reader.tailer = cljs.core.atom.call(null, null));
+hs_deck_helper_cljs.reader.get_files = function(a) {
+  return hs_deck_helper_cljs.reader.fs.readdirSync(a);
+};
+hs_deck_helper_cljs.reader.get_full_paths = function(a) {
+  return cljs.core.map.call(null, function(b) {
+    return hs_deck_helper_cljs.reader.path.join(a, b);
+  }, hs_deck_helper_cljs.reader.get_files.call(null, a));
+};
+hs_deck_helper_cljs.reader.get_file_stats = function(a) {
+  return cljs.core.clj__GT_js.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "path", "path", -188191168), a, new cljs.core.Keyword(null, "stats", "stats", -85643011), cljs.core.js__GT_clj.call(null, hs_deck_helper_cljs.reader.fs.statSync(a))], null));
+};
+hs_deck_helper_cljs.reader.read_folder_file_stats = function(a) {
+  return cljs.core.map.call(null, hs_deck_helper_cljs.reader.get_file_stats, hs_deck_helper_cljs.reader.get_full_paths.call(null, a));
+};
+hs_deck_helper_cljs.reader.get_latest_logfile = function(a) {
+  return cljs.core.apply.call(null, cljs.core.max_key, function(a) {
+    return a.stats.ctime.getTime();
+  }, hs_deck_helper_cljs.reader.read_folder_file_stats.call(null, a));
+};
+hs_deck_helper_cljs.reader.setup_file_tailer = function(a) {
+  console.log("setting up tilaer on path ", a);
+  cljs.core.some_QMARK_.call(null, cljs.core.deref.call(null, hs_deck_helper_cljs.reader.tailer)) && cljs.core.deref.call(null, hs_deck_helper_cljs.reader.tailer).unwatch();
+  a = hs_deck_helper_cljs.reader.get_latest_logfile.call(null, a);
+  var b = new hs_deck_helper_cljs.reader.tail(a.path);
+  b.on("line", function(a, b) {
+    return function(a) {
+      return hs_deck_helper_cljs.events.on_new_line.call(null, a);
+    };
+  }(a, b));
+  b.watch();
+  return cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.reader.tailer, b);
+};
 hs_deck_helper_cljs.core = {};
 hs_deck_helper_cljs.core.path = cljs.nodejs.require.call(null, "path");
 hs_deck_helper_cljs.core.Electron = cljs.nodejs.require.call(null, "electron");
@@ -21327,6 +21368,7 @@ hs_deck_helper_cljs.core._main = function() {
   });
   return hs_deck_helper_cljs.core.app.on("ready", function() {
     hs_deck_helper_cljs.ipc.setup_listeners.call(null);
+    hs_deck_helper_cljs.reader.setup_file_tailer.call(null, "C:\\Users\\emilb\\AppData\\Local\\Blizzard\\Hearthstone\\Logs");
     cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.core._STAR_win_STAR_, new hs_deck_helper_cljs.core.BrowserWindow(cljs.core.clj__GT_js.call(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "width", "width", -384071477), 800, new cljs.core.Keyword(null, "height", "height", 1025178622), 600], null))));
     cljs.core.deref.call(null, hs_deck_helper_cljs.core._STAR_win_STAR_).loadURL([cljs.core.str("file://"), cljs.core.str(hs_deck_helper_cljs.core.path.resolve(__dirname, "../index.html"))].join(""));
     return cljs.core.deref.call(null, hs_deck_helper_cljs.core._STAR_win_STAR_).on("closed", function() {
@@ -21337,6 +21379,11 @@ hs_deck_helper_cljs.core._main = function() {
 cljs.nodejs.enable_util_print_BANG_.call(null);
 console.log([cljs.core.str("Start descjop application on "), cljs.core.str(hs_deck_helper_cljs.core.Os.type()), cljs.core.str(".")].join(""));
 cljs.core._STAR_main_cli_fn_STAR_ = hs_deck_helper_cljs.core._main;
+hs_deck_helper_cljs.regexps = {};
+hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card \\name\x3d.* to ";
+hs_deck_helper_cljs.regexps.friendly_draw = [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY HAND")].join("");
+hs_deck_helper_cljs.regexps.opposing_play = [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("OPPOSING PLAY")].join("");
+hs_deck_helper_cljs.regexps.friendly_play = [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY PLAY")].join("");
 cljs.nodejscli = {};
 COMPILED && (goog.global = global);
 if (null != cljs.core._STAR_main_cli_fn_STAR_ && cljs.core.fn_QMARK_.call(null, cljs.core._STAR_main_cli_fn_STAR_)) {

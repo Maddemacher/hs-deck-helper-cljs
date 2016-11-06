@@ -1514,3 +1514,169 @@ notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
 [0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
 [32mSuccessfully compiled "app/dev/js/front.js" in 0.65 seconds.[0m
 notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 2.276 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:24  column:4  ----[0m
+
+  [1mNo such namespace: reader, could not locate reader.cljs, reader.cljc, or Closure namespace ""[0m
+
+  [36m21[0m  [36m(defn init! [setting][0m
+  [36m22[0m  [36m  (re-frame/dispatch-sync [:initialize-db])[0m
+  [36m23[0m  [36m  (ipc/setup-listeners)[0m
+  [33m24[0m  [1m  (reader/setup-file-watcher "")[0m
+  [0m  [0m  [33m   ^--- No such namespace: reader, could not locate reader.cljs, reader.cljc, or Closure namespace ""[0m
+  [36m25[0m  [36m  (mount-root setting))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:24  column:4  ----[0m
+
+  [1mUse of undeclared Var reader/setup-file-watcher[0m
+
+  [36m21[0m  [36m(defn init! [setting][0m
+  [36m22[0m  [36m  (re-frame/dispatch-sync [:initialize-db])[0m
+  [36m23[0m  [36m  (ipc/setup-listeners)[0m
+  [33m24[0m  [1m  (reader/setup-file-watcher "")[0m
+  [0m  [0m  [33m   ^--- Use of undeclared Var reader/setup-file-watcher[0m
+  [36m25[0m  [36m  (mount-root setting))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.777 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.714 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/api.cljs   line:7  column:20  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.api/getTime[0m
+
+  [36m6[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [33m7[0m  [1m  (apply max-key #(getTime (.-ctime %)) (map #(.join path folder-path %) (.readdirSync fs folder-path))))[0m
+  [0m [0m  [33m                   ^--- Use of undeclared Var hs-deck-helper-cljs-front.api/getTime[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/api.cljs   line:7  column:54  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.api/path[0m
+
+  [36m6[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [33m7[0m  [1m  (apply max-key #(getTime (.-ctime %)) (map #(.join path folder-path %) (.readdirSync fs folder-path))))[0m
+  [0m [0m  [33m                                                     ^--- Use of undeclared Var hs-deck-helper-cljs-front.api/path[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/api.cljs   line:7  column:88  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.api/fs[0m
+
+  [36m6[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [33m7[0m  [1m  (apply max-key #(getTime (.-ctime %)) (map #(.join path folder-path %) (.readdirSync fs folder-path))))[0m
+  [0m [0m  [33m                                                                                       ^--- Use of undeclared Var hs-deck-helper-cljs-front.api/fs[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.838 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/api.cljs   line:8  column:20  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.api/getTime[0m
+
+  [36m4[0m  [36m(def path (js/require "path"))[0m
+  [36m5[0m  [36m[0m
+  [36m6[0m  [36m[0m
+  [36m7[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [33m8[0m  [1m  (apply max-key #(getTime (.-ctime %)) (map #(.join path folder-path %) (.readdirSync fs folder-path))))[0m
+  [0m [0m  [33m                   ^--- Use of undeclared Var hs-deck-helper-cljs-front.api/getTime[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.722 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.576 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.639 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.725 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.624 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.712 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.65 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.668 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.72 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.368 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/api.cljs   line:13  column:24  ----[0m
+
+  [1mInvalid token: :[0m
+
+  [36m12[0m  [36m(defn read-folder-file-stats [folder-path][0m
+  [33m13[0m  [1m  (map #(i #js{"path": %, "stats": (.statSync fs %)} (get-full-paths folder-path))))[0m
+  [0m  [0m  [33m                       ^--- Invalid token: :[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [36m16[0m  [36m  (apply max-key #(.getTime (.-ctime %)) (read-folder-file-stats folder-path)))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.381 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/api.cljs   line:13  column:22  ----[0m
+
+  [1mInvalid token: :[0m
+
+  [36m12[0m  [36m(defn read-folder-file-stats [folder-path][0m
+  [33m13[0m  [1m  (map #(#js{"path": %, "stats": (.statSync fs %)} (get-full-paths folder-path))))[0m
+  [0m  [0m  [33m                     ^--- Invalid token: :[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [36m16[0m  [36m  (apply max-key #(.getTime (.-ctime %)) (read-folder-file-stats folder-path)))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.35 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/api.cljs   line:13  column:22  ----[0m
+
+  [1mInvalid token: :[0m
+
+  [36m12[0m  [36m(defn read-folder-file-stats [folder-path][0m
+  [33m13[0m  [1m  (map #(#js{"path": % "stats": (.statSync fs %)} (get-full-paths folder-path))))[0m
+  [0m  [0m  [33m                     ^--- Invalid token: :[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn get-latest-logfile [folder-path][0m
+  [36m16[0m  [36m  (apply max-key #(.getTime (.-ctime %)) (read-folder-file-stats folder-path)))[0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/api.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.588 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.58 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.888 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.574 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.628 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.681 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js

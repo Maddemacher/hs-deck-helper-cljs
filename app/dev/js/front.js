@@ -32,11 +32,11 @@ goog.addDependency("../re_frame/subs.js", ['re_frame.subs'], ['re_frame.interop'
 goog.addDependency("../re_frame/cofx.js", ['re_frame.cofx'], ['re_frame.interceptor', 're_frame.registrar', 'cljs.core', 're_frame.loggers', 're_frame.db']);
 goog.addDependency("../re_frame/core.js", ['re_frame.core'], ['re_frame.interop', 're_frame.interceptor', 're_frame.events', 're_frame.fx', 're_frame.registrar', 'cljs.core', 're_frame.router', 're_frame.std_interceptors', 're_frame.loggers', 're_frame.subs', 're_frame.cofx', 're_frame.db']);
 goog.addDependency("../hs_deck_helper_cljs_front/events.js", ['hs_deck_helper_cljs_front.events'], ['cljs.core', 'hs_deck_helper_cljs_front.db', 're_frame.core']);
+goog.addDependency("../hs_deck_helper_cljs_front/api.js", ['hs_deck_helper_cljs_front.api'], ['cljs.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/resources.js", ['hs_deck_helper_cljs_front.resources'], ['cljs.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/ipc.js", ['hs_deck_helper_cljs_front.ipc'], ['cljs.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/subs.js", ['hs_deck_helper_cljs_front.subs'], ['cljs.core', 're_frame.core']);
-goog.addDependency("../hs_deck_helper_cljs_front/reader.js", ['hs_deck_helper_cljs_front.reader'], ['cljs.core', 're_frame.core']);
-goog.addDependency("../hs_deck_helper_cljs_front/core.js", ['hs_deck_helper_cljs_front.core'], ['hs_deck_helper_cljs_front.events', 'reagent.core', 'hs_deck_helper_cljs_front.resources', 'hs_deck_helper_cljs_front.ipc', 'cljs.core', 'hs_deck_helper_cljs_front.subs', 'hs_deck_helper_cljs_front.reader', 're_frame.core']);
+goog.addDependency("../hs_deck_helper_cljs_front/core.js", ['hs_deck_helper_cljs_front.core'], ['hs_deck_helper_cljs_front.events', 'hs_deck_helper_cljs_front.api', 'reagent.core', 'hs_deck_helper_cljs_front.resources', 'hs_deck_helper_cljs_front.ipc', 'cljs.core', 'hs_deck_helper_cljs_front.subs', 're_frame.core']);
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
 goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core', 'cljs.core.async.impl.buffers', 'goog.async.nextTick']);
@@ -56,5 +56,3 @@ goog.addDependency("../figwheel/client/heads_up.js", ['figwheel.client.heads_up'
 goog.addDependency("../figwheel/client.js", ['figwheel.client'], ['goog.userAgent.product', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'figwheel.client.file_reloading', 'figwheel.client.utils', 'cljs.repl', 'figwheel.client.heads_up', 'figwheel.client.socket', 'clojure.string', 'cljs.reader']);
 goog.addDependency("../hs_deck_helper_cljs_front/conf.js", ['hs_deck_helper_cljs_front.conf'], ['cljs.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/init.js", ['hs_deck_helper_cljs_front.init'], ['cljs.core', 'hs_deck_helper_cljs_front.core', 'figwheel.client', 'hs_deck_helper_cljs_front.conf']);
-goog.addDependency("../hs_deck_helper_cljs_front/api.js", ['hs_deck_helper_cljs_front.api'], ['cljs.core']);
-goog.addDependency("../hs_deck_helper_cljs_front/regexps.js", ['hs_deck_helper_cljs_front.regexps'], ['cljs.core']);

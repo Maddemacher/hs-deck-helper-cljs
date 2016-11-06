@@ -1,5 +1,6 @@
 (ns hs-deck-helper-cljs.core
   (:require [cljs.nodejs :as nodejs]
+            [hs-deck-helper-cljs.reader :as reader]
             [hs-deck-helper-cljs.ipc :as ipc]))
 
 (def path (nodejs/require "path"))
@@ -33,6 +34,7 @@
   (.on app "ready"
        (fn []
          (ipc/setup-listeners)
+         (reader/setup-file-tailer "C:\\Users\\emilb\\AppData\\Local\\Blizzard\\Hearthstone\\Logs")
          (reset! *win* (BrowserWindow. (clj->js {:width 800 :height 600})))
 
          ;; when no optimize comment out
