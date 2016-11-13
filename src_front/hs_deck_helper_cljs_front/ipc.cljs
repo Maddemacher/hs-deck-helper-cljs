@@ -1,20 +1,22 @@
 (ns hs-deck-helper-cljs-front.ipc
-  )
+  (:require [re-frame.core :as re-frame :refer [subscribe dispatch dispatch-sync]]))
 
 (def electron (js/require "electron"))
 
 (def ipcRenderer (.-ipcRenderer electron))
 
 (defn setup-listeners []
-  (.on ipcRenderer "synchronous-message"
-              (fn [event, arg] (println arg)))
-  (.on ipcRenderer "asynchronous-message"
-              (fn [event, arg] (println arg))))
+  (.on ipcRenderer "friendly-play"
+       (fn [event, card]
+         (println "new card played" card)
+         (re-frame/dispatch [:friendly-play card])))
 
-(defn send-message-sync [msg]
-  (js/console.log "sending sync message to main")
-  (.sendSync ipcRenderer "synchronous-message" msg))
+  (.on ipcRenderer "friendly-draw"
+       (fn [event, card]
+         (println "new card drawn" card)
+         (re-frame/dispatch [:friendly-draw card])))
 
-(defn send-message-async [msg]
-  (js/console.log "sending async message to main")
-  (.send ipcRenderer "asynchronous-message" msg))
+  (.on ipcRenderer "oponent-play"
+       (fn [event card]
+         (printn "opponenet played card " card)
+         (re-frame/dispatch [:opponent-play card]))))

@@ -1680,3 +1680,458 @@ notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
 [0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
 [32mSuccessfully compiled "app/dev/js/front.js" in 0.681 seconds.[0m
 notifying browser that file changed:  out\hs_deck_helper_cljs_front\api.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.526 seconds.[0m
+[36m----  Could not Analyze  src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+
+  [1mNo such namespace: hs-deck-helper-cljs-front.resources, could not locate hs_deck_helper_cljs_front/resources.cljs, hs_deck_helper_cljs_front/resources.cljc, or Closure namespace "hs-deck-helper-cljs-front.resources" [0m
+
+[36m----  Analysis Error : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:17  column:23  ----[0m
+
+  [1mNo such namespace: resources, could not locate resources.cljs, resources.cljc, or Closure namespace ""[0m
+
+  [36m13[0m  [36m    [:div.col-lg-12[0m
+  [36m14[0m  [36m     [:h1 (str "Current beer count " @beer-count)][0m
+  [36m15[0m  [36m     [:p @friendly-played][0m
+  [36m16[0m  [36m     [:p @opponent-played][0m
+  [33m17[0m  [1m     [:p (str "cards" resources/hs-cards)][0m
+  [0m  [0m  [33m                      ^--- No such namespace: resources, could not locate resources.cljs, resources.cljc, or Closure namespace ""[0m
+  [36m18[0m  [36m     [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m[0m
+  [36m21[0m  [36m(defn mount-root [setting][0m
+  [36m22[0m  [36m  (r/render [root-component][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:17  column:23  ----[0m
+
+  [1mUse of undeclared Var resources/hs-cards[0m
+
+  [36m13[0m  [36m    [:div.col-lg-12[0m
+  [36m14[0m  [36m     [:h1 (str "Current beer count " @beer-count)][0m
+  [36m15[0m  [36m     [:p @friendly-played][0m
+  [36m16[0m  [36m     [:p @opponent-played][0m
+  [33m17[0m  [1m     [:p (str "cards" resources/hs-cards)][0m
+  [0m  [0m  [33m                      ^--- Use of undeclared Var resources/hs-cards[0m
+  [36m18[0m  [36m     [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m[0m
+  [36m21[0m  [36m(defn mount-root [setting][0m
+  [36m22[0m  [36m  (r/render [root-component][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.708 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.772 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/ipc.cljs   line:21  column:11  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.ipc/printn[0m
+
+  [36m17[0m  [36m         (re-frame/dispatch [:friendly-draw card])))[0m
+  [36m18[0m  [36m[0m
+  [36m19[0m  [36m  (.on ipcRenderer "oponent-play"[0m
+  [36m20[0m  [36m       (fn [event card][0m
+  [33m21[0m  [1m         (printn "opponenet played card " card)[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var hs-deck-helper-cljs-front.ipc/printn[0m
+  [36m22[0m  [36m         (re-frame/dispatch [:opponent-play card]))))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/ipc.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.185 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\ipc.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/subs.cljs   line:18  column:20  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.subs/dn[0m
+
+  [36m15[0m  [36m(reg-sub[0m
+  [36m16[0m  [36m :friendly-drawn[0m
+  [36m17[0m  [36m (fn [db _][0m
+  [33m18[0m  [1m   (:friendly-draw dn)))[0m
+  [0m  [0m  [33m                   ^--- Use of undeclared Var hs-deck-helper-cljs-front.subs/dn[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(reg-sub[0m
+  [36m21[0m  [36m :opponent-played[0m
+  [36m22[0m  [36m (fn [db _][0m
+  [36m23[0m  [36m   (:opponent-play db)))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/subs.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.073 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/events.cljs   line:26  column:11  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+
+  [36m23[0m  [36m(reg-event-db[0m
+  [36m24[0m  [36m :friendly-draw[0m
+  [36m25[0m  [36m (fn [dv [_ card]][0m
+  [33m26[0m  [1m   (assoc db :friendly-draw (conj (:friendly-draw db) card))))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+  [36m27[0m  [36m[0m
+  [36m28[0m  [36m(reg-event-db[0m
+  [36m29[0m  [36m :opponent-play[0m
+  [36m30[0m  [36m (fn [db [_ card]][0m
+  [36m31[0m  [36m   (assoc db :opponent-play (conj (:opponent-play db) card))))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/events.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/events.cljs   line:26  column:51  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+
+  [36m23[0m  [36m(reg-event-db[0m
+  [36m24[0m  [36m :friendly-draw[0m
+  [36m25[0m  [36m (fn [dv [_ card]][0m
+  [33m26[0m  [1m   (assoc db :friendly-draw (conj (:friendly-draw db) card))))[0m
+  [0m  [0m  [33m                                                  ^--- Use of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+  [36m27[0m  [36m[0m
+  [36m28[0m  [36m(reg-event-db[0m
+  [36m29[0m  [36m :opponent-play[0m
+  [36m30[0m  [36m (fn [db [_ card]][0m
+  [36m31[0m  [36m   (assoc db :opponent-play (conj (:opponent-play db) card))))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/events.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.905 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.955 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 2.272 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.818 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/events.cljs   line:27  column:11  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+
+  [36m24[0m  [36m(reg-event-db[0m
+  [36m25[0m  [36m :friendly-draw[0m
+  [36m26[0m  [36m (fn [dv [_ card]][0m
+  [33m27[0m  [1m   (assoc db :friendly-draw (conj (:friendly-draw db) card))))[0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+  [36m28[0m  [36m[0m
+  [36m29[0m  [36m(reg-event-db[0m
+  [36m30[0m  [36m :opponent-play[0m
+  [36m31[0m  [36m (fn [db [_ card]][0m
+  [36m32[0m  [36m   (assoc db :opponent-play (conj (:opponent-play db) card))))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/events.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/events.cljs   line:27  column:51  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+
+  [36m24[0m  [36m(reg-event-db[0m
+  [36m25[0m  [36m :friendly-draw[0m
+  [36m26[0m  [36m (fn [dv [_ card]][0m
+  [33m27[0m  [1m   (assoc db :friendly-draw (conj (:friendly-draw db) card))))[0m
+  [0m  [0m  [33m                                                  ^--- Use of undeclared Var hs-deck-helper-cljs-front.events/db[0m
+  [36m28[0m  [36m[0m
+  [36m29[0m  [36m(reg-event-db[0m
+  [36m30[0m  [36m :opponent-play[0m
+  [36m31[0m  [36m (fn [db [_ card]][0m
+  [36m32[0m  [36m   (assoc db :opponent-play (conj (:opponent-play db) card))))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/events.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.944 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.768 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.717 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.673 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/subs.cljs   line:18  column:20  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.subs/dn[0m
+
+  [36m15[0m  [36m(reg-sub[0m
+  [36m16[0m  [36m :get-friendly-drawn[0m
+  [36m17[0m  [36m (fn [db _][0m
+  [33m18[0m  [1m   (:friendly-draw dn)))[0m
+  [0m  [0m  [33m                   ^--- Use of undeclared Var hs-deck-helper-cljs-front.subs/dn[0m
+  [36m19[0m  [36m[0m
+  [36m20[0m  [36m(reg-sub[0m
+  [36m21[0m  [36m :get-opponent-play[0m
+  [36m22[0m  [36m (fn [db _][0m
+  [36m23[0m  [36m   (:opponent-play db)))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/subs.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.836 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.689 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.71 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.723 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.751 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\db.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:14  column:28  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+
+  [36m10[0m  [36m(let [beer-count (re-frame/subscribe [:get-beer-count])[0m
+  [36m11[0m  [36m      ;friendly-played (re-frame/subscribe [:get-friendly-play])[0m
+  [36m12[0m  [36m      ;friendly-drawn (re-frame/subscribe [:get-friendly-draw])[0m
+  [36m13[0m  [36m      opponent-played (re-frame/subscribe [:get-opponent-play])][0m
+  [33m14[0m  [1m  (js/console.log "op " @friendly-played)[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+  [36m15[0m  [36m  [:div.col-lg-12[0m
+  [36m16[0m  [36m   [:h1 (str "Current beer count " @beer-count)][0m
+  [36m17[0m  [36m   [:p @friendly-played][0m
+  [36m18[0m  [36m   [:p @opponent-played][0m
+  [36m19[0m  [36m   [:p @friendly-drawn][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:17  column:11  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+
+  [36m13[0m  [36m    opponent-played (re-frame/subscribe [:get-opponent-play])][0m
+  [36m14[0m  [36m(js/console.log "op " @friendly-played)[0m
+  [36m15[0m  [36m[:div.col-lg-12[0m
+  [36m16[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [33m17[0m  [1m [:p @friendly-played][0m
+  [0m  [0m  [33m      ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+  [36m18[0m  [36m [:p @opponent-played][0m
+  [36m19[0m  [36m [:p @friendly-drawn][0m
+  [36m20[0m  [36m [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:19  column:11  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/friendly-drawn[0m
+
+  [36m15[0m  [36m    [:div.col-lg-12[0m
+  [36m16[0m  [36m     [:h1 (str "Current beer count " @beer-count)][0m
+  [36m17[0m  [36m     [:p @friendly-played][0m
+  [36m18[0m  [36m     [:p @opponent-played][0m
+  [33m19[0m  [1m     [:p @friendly-drawn][0m
+  [0m  [0m  [33m          ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/friendly-drawn[0m
+  [36m20[0m  [36m     [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+  [36m21[0m  [36m[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn mount-root [setting][0m
+  [36m24[0m  [36m  (r/render [root-component][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.792 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.656 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.65 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:15  column:28  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+
+  [36m11[0m  [36m    ;friendly-played (re-frame/subscribe [:friendly-played])[0m
+  [36m12[0m  [36m    ;friendly-drawn (re-frame/subscribe [:friendly-drawn])[0m
+  [36m13[0m  [36m    ;opponent-played (re-frame/subscribe [:opponent-played])[0m
+  [36m14[0m  [36m    ][0m
+  [33m15[0m  [1m(js/console.log "op " @friendly-played)[0m
+  [0m  [0m  [33m                       ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+  [36m16[0m  [36m[:div.col-lg-12[0m
+  [36m17[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [36m18[0m  [36m ;[:p @friendly-played][0m
+  [36m19[0m  [36m ;[:p @opponent-played][0m
+  [36m20[0m  [36m ;[:p @friendly-drawn][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.651 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.596 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.643 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.6 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.632 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.612 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.65 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.623 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.58 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.664 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.606 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.669 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\db.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:15  column:28  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+
+  [36m11[0m  [36m    ;friendly-played (re-frame/subscribe [:get-friendly-play])[0m
+  [36m12[0m  [36m    ;friendly-drawn (re-frame/subscribe [:friendly-drawn])[0m
+  [36m13[0m  [36m    ;opponent-played (re-frame/subscribe [:opponent-played])[0m
+  [36m14[0m  [36m    ][0m
+  [33m15[0m  [1m(js/console.log "op " @friendly-played)[0m
+  [0m  [0m  [33m                       ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+  [36m16[0m  [36m[:div.col-lg-12[0m
+  [36m17[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [36m18[0m  [36m [:p @friendly-played][0m
+  [36m19[0m  [36m ;[:p @opponent-played][0m
+  [36m20[0m  [36m ;[:p @friendly-drawn][0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:18  column:11  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+
+  [36m14[0m  [36m    ][0m
+  [36m15[0m  [36m(js/console.log "op " @friendly-played)[0m
+  [36m16[0m  [36m[:div.col-lg-12[0m
+  [36m17[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [33m18[0m  [1m [:p @friendly-played][0m
+  [0m  [0m  [33m      ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/friendly-played[0m
+  [36m19[0m  [36m ;[:p @opponent-played][0m
+  [36m20[0m  [36m ;[:p @friendly-drawn][0m
+  [36m21[0m  [36m [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.715 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.609 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.652 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.596 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.596 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.6 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:18  column:23  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/%[0m
+
+  [36m14[0m  [36m    ][0m
+  [36m15[0m  [36m(js/console.log "op " @friendly-played)[0m
+  [36m16[0m  [36m[:div.col-lg-12[0m
+  [36m17[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [33m18[0m  [1m (map [:p (.-name %)] @friendly-played)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/%[0m
+  [36m19[0m  [36m ;[:p @friendly-played][0m
+  [36m20[0m  [36m ;[:p @opponent-played][0m
+  [36m21[0m  [36m ;[:p @friendly-drawn][0m
+  [36m22[0m  [36m [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.665 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.611 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.593 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.64 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.677 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.646 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.699 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.624 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[31mFailed to compile "app/dev/js/front.js" in 0.424 seconds.[0m
+[36m----  Could not Read  src_front/hs_deck_helper_cljs_front/core.cljs   line:18  column:25  ----[0m
+
+  [1mReader tag must be a symbol[0m
+
+  [36m16[0m  [36m[:div.col-lg-12[0m
+  [36m17[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [33m18[0m  [1m (map #[:p (str  %)] (clj->js @friendly-played))[0m
+  [0m  [0m  [33m                    ^--- Reader tag must be a symbol[0m
+  [36m19[0m  [36m ;[:p @friendly-played][0m
+  [36m20[0m  [36m ;[:p @opponent-played][0m
+  [36m21[0m  [36m ;[:p @friendly-drawn][0m
+
+[36m----  Reader Error : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_front/hs_deck_helper_cljs_front/core.cljs   line:18  column:21  ----[0m
+
+  [1mUse of undeclared Var hs-deck-helper-cljs-front.core/%[0m
+
+  [36m14[0m  [36m    ][0m
+  [36m15[0m  [36m(js/console.log "op " (clj->js @friendly-played))[0m
+  [36m16[0m  [36m[:div.col-lg-12[0m
+  [36m17[0m  [36m [:h1 (str "Current beer count " @beer-count)][0m
+  [33m18[0m  [1m (map [:p (str  %)] (clj->js @friendly-played))[0m
+  [0m  [0m  [33m                ^--- Use of undeclared Var hs-deck-helper-cljs-front.core/%[0m
+  [36m19[0m  [36m ;[:p @friendly-played][0m
+  [36m20[0m  [36m ;[:p @opponent-played][0m
+  [36m21[0m  [36m ;[:p @friendly-drawn][0m
+  [36m22[0m  [36m [:button.btn.btn-primary { :on-click #(re-frame/dispatch [:open-beer]) } "Click me"]]))[0m
+
+[36m----  Compiler Warning : Please see src_front/hs_deck_helper_cljs_front/core.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.685 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.701 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.714 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.709 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.654 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js
+[0mCompiling "app/dev/js/front.js" from ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.642 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\core.js

@@ -33,7 +33,6 @@
   ;; ready listener
   (.on app "ready"
        (fn []
-         (ipc/setup-listeners)
          (reader/setup-file-tailer "C:\\Users\\emilb\\AppData\\Local\\Blizzard\\Hearthstone\\Logs")
          (reset! *win* (BrowserWindow. (clj->js {:width 800 :height 600})))
 
@@ -42,7 +41,9 @@
          ;; when no optimize uncomment
          ;; (.loadURL @*win* (str "file://" (.resolve path (js* "__dirname") "../../../index.html")))
 
-         (.on @*win* "closed" (fn [] (reset! *win* nil))))))
+         (.on @*win* "closed" (fn [] (reset! *win* nil)))
+         (ipc/setup-listeners @*win*))))
+
 
 (nodejs/enable-util-print!)
 

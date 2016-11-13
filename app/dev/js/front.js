@@ -33,10 +33,9 @@ goog.addDependency("../re_frame/cofx.js", ['re_frame.cofx'], ['re_frame.intercep
 goog.addDependency("../re_frame/core.js", ['re_frame.core'], ['re_frame.interop', 're_frame.interceptor', 're_frame.events', 're_frame.fx', 're_frame.registrar', 'cljs.core', 're_frame.router', 're_frame.std_interceptors', 're_frame.loggers', 're_frame.subs', 're_frame.cofx', 're_frame.db']);
 goog.addDependency("../hs_deck_helper_cljs_front/events.js", ['hs_deck_helper_cljs_front.events'], ['cljs.core', 'hs_deck_helper_cljs_front.db', 're_frame.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/api.js", ['hs_deck_helper_cljs_front.api'], ['cljs.core']);
-goog.addDependency("../hs_deck_helper_cljs_front/resources.js", ['hs_deck_helper_cljs_front.resources'], ['cljs.core']);
-goog.addDependency("../hs_deck_helper_cljs_front/ipc.js", ['hs_deck_helper_cljs_front.ipc'], ['cljs.core']);
+goog.addDependency("../hs_deck_helper_cljs_front/ipc.js", ['hs_deck_helper_cljs_front.ipc'], ['cljs.core', 're_frame.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/subs.js", ['hs_deck_helper_cljs_front.subs'], ['cljs.core', 're_frame.core']);
-goog.addDependency("../hs_deck_helper_cljs_front/core.js", ['hs_deck_helper_cljs_front.core'], ['hs_deck_helper_cljs_front.events', 'hs_deck_helper_cljs_front.api', 'reagent.core', 'hs_deck_helper_cljs_front.resources', 'hs_deck_helper_cljs_front.ipc', 'cljs.core', 'hs_deck_helper_cljs_front.subs', 're_frame.core']);
+goog.addDependency("../hs_deck_helper_cljs_front/core.js", ['hs_deck_helper_cljs_front.core'], ['hs_deck_helper_cljs_front.events', 'hs_deck_helper_cljs_front.api', 'reagent.core', 'hs_deck_helper_cljs_front.ipc', 'cljs.core', 'hs_deck_helper_cljs_front.subs', 're_frame.core']);
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
 goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core', 'cljs.core.async.impl.buffers', 'goog.async.nextTick']);
