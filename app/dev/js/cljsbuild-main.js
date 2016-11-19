@@ -21239,19 +21239,6 @@ cljs.core.find_macros_ns = function(a) {
 cljs.core.ns_name = function(a) {
   return a.name;
 };
-var common = {collections:{}};
-common.collections.find_first = function(a, b) {
-  return cljs.core.some.call(null, function(b) {
-    return cljs.core.truth_(a.call(null, b)) ? b : null;
-  }, b);
-};
-var hs_deck_helper_cljs = {regexps:{}};
-hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card \\[name\x3d.* to ";
-hs_deck_helper_cljs.regexps.friendly_draw = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY HAND")].join(""));
-hs_deck_helper_cljs.regexps.opposing_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("OPPOSING PLAY")].join(""));
-hs_deck_helper_cljs.regexps.friendly_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY PLAY")].join(""));
-hs_deck_helper_cljs.regexps.match_end = cljs.core.re_pattern.call(null, "\\[Power\\] GameState.DebugPrintPower\\(\\) - CREATE_GAME");
-hs_deck_helper_cljs.regexps.card_id = /cardId=\S+/;
 cljs.nodejs = {};
 cljs.nodejs.require = require;
 cljs.nodejs.process = process;
@@ -21300,6 +21287,510 @@ cljs.nodejs.enable_util_print_BANG_ = function() {
     return b;
   }();
   return null;
+};
+var common = {logger:{}};
+"undefined" === typeof common.logger.log_config && (common.logger.log_config = new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "info", "info", -317069002), !1, new cljs.core.Keyword(null, "error", "error", -978969032), !1, new cljs.core.Keyword(null, "block", "block", 664686210), !1, new cljs.core.Keyword(null, "tag", "tag", -1290361223), !1], null));
+"undefined" === typeof common.logger.loglevel && (common.logger.loglevel = new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "info", "info", -317069002), "INFO", new cljs.core.Keyword(null, "error", "error", -978969032), "ERROR", new cljs.core.Keyword(null, "block", "block", 664686210), "BLOCK", new cljs.core.Keyword(null, "tag", "tag", -1290361223), "TAG"], null));
+common.logger.log = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  b = 1 < b.length ? new cljs.core.IndexedSeq(b.slice(1), 0, null) : null;
+  return common.logger.log.cljs$core$IFn$_invoke$arity$variadic(arguments[0], b);
+};
+common.logger.log.cljs$core$IFn$_invoke$arity$variadic = function(a, b) {
+  return console.log(cljs.core.apply.call(null, cljs.core.str, cljs.core.flatten.call(null, cljs.core.interpose.call(null, " | ", new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new Date, a, b], null)))));
+};
+common.logger.log.cljs$lang$maxFixedArity = 1;
+common.logger.log.cljs$lang$applyTo = function(a) {
+  var b = cljs.core.first.call(null, a);
+  a = cljs.core.next.call(null, a);
+  return common.logger.log.cljs$core$IFn$_invoke$arity$variadic(b, a);
+};
+common.logger.info = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
+  return common.logger.info.cljs$core$IFn$_invoke$arity$variadic(b);
+};
+common.logger.info.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return cljs.core.truth_((new cljs.core.Keyword(null, "info", "info", -317069002)).cljs$core$IFn$_invoke$arity$1(common.logger.log_config)) ? common.logger.log.call(null, (new cljs.core.Keyword(null, "info", "info", -317069002)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a) : null;
+};
+common.logger.info.cljs$lang$maxFixedArity = 0;
+common.logger.info.cljs$lang$applyTo = function(a) {
+  return common.logger.info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+};
+common.logger.error = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
+  return common.logger.error.cljs$core$IFn$_invoke$arity$variadic(b);
+};
+common.logger.error.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return cljs.core.truth_((new cljs.core.Keyword(null, "error", "error", -978969032)).cljs$core$IFn$_invoke$arity$1(common.logger.log_config)) ? common.logger.log.call(null, (new cljs.core.Keyword(null, "error", "error", -978969032)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a) : null;
+};
+common.logger.error.cljs$lang$maxFixedArity = 0;
+common.logger.error.cljs$lang$applyTo = function(a) {
+  return common.logger.error.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+};
+common.logger.block = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
+  return common.logger.block.cljs$core$IFn$_invoke$arity$variadic(b);
+};
+common.logger.block.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return cljs.core.truth_((new cljs.core.Keyword(null, "block", "block", 664686210)).cljs$core$IFn$_invoke$arity$1(common.logger.log_config)) ? common.logger.log.call(null, (new cljs.core.Keyword(null, "block", "block", 664686210)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a) : null;
+};
+common.logger.block.cljs$lang$maxFixedArity = 0;
+common.logger.block.cljs$lang$applyTo = function(a) {
+  return common.logger.block.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+};
+common.logger.tag = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
+  return common.logger.tag.cljs$core$IFn$_invoke$arity$variadic(b);
+};
+common.logger.tag.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return cljs.core.truth_((new cljs.core.Keyword(null, "tag", "tag", -1290361223)).cljs$core$IFn$_invoke$arity$1(common.logger.log_config)) ? common.logger.log.call(null, (new cljs.core.Keyword(null, "tag", "tag", -1290361223)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a) : null;
+};
+common.logger.tag.cljs$lang$maxFixedArity = 0;
+common.logger.tag.cljs$lang$applyTo = function(a) {
+  return common.logger.tag.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+};
+common.logger.temp = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
+  return common.logger.temp.cljs$core$IFn$_invoke$arity$variadic(b);
+};
+common.logger.temp.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return common.logger.log.call(null, "TEMP", a);
+};
+common.logger.temp.cljs$lang$maxFixedArity = 0;
+common.logger.temp.cljs$lang$applyTo = function(a) {
+  return common.logger.temp.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+};
+var hs_deck_helper_cljs = {ipc:{}};
+hs_deck_helper_cljs.ipc.electron = cljs.nodejs.require.call(null, "electron");
+"undefined" === typeof hs_deck_helper_cljs.ipc.browserWindow && (hs_deck_helper_cljs.ipc.browserWindow = cljs.core.atom.call(null, null));
+hs_deck_helper_cljs.ipc.ipcMain = hs_deck_helper_cljs.ipc.electron.ipcMain;
+hs_deck_helper_cljs.ipc.send_message = function(a, b) {
+  common.logger.info.call(null, "Sending message on topic: ", a, " message ", b);
+  return cljs.core.deref.call(null, hs_deck_helper_cljs.ipc.browserWindow).webContents.send(a, b);
+};
+hs_deck_helper_cljs.ipc.setup_listeners = function(a) {
+  common.logger.info.call(null, "Setting up IPC listeners ", a);
+  common.logger.info.call(null, "Contents ", a.webContents);
+  return cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.ipc.browserWindow, a);
+};
+hs_deck_helper_cljs.ipc.send_friendly_play = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-play", a);
+};
+hs_deck_helper_cljs.ipc.send_opponenet_play = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "opposing-play", a);
+};
+hs_deck_helper_cljs.ipc.send_friendly_draw = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-draw", a);
+};
+hs_deck_helper_cljs.ipc.send_match_end = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "match-end", a);
+};
+hs_deck_helper_cljs.ipc.send_game_won = function() {
+  return hs_deck_helper_cljs.ipc.send_match_end.call(null, !0);
+};
+hs_deck_helper_cljs.ipc.send_game_lost = function() {
+  return hs_deck_helper_cljs.ipc.send_match_end.call(null, !1);
+};
+hs_deck_helper_cljs.ipc.send_current_player = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "current-player", a);
+};
+var clojure = {string:{}};
+clojure.string.seq_reverse = function(a) {
+  return cljs.core.reduce.call(null, cljs.core.conj, cljs.core.List.EMPTY, a);
+};
+clojure.string.re_surrogate_pair = RegExp("([\\uD800-\\uDBFF])([\\uDC00-\\uDFFF])", "g");
+clojure.string.reverse = function(a) {
+  return a.replace(clojure.string.re_surrogate_pair, "$2$1").split("").reverse().join("");
+};
+clojure.string.replace_all = function(a, b, c) {
+  return a.replace(new RegExp(b.source, "g"), c);
+};
+clojure.string.replace_with = function(a) {
+  return function() {
+    var b = function(b) {
+      b = cljs.core.drop_last.call(null, 2, b);
+      return cljs.core._EQ_.call(null, cljs.core.count.call(null, b), 1) ? a.call(null, cljs.core.first.call(null, b)) : a.call(null, cljs.core.vec.call(null, b));
+    }, c = function(a) {
+      var c = null;
+      if (0 < arguments.length) {
+        for (var c = 0, f = Array(arguments.length - 0);c < f.length;) {
+          f[c] = arguments[c + 0], ++c;
+        }
+        c = new cljs.core.IndexedSeq(f, 0);
+      }
+      return b.call(this, c);
+    };
+    c.cljs$lang$maxFixedArity = 0;
+    c.cljs$lang$applyTo = function(a) {
+      a = cljs.core.seq(a);
+      return b(a);
+    };
+    c.cljs$core$IFn$_invoke$arity$variadic = b;
+    return c;
+  }();
+};
+clojure.string.replace = function(a, b, c) {
+  if ("string" === typeof b) {
+    return a.replace(new RegExp(goog.string.regExpEscape(b), "g"), c);
+  }
+  if (b instanceof RegExp) {
+    return "string" === typeof c ? clojure.string.replace_all.call(null, a, b, c) : clojure.string.replace_all.call(null, a, b, clojure.string.replace_with.call(null, c));
+  }
+  throw [cljs.core.str("Invalid match arg: "), cljs.core.str(b)].join("");
+};
+clojure.string.replace_first = function(a, b, c) {
+  return a.replace(b, c);
+};
+clojure.string.join = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  switch(b.length) {
+    case 1:
+      return clojure.string.join.cljs$core$IFn$_invoke$arity$1(arguments[0]);
+    case 2:
+      return clojure.string.join.cljs$core$IFn$_invoke$arity$2(arguments[0], arguments[1]);
+    default:
+      throw Error([cljs.core.str("Invalid arity: "), cljs.core.str(b.length)].join(""));;
+  }
+};
+clojure.string.join.cljs$core$IFn$_invoke$arity$1 = function(a) {
+  var b = new goog.string.StringBuffer;
+  for (a = cljs.core.seq.call(null, a);;) {
+    if (null != a) {
+      b = b.append("" + cljs.core.str(cljs.core.first.call(null, a))), a = cljs.core.next.call(null, a);
+    } else {
+      return b.toString();
+    }
+  }
+};
+clojure.string.join.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
+  for (var c = new goog.string.StringBuffer, d = cljs.core.seq.call(null, b);;) {
+    if (null != d) {
+      c.append("" + cljs.core.str(cljs.core.first.call(null, d))), d = cljs.core.next.call(null, d), null != d && c.append(a);
+    } else {
+      return c.toString();
+    }
+  }
+};
+clojure.string.join.cljs$lang$maxFixedArity = 2;
+clojure.string.upper_case = function(a) {
+  return a.toUpperCase();
+};
+clojure.string.lower_case = function(a) {
+  return a.toLowerCase();
+};
+clojure.string.capitalize = function(a) {
+  return 2 > cljs.core.count.call(null, a) ? clojure.string.upper_case.call(null, a) : [cljs.core.str(clojure.string.upper_case.call(null, cljs.core.subs.call(null, a, 0, 1))), cljs.core.str(clojure.string.lower_case.call(null, cljs.core.subs.call(null, a, 1)))].join("");
+};
+clojure.string.pop_last_while_empty = function(a) {
+  for (;;) {
+    if ("" === cljs.core.peek.call(null, a)) {
+      a = cljs.core.pop.call(null, a);
+    } else {
+      return a;
+    }
+  }
+};
+clojure.string.discard_trailing_if_needed = function(a, b) {
+  return 0 === a && 1 < cljs.core.count.call(null, b) ? clojure.string.pop_last_while_empty.call(null, b) : b;
+};
+clojure.string.split_with_empty_regex = function(a, b) {
+  if (0 >= b || b >= 2 + cljs.core.count.call(null, a)) {
+    return cljs.core.conj.call(null, cljs.core.vec.call(null, cljs.core.cons.call(null, "", cljs.core.map.call(null, cljs.core.str, cljs.core.seq.call(null, a)))), "");
+  }
+  var c = cljs.core._EQ__EQ_;
+  if (cljs.core.truth_(c.call(null, 1, b))) {
+    return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [a], null);
+  }
+  if (cljs.core.truth_(c.call(null, 2, b))) {
+    return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["", a], null);
+  }
+  c = b - 2;
+  return cljs.core.conj.call(null, cljs.core.vec.call(null, cljs.core.cons.call(null, "", cljs.core.subvec.call(null, cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core.str, cljs.core.seq.call(null, a))), 0, c))), cljs.core.subs.call(null, a, c));
+};
+clojure.string.split = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  switch(b.length) {
+    case 2:
+      return clojure.string.split.cljs$core$IFn$_invoke$arity$2(arguments[0], arguments[1]);
+    case 3:
+      return clojure.string.split.cljs$core$IFn$_invoke$arity$3(arguments[0], arguments[1], arguments[2]);
+    default:
+      throw Error([cljs.core.str("Invalid arity: "), cljs.core.str(b.length)].join(""));;
+  }
+};
+clojure.string.split.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
+  return clojure.string.split.call(null, a, b, 0);
+};
+clojure.string.split.cljs$core$IFn$_invoke$arity$3 = function(a, b, c) {
+  return clojure.string.discard_trailing_if_needed.call(null, c, "/(?:)/" === "" + cljs.core.str(b) ? clojure.string.split_with_empty_regex.call(null, a, c) : 1 > c ? cljs.core.vec.call(null, ("" + cljs.core.str(a)).split(b)) : function() {
+    for (var d = a, e = c, f = cljs.core.PersistentVector.EMPTY;;) {
+      if (1 === e) {
+        return cljs.core.conj.call(null, f, d);
+      }
+      var g = cljs.core.re_find.call(null, b, d);
+      if (null != g) {
+        var h = d.indexOf(g), g = d.substring(h + cljs.core.count.call(null, g)), e = e - 1, f = cljs.core.conj.call(null, f, d.substring(0, h)), d = g
+      } else {
+        return cljs.core.conj.call(null, f, d);
+      }
+    }
+  }());
+};
+clojure.string.split.cljs$lang$maxFixedArity = 3;
+clojure.string.split_lines = function(a) {
+  return clojure.string.split.call(null, a, /\n|\r\n/);
+};
+clojure.string.trim = function(a) {
+  return goog.string.trim(a);
+};
+clojure.string.triml = function(a) {
+  return goog.string.trimLeft(a);
+};
+clojure.string.trimr = function(a) {
+  return goog.string.trimRight(a);
+};
+clojure.string.trim_newline = function(a) {
+  for (var b = a.length;;) {
+    if (0 === b) {
+      return "";
+    }
+    var c = cljs.core.get.call(null, a, b - 1);
+    if ("\n" === c || "\r" === c) {
+      --b;
+    } else {
+      return a.substring(0, b);
+    }
+  }
+};
+clojure.string.blank_QMARK_ = function(a) {
+  return goog.string.isEmptySafe(a);
+};
+clojure.string.escape = function(a, b) {
+  for (var c = new goog.string.StringBuffer, d = a.length, e = 0;;) {
+    if (d === e) {
+      return c.toString();
+    }
+    var f = a.charAt(e), g = cljs.core.get.call(null, b, f);
+    null != g ? c.append("" + cljs.core.str(g)) : c.append(f);
+    e += 1;
+  }
+};
+clojure.string.index_of = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  switch(b.length) {
+    case 2:
+      return clojure.string.index_of.cljs$core$IFn$_invoke$arity$2(arguments[0], arguments[1]);
+    case 3:
+      return clojure.string.index_of.cljs$core$IFn$_invoke$arity$3(arguments[0], arguments[1], arguments[2]);
+    default:
+      throw Error([cljs.core.str("Invalid arity: "), cljs.core.str(b.length)].join(""));;
+  }
+};
+clojure.string.index_of.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
+  var c = a.indexOf(b);
+  return 0 > c ? null : c;
+};
+clojure.string.index_of.cljs$core$IFn$_invoke$arity$3 = function(a, b, c) {
+  a = a.indexOf(b, c);
+  return 0 > a ? null : a;
+};
+clojure.string.index_of.cljs$lang$maxFixedArity = 3;
+clojure.string.last_index_of = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  switch(b.length) {
+    case 2:
+      return clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$2(arguments[0], arguments[1]);
+    case 3:
+      return clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$3(arguments[0], arguments[1], arguments[2]);
+    default:
+      throw Error([cljs.core.str("Invalid arity: "), cljs.core.str(b.length)].join(""));;
+  }
+};
+clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
+  var c = a.lastIndexOf(b);
+  return 0 > c ? null : c;
+};
+clojure.string.last_index_of.cljs$core$IFn$_invoke$arity$3 = function(a, b, c) {
+  a = a.lastIndexOf(b, c);
+  return 0 > a ? null : a;
+};
+clojure.string.last_index_of.cljs$lang$maxFixedArity = 3;
+clojure.string.starts_with_QMARK_ = function(a, b) {
+  return goog.string.startsWith(a, b);
+};
+clojure.string.ends_with_QMARK_ = function(a, b) {
+  return goog.string.endsWith(a, b);
+};
+clojure.string.includes_QMARK_ = function(a, b) {
+  return goog.string.contains(a, b);
+};
+hs_deck_helper_cljs.tag_handler = {};
+hs_deck_helper_cljs.tag_handler.handle_tag_change = function(a) {
+  common.logger.tag.call(null, "in handle tag", a);
+  return clojure.string.includes_QMARK_.call(null, a, "Entity\x3dMadde tag\x3dPLAYSTATE value\x3dWON") ? hs_deck_helper_cljs.ipc.send_game_won.call(null) : clojure.string.includes_QMARK_.call(null, a, "Entity\x3dMadde tag\x3dPLAYSTATE value\x3dLOST") ? hs_deck_helper_cljs.ipc.send_game_lost.call(null) : null;
+};
+hs_deck_helper_cljs.tag_handler.get_entity = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, cljs.core.re_find.call(null, /Entity=\S+/, a)));
+};
+hs_deck_helper_cljs.tag_handler.get_tag = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 4, cljs.core.re_find.call(null, /tag=\S+/, a)));
+};
+hs_deck_helper_cljs.tag_handler.get_value = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 6, cljs.core.re_find.call(null, /value=\S+/, a)));
+};
+hs_deck_helper_cljs.tag_handler.get_block_type = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 10, cljs.core.re_find.call(null, /BlockType=\S+/, a)));
+};
+hs_deck_helper_cljs.tag_handler.get_tag_data = function(a) {
+  return cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "entity", "entity", -450970276), hs_deck_helper_cljs.tag_handler.get_entity.call(null, a), cljs.core.keyword.call(null, hs_deck_helper_cljs.tag_handler.get_tag.call(null, a)), hs_deck_helper_cljs.tag_handler.get_value.call(null, a)], !0, !1);
+};
+hs_deck_helper_cljs.regexps = {};
+hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card .* to ";
+hs_deck_helper_cljs.regexps.friendly_draw = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY HAND")].join(""));
+hs_deck_helper_cljs.regexps.opposing_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("OPPOSING PLAY")].join(""));
+hs_deck_helper_cljs.regexps.friendly_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY PLAY")].join(""));
+hs_deck_helper_cljs.regexps.match_end = cljs.core.re_pattern.call(null, "\\[Power\\] GameState.DebugPrintPower\\(\\) - CREATE_GAME");
+hs_deck_helper_cljs.regexps.block_start_tag = cljs.core.re_pattern.call(null, "\\[Power\\] PowerTaskList.DebugPrintPower\\(\\) - BLOCK_START");
+hs_deck_helper_cljs.regexps.block_end_tag = cljs.core.re_pattern.call(null, "\\[Power\\] PowerTaskList.DebugPrintPower\\(\\) - BLOCK_END");
+hs_deck_helper_cljs.regexps.card_id = /cardId=\S+/;
+hs_deck_helper_cljs.regexps.block_type = /BlockType=\S+/;
+hs_deck_helper_cljs.regexps.tag_change = cljs.core.re_pattern.call(null, "\\[Power\\] GameState.DebugPrintPower\\(\\) - TAG_CHANGE");
+hs_deck_helper_cljs.entity_handler = {};
+hs_deck_helper_cljs.entity_handler.get_card_id = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, cljs.core.re_find.call(null, /CardID=\S+/, a)));
+};
+hs_deck_helper_cljs.entity_handler.get_zone = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 5, cljs.core.re_find.call(null, /zone=\S+/, a)));
+};
+hs_deck_helper_cljs.entity_handler.get_show_entity_data = function(a) {
+  return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "card-id", "card-id", -1770060179), hs_deck_helper_cljs.entity_handler.get_card_id.call(null, a), new cljs.core.Keyword(null, "zone", "zone", 2068674983), hs_deck_helper_cljs.entity_handler.get_zone.call(null, a)], null);
+};
+hs_deck_helper_cljs.block_handler = {};
+hs_deck_helper_cljs.block_handler.base_block = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "type", "type", 1174270348), "", new cljs.core.Keyword(null, "entity", "entity", -450970276), "", new cljs.core.Keyword(null, "tags", "tags", 1771418977), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "blocks", "blocks", -610462153), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809), cljs.core.PersistentVector.EMPTY], 
+null);
+hs_deck_helper_cljs.block_handler.get_block_data = function(a) {
+  var b = cljs.core.atom.call(null, hs_deck_helper_cljs.block_handler.base_block), c = cljs.core.first.call(null, a), d = (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(c);
+  a = cljs.core.rest.call(null, a);
+  cljs.core.swap_BANG_.call(null, b, cljs.core.assoc, new cljs.core.Keyword(null, "type", "type", 1174270348), hs_deck_helper_cljs.tag_handler.get_block_type.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(c)));
+  cljs.core.swap_BANG_.call(null, b, cljs.core.assoc, new cljs.core.Keyword(null, "entity", "entity", -450970276), hs_deck_helper_cljs.tag_handler.get_entity.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(c)));
+  cljs.core.mapv.call(null, function(a, b, c, d) {
+    return function(b) {
+      return 1 < (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(b) ? null : clojure.string.includes_QMARK_.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b), "TAG_CHANGE") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tags", "tags", 1771418977)], null), cljs.core.conj, hs_deck_helper_cljs.tag_handler.get_tag_data.call(null, 
+      (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b))) : clojure.string.includes_QMARK_.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b), "SHOW_ENTITY") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)], null), cljs.core.conj, hs_deck_helper_cljs.entity_handler.get_show_entity_data.call(null, 
+      (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b))) : clojure.string.includes_QMARK_.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b), "BLOCK_START") ? common.logger.temp.call(null, "Block in block") : null;
+    };
+  }(b, c, d, a), a);
+  var e = cljs.core.vals.call(null, cljs.core.group_by.call(null, new cljs.core.Keyword(null, "entity", "entity", -450970276), (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, b))));
+  cljs.core.swap_BANG_.call(null, b, cljs.core.assoc, new cljs.core.Keyword(null, "tags", "tags", 1771418977), cljs.core.mapv.call(null, function(a, b, c, d, e) {
+    return function(a) {
+      return cljs.core.apply.call(null, cljs.core.merge, a);
+    };
+  }(e, b, c, d, a), e));
+  return cljs.core.deref.call(null, b);
+};
+hs_deck_helper_cljs.block_handler.parse_tags_update = function(a) {
+  common.logger.temp.call(null, "tag ", a);
+  return cljs.core._EQ_.call(null, "1", (new cljs.core.Keyword(null, "CURRENT_PLAYER", "CURRENT_PLAYER", -831145661)).cljs$core$IFn$_invoke$arity$1(a)) ? hs_deck_helper_cljs.ipc.send_current_player.call(null, (new cljs.core.Keyword(null, "entity", "entity", -450970276)).cljs$core$IFn$_invoke$arity$1(a)) : null;
+};
+hs_deck_helper_cljs.block_handler.on_attack_block = function(a) {
+  return common.logger.block.call(null, "Attack block", a);
+};
+hs_deck_helper_cljs.block_handler.on_play_block = function(a) {
+  common.logger.block.call(null, "Play block");
+  return cljs.core.some_QMARK_.call(null, (new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)).cljs$core$IFn$_invoke$arity$1(a)) ? common.logger.block.call(null, "Stuff shown") : null;
+};
+hs_deck_helper_cljs.block_handler.on_trigger_block = function(a) {
+  common.logger.block.call(null, "Trigger block");
+  cljs.core.some_QMARK_.call(null, (new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)).cljs$core$IFn$_invoke$arity$1(a)) && common.logger.block.call(null, "Stuff shown");
+  return cljs.core.mapv.call(null, hs_deck_helper_cljs.block_handler.parse_tags_update, (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(a));
+};
+hs_deck_helper_cljs.block_handler.on_power_block = function(a) {
+  return common.logger.block.call(null, "Power block", a);
+};
+hs_deck_helper_cljs.block_handler.on_deaths_block = function(a) {
+  return common.logger.block.call(null, "Deaths block");
+};
+hs_deck_helper_cljs.block_handler.handle_block = function(a) {
+  a = hs_deck_helper_cljs.block_handler.get_block_data.call(null, (new cljs.core.Keyword(null, "content", "content", 15833224)).cljs$core$IFn$_invoke$arity$1(a));
+  switch((new cljs.core.Keyword(null, "type", "type", 1174270348)).cljs$core$IFn$_invoke$arity$1(a)) {
+    case "ATTACK":
+      return hs_deck_helper_cljs.block_handler.on_attack_block.call(null, a);
+    case "PLAY":
+      return hs_deck_helper_cljs.block_handler.on_play_block.call(null, a);
+    case "TRIGGER":
+      return hs_deck_helper_cljs.block_handler.on_trigger_block.call(null, a);
+    case "POWER":
+      return hs_deck_helper_cljs.block_handler.on_power_block.call(null, a);
+    case "DEATHS":
+      return hs_deck_helper_cljs.block_handler.on_deaths_block.call(null, a);
+    default:
+      return common.logger.error.call(null, "Uknown block found");
+  }
 };
 hs_deck_helper_cljs.cards = {};
 hs_deck_helper_cljs.cards.cards = cljs.core.PersistentVector.fromArray([new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "KARA_13_23", new cljs.core.Keyword(null, "name", "name", 1843675177), "Romulo"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "LOE_115b", new cljs.core.Keyword(null, "name", "name", 1843675177), "Raven Idol"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
@@ -22253,98 +22744,22 @@ hs_deck_helper_cljs.resources.get_id = function(a) {
 };
 hs_deck_helper_cljs.resources.get_card = function(a) {
   a = hs_deck_helper_cljs.resources.get_id.call(null, a);
-  console.log("card id ", a);
-  console.log(hs_deck_helper_cljs.cards.cards);
+  common.logger.info.call(null, "card id ", a);
   return cljs.core.some.call(null, function(a) {
     return function(c) {
       return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(c), a) ? c : null;
     };
   }(a), hs_deck_helper_cljs.cards.cards);
 };
-common.logger = {};
-"undefined" === typeof common.logger.loglevel && (common.logger.loglevel = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "info", "info", -317069002), "INFO", new cljs.core.Keyword(null, "error", "error", -978969032), "ERROR"], null));
-common.logger.log = function(a) {
-  for (var b = [], c = arguments.length, d = 0;;) {
-    if (d < c) {
-      b.push(arguments[d]), d += 1;
-    } else {
-      break;
-    }
-  }
-  b = 1 < b.length ? new cljs.core.IndexedSeq(b.slice(1), 0, null) : null;
-  return common.logger.log.cljs$core$IFn$_invoke$arity$variadic(arguments[0], b);
-};
-common.logger.log.cljs$core$IFn$_invoke$arity$variadic = function(a, b) {
-  return console.log(cljs.core.apply.call(null, cljs.core.str, cljs.core.flatten.call(null, cljs.core.interpose.call(null, " | ", new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new Date, a, b], null)))));
-};
-common.logger.log.cljs$lang$maxFixedArity = 1;
-common.logger.log.cljs$lang$applyTo = function(a) {
-  var b = cljs.core.first.call(null, a);
-  a = cljs.core.next.call(null, a);
-  return common.logger.log.cljs$core$IFn$_invoke$arity$variadic(b, a);
-};
-common.logger.info = function(a) {
-  for (var b = [], c = arguments.length, d = 0;;) {
-    if (d < c) {
-      b.push(arguments[d]), d += 1;
-    } else {
-      break;
-    }
-  }
-  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
-  return common.logger.info.cljs$core$IFn$_invoke$arity$variadic(b);
-};
-common.logger.info.cljs$core$IFn$_invoke$arity$variadic = function(a) {
-  return common.logger.log.call(null, (new cljs.core.Keyword(null, "info", "info", -317069002)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a);
-};
-common.logger.info.cljs$lang$maxFixedArity = 0;
-common.logger.info.cljs$lang$applyTo = function(a) {
-  return common.logger.info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
-};
-common.logger.error = function(a) {
-  for (var b = [], c = arguments.length, d = 0;;) {
-    if (d < c) {
-      b.push(arguments[d]), d += 1;
-    } else {
-      break;
-    }
-  }
-  b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
-  return common.logger.error.cljs$core$IFn$_invoke$arity$variadic(b);
-};
-common.logger.error.cljs$core$IFn$_invoke$arity$variadic = function(a) {
-  return common.logger.log.call(null, (new cljs.core.Keyword(null, "error", "error", -978969032)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a);
-};
-common.logger.error.cljs$lang$maxFixedArity = 0;
-common.logger.error.cljs$lang$applyTo = function(a) {
-  return common.logger.error.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
-};
-hs_deck_helper_cljs.ipc = {};
-hs_deck_helper_cljs.ipc.electron = cljs.nodejs.require.call(null, "electron");
-"undefined" === typeof hs_deck_helper_cljs.ipc.browserWindow && (hs_deck_helper_cljs.ipc.browserWindow = cljs.core.atom.call(null, null));
-hs_deck_helper_cljs.ipc.ipcMain = hs_deck_helper_cljs.ipc.electron.ipcMain;
-hs_deck_helper_cljs.ipc.send_message = function(a, b) {
-  common.logger.info.call(null, "Sending message on topic: ", a, " message ", b);
-  return cljs.core.deref.call(null, hs_deck_helper_cljs.ipc.browserWindow).webContents.send(a, b);
-};
-hs_deck_helper_cljs.ipc.setup_listeners = function(a) {
-  common.logger.info.call(null, "Setting up IPC listeners ", a);
-  common.logger.info.call(null, "Contents ", a.webContents);
-  return cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.ipc.browserWindow, a);
-};
-hs_deck_helper_cljs.ipc.send_friendly_play = function(a) {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-play", a);
-};
-hs_deck_helper_cljs.ipc.send_opponenet_play = function(a) {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "opposing-play", a);
-};
-hs_deck_helper_cljs.ipc.send_friendly_draw = function(a) {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-draw", a);
-};
-hs_deck_helper_cljs.ipc.send_match_end = function() {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "match-end");
-};
 hs_deck_helper_cljs.events = {};
+"undefined" === typeof hs_deck_helper_cljs.events.block_buffer_init && (hs_deck_helper_cljs.events.block_buffer_init = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "appending", "appending", -1068836078), !1, new cljs.core.Keyword(null, "content", "content", 15833224), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422), 0], null));
+"undefined" === typeof hs_deck_helper_cljs.events.block_buffer && (hs_deck_helper_cljs.events.block_buffer = cljs.core.atom.call(null, hs_deck_helper_cljs.events.block_buffer_init));
+hs_deck_helper_cljs.events.is_block_end_tag = function(a) {
+  return cljs.core.re_find.call(null, hs_deck_helper_cljs.regexps.block_end_tag, a);
+};
+hs_deck_helper_cljs.events.is_block_start_tag = function(a) {
+  return cljs.core.re_find.call(null, hs_deck_helper_cljs.regexps.block_start_tag, a);
+};
 hs_deck_helper_cljs.events.on_friendly_play = function(a) {
   common.logger.info.call(null, "Friendly play ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_friendly_play.call(null, cljs.core.clj__GT_js.call(null, a));
@@ -22357,14 +22772,18 @@ hs_deck_helper_cljs.events.on_opposing_play = function(a) {
   common.logger.info.call(null, "Opposing play ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_opponenet_play.call(null, cljs.core.clj__GT_js.call(null, a));
 };
-hs_deck_helper_cljs.events.on_match_end = function() {
-  common.logger.info.call(null, "Match ended");
-  return hs_deck_helper_cljs.ipc.send_match_end.call(null);
-};
 hs_deck_helper_cljs.events.on_new_line = function(a) {
+  cljs.core.truth_(hs_deck_helper_cljs.events.is_block_start_tag.call(null, a)) && (cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.assoc, new cljs.core.Keyword(null, "appending", "appending", -1068836078), !0), cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)], null), cljs.core.inc));
+  cljs.core.truth_((new cljs.core.Keyword(null, "appending", "appending", -1068836078)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer))) && cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "content", "content", 15833224)], null), cljs.core.conj, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
+  "data", "data", -232669377), a, new cljs.core.Keyword(null, "level", "level", 1290497552), (new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer))], null));
+  cljs.core.truth_(hs_deck_helper_cljs.events.is_block_end_tag.call(null, a)) && (cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)], null), cljs.core.dec), cljs.core._EQ_.call(null, 0, (new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
+  hs_deck_helper_cljs.events.block_buffer))) && (hs_deck_helper_cljs.block_handler.handle_block.call(null, cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer)), cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, hs_deck_helper_cljs.events.block_buffer_init)));
+  if (cljs.core.truth_((new cljs.core.Keyword(null, "appending", "appending", -1068836078)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer)))) {
+    return null;
+  }
   var b = cljs.core.re_find;
   return cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_draw, a)) ? hs_deck_helper_cljs.events.on_friendly_draw.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_play, a)) ? hs_deck_helper_cljs.events.on_friendly_play.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.opposing_play, a)) ? hs_deck_helper_cljs.events.on_opposing_play.call(null, 
-  hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.match_end, a)) ? hs_deck_helper_cljs.events.on_match_end.call(null) : common.logger.info.call(null, "No action on line: ", a);
+  hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.tag_change, a)) ? hs_deck_helper_cljs.tag_handler.handle_tag_change.call(null, a) : common.logger.info.call(null, "No action on line: ", a);
 };
 hs_deck_helper_cljs.reader = {};
 hs_deck_helper_cljs.reader.tail = cljs.nodejs.require.call(null, "tail").Tail;
@@ -22437,6 +22856,12 @@ hs_deck_helper_cljs.core._main = function() {
 cljs.nodejs.enable_util_print_BANG_.call(null);
 console.log([cljs.core.str("Start descjop application on "), cljs.core.str(hs_deck_helper_cljs.core.Os.type()), cljs.core.str(".")].join(""));
 cljs.core._STAR_main_cli_fn_STAR_ = hs_deck_helper_cljs.core._main;
+common.collections = {};
+common.collections.find_first = function(a, b) {
+  return cljs.core.some.call(null, function(b) {
+    return cljs.core.truth_(a.call(null, b)) ? b : null;
+  }, b);
+};
 cljs.nodejscli = {};
 COMPILED && (goog.global = global);
 if (null != cljs.core._STAR_main_cli_fn_STAR_ && cljs.core.fn_QMARK_.call(null, cljs.core._STAR_main_cli_fn_STAR_)) {

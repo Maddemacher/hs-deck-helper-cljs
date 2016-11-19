@@ -5,21 +5,21 @@
 (reg-sub
  :get-friendly-play
  (fn  [db _]
-   (logger/info "Getting friently play" db)
+   (logger/info "Getting friently play")
    (:friendly-play db)))
 
 
 (reg-sub
  :get-friendly-draw
  (fn [db _]
-   (logger/info "Getting friendly draw" db)
+   (logger/info "Getting friendly draw")
    (:friendly-draw db)))
 
 
 (reg-sub
  :get-opposing-play
  (fn [db _]
-   (logger/info "Getting opposing play" db)
+   (logger/info "Getting opposing play")
    (:opposing-play db)))
 
 
@@ -27,4 +27,10 @@
  :get-old-matches
  (fn [db _]
    (logger/info "Getting old matches" db)
-   (:old-matches db)))
+   {:matches (:old-matches db) :wins (:wins db) :loses (:loses db)}))
+
+(reg-sub
+ :get-current-player
+ (fn [db _]
+   (logger/info "Getting current player")
+   (:current-player db)))

@@ -26,7 +26,9 @@
 
 (defn setup-file-tailer [folder-path]
   (logger/info "setting up tilaer on path " folder-path)
+
   (when (some? @tailer) (.unwatch @tailer))
+
   (let [latest-log-file (get-latest-logfile folder-path)
         file-tailer (new tail (.-path latest-log-file) (clj->js {:fromBeginning false}))]
 

@@ -29,6 +29,14 @@
 (defn send-friendly-draw [card]
   (send-message "friendly-draw" card))
 
+(defn send-match-end [won]
+  (send-message "match-end" won))
 
-(defn send-match-end []
-  (send-message "match-end"))
+(defn send-game-won []
+  (send-match-end true))
+
+(defn send-game-lost []
+  (send-match-end false))
+
+(defn send-current-player [player]
+  (send-message "current-player" player))

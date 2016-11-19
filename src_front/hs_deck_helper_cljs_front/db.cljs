@@ -7,4 +7,7 @@
              :friendly-play []
              :opposing-play []
              :old-matches []
+             :wins 0
+             :loses 0
+             :current-player ""
              })

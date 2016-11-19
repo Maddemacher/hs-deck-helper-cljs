@@ -12,37 +12,46 @@ common.logger.info.call(null,"Initializing db",hs_deck_helper_cljs_front.db.app_
 
 return hs_deck_helper_cljs_front.db.app_db;
 }));
-re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"match-end","match-end",-1347942185),(function (db,p__30607){
-var vec__30608 = p__30607;
-var _ = cljs.core.nth.call(null,vec__30608,(0),null);
-var ___$1 = cljs.core.nth.call(null,vec__30608,(1),null);
-common.logger.info.call(null,"Match end event",db);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"match-end","match-end",-1347942185),(function (db,p__30198){
+var vec__30199 = p__30198;
+var _ = cljs.core.nth.call(null,vec__30199,(0),null);
+var won = cljs.core.nth.call(null,vec__30199,(1),null);
+common.logger.info.call(null,"Match end event");
 
-return cljs.core.assoc.call(null,hs_deck_helper_cljs_front.db.app_db,new cljs.core.Keyword(null,"old-matches","old-matches",-1690600604),cljs.core.conj.call(null,new cljs.core.Keyword(null,"old-matches","old-matches",-1690600604).cljs$core$IFn$_invoke$arity$1(db),hs_deck_helper_cljs_front.events.get_current_match.call(null,db)));
+var win_recorded = (cljs.core.truth_(won)?cljs.core.assoc.call(null,hs_deck_helper_cljs_front.db.app_db,new cljs.core.Keyword(null,"wins","wins",1850756412),(new cljs.core.Keyword(null,"wins","wins",1850756412).cljs$core$IFn$_invoke$arity$1(db) + (1))):cljs.core.assoc.call(null,hs_deck_helper_cljs_front.db.app_db,new cljs.core.Keyword(null,"loses","loses",-1234787781),(new cljs.core.Keyword(null,"loses","loses",-1234787781).cljs$core$IFn$_invoke$arity$1(db) + (1))));
+return cljs.core.assoc.call(null,win_recorded,new cljs.core.Keyword(null,"old-matches","old-matches",-1690600604),cljs.core.conj.call(null,new cljs.core.Keyword(null,"old-matches","old-matches",-1690600604).cljs$core$IFn$_invoke$arity$1(db),hs_deck_helper_cljs_front.events.get_current_match.call(null,db)));
 }));
-re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"friendly-play","friendly-play",-790804090),(function (db,p__30611){
-var vec__30612 = p__30611;
-var _ = cljs.core.nth.call(null,vec__30612,(0),null);
-var card = cljs.core.nth.call(null,vec__30612,(1),null);
-common.logger.info.call(null,"Friendly play event",db,card);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"friendly-play","friendly-play",-790804090),(function (db,p__30202){
+var vec__30203 = p__30202;
+var _ = cljs.core.nth.call(null,vec__30203,(0),null);
+var card = cljs.core.nth.call(null,vec__30203,(1),null);
+common.logger.info.call(null,"Friendly play event",card);
 
 return cljs.core.assoc.call(null,db,new cljs.core.Keyword(null,"friendly-play","friendly-play",-790804090),cljs.core.conj.call(null,new cljs.core.Keyword(null,"friendly-play","friendly-play",-790804090).cljs$core$IFn$_invoke$arity$1(db),card));
 }));
-re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"friendly-draw","friendly-draw",375101462),(function (db,p__30615){
-var vec__30616 = p__30615;
-var _ = cljs.core.nth.call(null,vec__30616,(0),null);
-var card = cljs.core.nth.call(null,vec__30616,(1),null);
-common.logger.info.call(null,"Friendly draw event",db,card);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"friendly-draw","friendly-draw",375101462),(function (db,p__30206){
+var vec__30207 = p__30206;
+var _ = cljs.core.nth.call(null,vec__30207,(0),null);
+var card = cljs.core.nth.call(null,vec__30207,(1),null);
+common.logger.info.call(null,"Friendly draw event",card);
 
 return cljs.core.assoc.call(null,db,new cljs.core.Keyword(null,"friendly-draw","friendly-draw",375101462),cljs.core.conj.call(null,new cljs.core.Keyword(null,"friendly-draw","friendly-draw",375101462).cljs$core$IFn$_invoke$arity$1(db),card));
 }));
-re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"opposing-play","opposing-play",-2057160478),(function (db,p__30619){
-var vec__30620 = p__30619;
-var _ = cljs.core.nth.call(null,vec__30620,(0),null);
-var card = cljs.core.nth.call(null,vec__30620,(1),null);
-common.logger.info.call(null,"Opposing play event",db,card);
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"opposing-play","opposing-play",-2057160478),(function (db,p__30210){
+var vec__30211 = p__30210;
+var _ = cljs.core.nth.call(null,vec__30211,(0),null);
+var card = cljs.core.nth.call(null,vec__30211,(1),null);
+common.logger.info.call(null,"Opposing play event",card);
 
 return cljs.core.assoc.call(null,db,new cljs.core.Keyword(null,"opposing-play","opposing-play",-2057160478),cljs.core.conj.call(null,new cljs.core.Keyword(null,"opposing-play","opposing-play",-2057160478).cljs$core$IFn$_invoke$arity$1(db),card));
+}));
+re_frame.core.reg_event_db.call(null,new cljs.core.Keyword(null,"current-player","current-player",-970625153),(function (db,p__30214){
+var vec__30215 = p__30214;
+var _ = cljs.core.nth.call(null,vec__30215,(0),null);
+var player = cljs.core.nth.call(null,vec__30215,(1),null);
+common.logger.info.call(null,"current player event",player);
+
+return cljs.core.assoc.call(null,db,new cljs.core.Keyword(null,"current-player","current-player",-970625153),player);
 }));
 
 //# sourceMappingURL=events.js.map

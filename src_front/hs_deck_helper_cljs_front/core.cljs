@@ -12,10 +12,12 @@
         friendly-drawn  (re-frame/subscribe [:get-friendly-draw])
         opposing-played (re-frame/subscribe [:get-opposing-play])
         old-matches     (re-frame/subscribe [:get-old-matches])
+        current-player  (re-frame/subscribe [:get-current-player])
         ]
     [:div.col-xs-12
      [:h1 "Best HS Deckhelper EU"]
-     [:h2 (str "Matches played " (count @old-matches))]
+     [:h2 (str "Matches played " (count (:matches @old-matches)) " Wins: " (:wins @old-matches) " Loses: " (:loses @old-matches))]
+     [:h3 (str "Current player: " @current-player)]
 
      [:div.col-xs-4
       [:h2 "Friendly Played"]

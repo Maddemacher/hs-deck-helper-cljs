@@ -17,26 +17,35 @@
 
 (reg-event-db
  :match-end
- (fn [db [_ _]]
-   (logger/info "Match end event" db)
-   (assoc app-db :old-matches (conj (:old-matches db) (get-current-match db)))
+ (fn [db [_ won]]
+   (logger/info "Match end event")
+   (let [win-recorded (if won
+                        (assoc app-db :wins (inc (:wins db)))
+                        (assoc app-db :loses (inc (:loses db))))]
+     (assoc win-recorded :old-matches (conj (:old-matches db) (get-current-match db))))
    ))
 
 (reg-event-db
  :friendly-play
  (fn [db [_ card]]
-   (logger/info "Friendly play event" db card)
+   (logger/info "Friendly play event" card)
    (assoc db :friendly-play (conj (:friendly-play db) card))))
 
 (reg-event-db
  :friendly-draw
  (fn [db [_ card]]
-   (logger/info "Friendly draw event" db card)
+   (logger/info "Friendly draw event" card)
    (assoc db :friendly-draw (conj (:friendly-draw db) card))))
 
 (reg-event-db
  :opposing-play
  (fn [db [_ card]]
-   (logger/info "Opposing play event" db card)
+   (logger/info "Opposing play event" card)
    (assoc db :opposing-play (conj (:opposing-play db) card)
           )))
+
+(reg-event-db
+ :current-player
+ (fn [db [_ player]]
+   (logger/info "current player event" player)
+   (assoc db :current-player player)))

@@ -25,10 +25,14 @@
          (re-frame/dispatch [:opposing-play card])))
 
   (.on ipcRenderer "match-end"
-       (fn [event]
+       (fn [event won]
          (logger/info "Match end event from backend")
-         (re-frame/dispatch [:match-end])))
+         (re-frame/dispatch [:match-end won])))
 
+  (.on ipcRenderer "current-player"
+       (fn [event player]
+         (logger/info "Current player changed")
+         (re-frame/dispatch [:current-player player])))
 
 
   )

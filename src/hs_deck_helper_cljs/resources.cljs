@@ -1,6 +1,7 @@
 (ns hs-deck-helper-cljs.resources
   (:require [cljs.nodejs :as nodejs]
             [hs-deck-helper-cljs.cards :as cards]
+            [common.logger :as logger]
             [hs-deck-helper-cljs.regexps :as regexps]))
 
 
@@ -9,6 +10,5 @@
 
 (defn get-card [line]
   (let [card-id (get-id line)]
-    (js/console.log "card id " card-id)
-    (js/console.log cards/cards)
+    (logger/info "card id " card-id)
     (some #(when (= (:id %) card-id) %) cards/cards)))
