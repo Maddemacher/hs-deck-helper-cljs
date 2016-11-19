@@ -2,8 +2,8 @@
 
 
 ;; initial state of app-db
-(def app-db {:beer-count 0
-             ;:friendly-draw []
+(def app-db {
+             :friendly-draw []
              :friendly-play []
-             ;:opponent-play []
+             :opposing-play []
              })

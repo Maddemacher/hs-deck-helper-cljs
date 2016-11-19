@@ -21239,6 +21239,18 @@ cljs.core.find_macros_ns = function(a) {
 cljs.core.ns_name = function(a) {
   return a.name;
 };
+var common = {collections:{}};
+common.collections.find_first = function(a, b) {
+  return cljs.core.some.call(null, function(b) {
+    return cljs.core.truth_(a.call(null, b)) ? b : null;
+  }, b);
+};
+var hs_deck_helper_cljs = {regexps:{}};
+hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card \\[name\x3d.* to ";
+hs_deck_helper_cljs.regexps.friendly_draw = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY HAND")].join(""));
+hs_deck_helper_cljs.regexps.opposing_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("OPPOSING PLAY")].join(""));
+hs_deck_helper_cljs.regexps.friendly_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY PLAY")].join(""));
+hs_deck_helper_cljs.regexps.card_id = /cardId=\S+/;
 cljs.nodejs = {};
 cljs.nodejs.require = require;
 cljs.nodejs.process = process;
@@ -21288,34 +21300,6 @@ cljs.nodejs.enable_util_print_BANG_ = function() {
   }();
   return null;
 };
-var hs_deck_helper_cljs = {ipc:{}};
-hs_deck_helper_cljs.ipc.electron = cljs.nodejs.require.call(null, "electron");
-"undefined" === typeof hs_deck_helper_cljs.ipc.browserWindow && (hs_deck_helper_cljs.ipc.browserWindow = cljs.core.atom.call(null, null));
-hs_deck_helper_cljs.ipc.ipcMain = hs_deck_helper_cljs.ipc.electron.ipcMain;
-hs_deck_helper_cljs.ipc.send_message = function(a, b) {
-  console.log("Sending message on topic: ", a, " message ", b);
-  return cljs.core.deref.call(null, hs_deck_helper_cljs.ipc.browserWindow).webContents.send(a, b);
-};
-hs_deck_helper_cljs.ipc.setup_listeners = function(a) {
-  console.log("Setting up IPC listeners ", a);
-  console.log("Contents ", a.webContents);
-  return cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.ipc.browserWindow, a);
-};
-hs_deck_helper_cljs.ipc.send_friendly_play = function(a) {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-play", a);
-};
-hs_deck_helper_cljs.ipc.send_opponenet_play = function(a) {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "opponent-play", a);
-};
-hs_deck_helper_cljs.ipc.send_friendly_draw = function(a) {
-  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-draw", a);
-};
-hs_deck_helper_cljs.regexps = {};
-hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card \\[name\x3d.* to ";
-hs_deck_helper_cljs.regexps.friendly_draw = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY HAND")].join(""));
-hs_deck_helper_cljs.regexps.opposing_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("OPPOSING PLAY")].join(""));
-hs_deck_helper_cljs.regexps.friendly_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY PLAY")].join(""));
-hs_deck_helper_cljs.regexps.card_id = /cardId=\S+/;
 hs_deck_helper_cljs.cards = {};
 hs_deck_helper_cljs.cards.cards = cljs.core.PersistentVector.fromArray([new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "KARA_13_23", new cljs.core.Keyword(null, "name", "name", 1843675177), "Romulo"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "LOE_115b", new cljs.core.Keyword(null, "name", "name", 1843675177), "Raven Idol"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
 "id", "id", -1388402092), "BRM_033", new cljs.core.Keyword(null, "name", "name", 1843675177), "Blackwing Technician"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "OG_281", new cljs.core.Keyword(null, "name", "name", 1843675177), "Beckoner of Evil"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "OG_048", new cljs.core.Keyword(null, "name", "name", 1843675177), "Mark of Y'Shaarj"], 
@@ -22276,9 +22260,9 @@ hs_deck_helper_cljs.resources.get_card = function(a) {
     };
   }(a), hs_deck_helper_cljs.cards.cards);
 };
-hs_deck_helper_cljs.logger = {};
-"undefined" === typeof hs_deck_helper_cljs.logger.loglevel && (hs_deck_helper_cljs.logger.loglevel = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "info", "info", -317069002), "INFO", new cljs.core.Keyword(null, "error", "error", -978969032), "ERROR"], null));
-hs_deck_helper_cljs.logger.log = function(a) {
+common.logger = {};
+"undefined" === typeof common.logger.loglevel && (common.logger.loglevel = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "info", "info", -317069002), "INFO", new cljs.core.Keyword(null, "error", "error", -978969032), "ERROR"], null));
+common.logger.log = function(a) {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
       b.push(arguments[d]), d += 1;
@@ -22287,18 +22271,18 @@ hs_deck_helper_cljs.logger.log = function(a) {
     }
   }
   b = 1 < b.length ? new cljs.core.IndexedSeq(b.slice(1), 0, null) : null;
-  return hs_deck_helper_cljs.logger.log.cljs$core$IFn$_invoke$arity$variadic(arguments[0], b);
+  return common.logger.log.cljs$core$IFn$_invoke$arity$variadic(arguments[0], b);
 };
-hs_deck_helper_cljs.logger.log.cljs$core$IFn$_invoke$arity$variadic = function(a, b) {
+common.logger.log.cljs$core$IFn$_invoke$arity$variadic = function(a, b) {
   return console.log(cljs.core.apply.call(null, cljs.core.str, cljs.core.flatten.call(null, cljs.core.interpose.call(null, " | ", new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new Date, a, b], null)))));
 };
-hs_deck_helper_cljs.logger.log.cljs$lang$maxFixedArity = 1;
-hs_deck_helper_cljs.logger.log.cljs$lang$applyTo = function(a) {
+common.logger.log.cljs$lang$maxFixedArity = 1;
+common.logger.log.cljs$lang$applyTo = function(a) {
   var b = cljs.core.first.call(null, a);
   a = cljs.core.next.call(null, a);
-  return hs_deck_helper_cljs.logger.log.cljs$core$IFn$_invoke$arity$variadic(b, a);
+  return common.logger.log.cljs$core$IFn$_invoke$arity$variadic(b, a);
 };
-hs_deck_helper_cljs.logger.info = function(a) {
+common.logger.info = function(a) {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
       b.push(arguments[d]), d += 1;
@@ -22307,16 +22291,16 @@ hs_deck_helper_cljs.logger.info = function(a) {
     }
   }
   b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
-  return hs_deck_helper_cljs.logger.info.cljs$core$IFn$_invoke$arity$variadic(b);
+  return common.logger.info.cljs$core$IFn$_invoke$arity$variadic(b);
 };
-hs_deck_helper_cljs.logger.info.cljs$core$IFn$_invoke$arity$variadic = function(a) {
-  return hs_deck_helper_cljs.logger.log.call(null, (new cljs.core.Keyword(null, "info", "info", -317069002)).cljs$core$IFn$_invoke$arity$1(hs_deck_helper_cljs.logger.loglevel), a);
+common.logger.info.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return common.logger.log.call(null, (new cljs.core.Keyword(null, "info", "info", -317069002)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a);
 };
-hs_deck_helper_cljs.logger.info.cljs$lang$maxFixedArity = 0;
-hs_deck_helper_cljs.logger.info.cljs$lang$applyTo = function(a) {
-  return hs_deck_helper_cljs.logger.info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+common.logger.info.cljs$lang$maxFixedArity = 0;
+common.logger.info.cljs$lang$applyTo = function(a) {
+  return common.logger.info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
 };
-hs_deck_helper_cljs.logger.error = function(a) {
+common.logger.error = function(a) {
   for (var b = [], c = arguments.length, d = 0;;) {
     if (d < c) {
       b.push(arguments[d]), d += 1;
@@ -22325,32 +22309,54 @@ hs_deck_helper_cljs.logger.error = function(a) {
     }
   }
   b = 0 < b.length ? new cljs.core.IndexedSeq(b.slice(0), 0, null) : null;
-  return hs_deck_helper_cljs.logger.error.cljs$core$IFn$_invoke$arity$variadic(b);
+  return common.logger.error.cljs$core$IFn$_invoke$arity$variadic(b);
 };
-hs_deck_helper_cljs.logger.error.cljs$core$IFn$_invoke$arity$variadic = function(a) {
-  return hs_deck_helper_cljs.logger.log.call(null, (new cljs.core.Keyword(null, "error", "error", -978969032)).cljs$core$IFn$_invoke$arity$1(hs_deck_helper_cljs.logger.loglevel), a);
+common.logger.error.cljs$core$IFn$_invoke$arity$variadic = function(a) {
+  return common.logger.log.call(null, (new cljs.core.Keyword(null, "error", "error", -978969032)).cljs$core$IFn$_invoke$arity$1(common.logger.loglevel), a);
 };
-hs_deck_helper_cljs.logger.error.cljs$lang$maxFixedArity = 0;
-hs_deck_helper_cljs.logger.error.cljs$lang$applyTo = function(a) {
-  return hs_deck_helper_cljs.logger.error.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+common.logger.error.cljs$lang$maxFixedArity = 0;
+common.logger.error.cljs$lang$applyTo = function(a) {
+  return common.logger.error.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null, a));
+};
+hs_deck_helper_cljs.ipc = {};
+hs_deck_helper_cljs.ipc.electron = cljs.nodejs.require.call(null, "electron");
+"undefined" === typeof hs_deck_helper_cljs.ipc.browserWindow && (hs_deck_helper_cljs.ipc.browserWindow = cljs.core.atom.call(null, null));
+hs_deck_helper_cljs.ipc.ipcMain = hs_deck_helper_cljs.ipc.electron.ipcMain;
+hs_deck_helper_cljs.ipc.send_message = function(a, b) {
+  console.log("Sending message on topic: ", a, " message ", b);
+  return cljs.core.deref.call(null, hs_deck_helper_cljs.ipc.browserWindow).webContents.send(a, b);
+};
+hs_deck_helper_cljs.ipc.setup_listeners = function(a) {
+  console.log("Setting up IPC listeners ", a);
+  console.log("Contents ", a.webContents);
+  return cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.ipc.browserWindow, a);
+};
+hs_deck_helper_cljs.ipc.send_friendly_play = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-play", a);
+};
+hs_deck_helper_cljs.ipc.send_opponenet_play = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "opposing-play", a);
+};
+hs_deck_helper_cljs.ipc.send_friendly_draw = function(a) {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-draw", a);
 };
 hs_deck_helper_cljs.events = {};
 hs_deck_helper_cljs.events.on_friendly_play = function(a) {
-  hs_deck_helper_cljs.logger.info.call(null, "Friendly play ", cljs.core.clj__GT_js.call(null, a));
+  common.logger.info.call(null, "Friendly play ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_friendly_play.call(null, cljs.core.clj__GT_js.call(null, a));
 };
 hs_deck_helper_cljs.events.on_friendly_draw = function(a) {
-  hs_deck_helper_cljs.logger.info.call(null, "Friendly draw ", cljs.core.clj__GT_js.call(null, a));
+  common.logger.info.call(null, "Friendly draw ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_friendly_draw.call(null, cljs.core.clj__GT_js.call(null, a));
 };
 hs_deck_helper_cljs.events.on_opposing_play = function(a) {
-  hs_deck_helper_cljs.logger.info.call(null, "Opposing play ", cljs.core.clj__GT_js.call(null, a));
+  common.logger.info.call(null, "Opposing play ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_opponenet_play.call(null, cljs.core.clj__GT_js.call(null, a));
 };
 hs_deck_helper_cljs.events.on_new_line = function(a) {
   var b = cljs.core.re_find;
   return cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_draw, a)) ? hs_deck_helper_cljs.events.on_friendly_draw.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_play, a)) ? hs_deck_helper_cljs.events.on_friendly_play.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.opposing_play, a)) ? hs_deck_helper_cljs.events.on_opposing_play.call(null, 
-  hs_deck_helper_cljs.resources.get_card.call(null, a)) : hs_deck_helper_cljs.logger.info.call(null, "No action on line: ", a);
+  hs_deck_helper_cljs.resources.get_card.call(null, a)) : common.logger.info.call(null, "No action on line: ", a);
 };
 hs_deck_helper_cljs.reader = {};
 hs_deck_helper_cljs.reader.tail = cljs.nodejs.require.call(null, "tail").Tail;
@@ -22377,7 +22383,7 @@ hs_deck_helper_cljs.reader.get_latest_logfile = function(a) {
   }, hs_deck_helper_cljs.reader.read_folder_file_stats.call(null, a));
 };
 hs_deck_helper_cljs.reader.setup_file_tailer = function(a) {
-  hs_deck_helper_cljs.logger.info.call(null, "setting up tilaer on path ", a);
+  common.logger.info.call(null, "setting up tilaer on path ", a);
   cljs.core.some_QMARK_.call(null, cljs.core.deref.call(null, hs_deck_helper_cljs.reader.tailer)) && cljs.core.deref.call(null, hs_deck_helper_cljs.reader.tailer).unwatch();
   a = hs_deck_helper_cljs.reader.get_latest_logfile.call(null, a);
   var b = new hs_deck_helper_cljs.reader.tail(a.path, cljs.core.clj__GT_js.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "fromBeginning", "fromBeginning", 1026070438), !1], null)));
@@ -22388,7 +22394,7 @@ hs_deck_helper_cljs.reader.setup_file_tailer = function(a) {
   }(a, b));
   b.on("error", function(a, b) {
     return function(a) {
-      return hs_deck_helper_cljs.logger.error.call(null, a);
+      return common.logger.error.call(null, a);
     };
   }(a, b));
   b.watch();

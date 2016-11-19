@@ -47,7 +47,7 @@
                                  ["cljsbuild" "once" "prod-main"]
                                  ["cljsbuild" "once" "prod-front"]]}
   :hooks [leiningen.cljsbuild]
-  :cljsbuild {:builds {:dev-main {:source-paths ["src"]
+  :cljsbuild {:builds {:dev-main {:source-paths ["src_common" "src"]
                                   :incremental true
                                   :jar true
                                   :assert true
@@ -73,7 +73,7 @@
                                              ;;:source-map "app/dev/js/test.js.map"
                                              :pretty-print true
                                              :output-wrapper true}}
-                       :dev-front {:source-paths ["src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]
+                       :dev-front {:source-paths ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]
                                    :incremental true
                                    :jar true
                                    :assert true
@@ -97,7 +97,7 @@
                                               ;;:source-map "app/dev/js/test.js.map"
                                               :pretty-print true
                                               :output-wrapper true}}
-                       :prod-main {:source-paths ["src"]
+                       :prod-main {:source-paths ["src_common" "src"]
                                    :incremental true
                                    :jar true
                                    :assert true
@@ -123,7 +123,7 @@
                                               ;;:source-map "app/prod/js/test.js.map"
                                               :pretty-print true
                                               :output-wrapper true}}
-                       :prod-front {:source-paths ["src_front" "src_front_profile/hs_deck_helper_cljs_front/prod"]
+                       :prod-front {:source-paths ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/prod"]
                                     :incremental true
                                     :jar true
                                     :assert true

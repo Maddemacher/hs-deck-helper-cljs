@@ -21,7 +21,7 @@
   (send-message "friendly-play" card))
 
 (defn send-opponenet-play [card]
-  (send-message "opponent-play" card))
+  (send-message "opposing-play" card))
 
 (defn send-friendly-draw [card]
   (send-message "friendly-draw" card))

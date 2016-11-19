@@ -1,24 +1,21 @@
 (ns hs-deck-helper-cljs-front.subs
-  (:require [re-frame.core :refer [reg-sub]]))
-
-
-(reg-sub
-  :get-beer-count
-  (fn [db _]
-    (:beer-count db)))
+  (:require [re-frame.core :refer [reg-sub]]
+            [common.logger :as logger]))
 
 (reg-sub
  :get-friendly-play
  (fn  [db _]
-   (js/console.log "Getting friently play " db)
+   (logger/info "Getting friently play" db)
    (:friendly-play db)))
 
 (reg-sub
  :get-friendly-draw
  (fn [db _]
+   (logger/info "Getting friendly draw" db)
    (:friendly-draw db)))
 
 (reg-sub
- :get-opponent-play
+ :get-opposing-play
  (fn [db _]
-   (:opponent-play db)))
+   (logger/info "Getting opposing play" db)
+   (:opposing-play db)))
