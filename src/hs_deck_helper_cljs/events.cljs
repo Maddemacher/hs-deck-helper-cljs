@@ -19,10 +19,14 @@
   (logger/info "Opposing play " (clj->js card))
   (ipc/send-opponenet-play (clj->js card)))
 
+(defn on-match-end []
+  (logger/info "Match ended")
+  (ipc/send-match-end))
 
 (defn on-new-line [line]
   (condp re-find line
         regexps/friendly-draw (on-friendly-draw (resources/get-card line))
         regexps/friendly-play (on-friendly-play (resources/get-card line))
         regexps/opposing-play (on-opposing-play (resources/get-card line))
+        regexps/match-end     (on-match-end)
         (logger/info "No action on line: " line)))

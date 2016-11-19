@@ -8,4 +8,6 @@
 
 (def friendly-play (re-pattern (str transition-card "FRIENDLY PLAY")))
 
+(def match-end (re-pattern "\\[Power\\] GameState.DebugPrintPower\\(\\) - CREATE_GAME"))
+
 (def card-id #"cardId=\S+")

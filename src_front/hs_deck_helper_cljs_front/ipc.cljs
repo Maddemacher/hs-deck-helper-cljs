@@ -22,4 +22,13 @@
   (.on ipcRenderer "opposing-play"
        (fn [event card]
          (logger/info "Opposing play event from backend" card)
-         (re-frame/dispatch [:opposing-play card]))))
+         (re-frame/dispatch [:opposing-play card])))
+
+  (.on ipcRenderer "match-end"
+       (fn [event]
+         (logger/info "Match end event from backend")
+         (re-frame/dispatch [:match-end])))
+
+
+
+  )

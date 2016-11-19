@@ -18,5 +18,10 @@ common.logger.info.call(null,"Getting opposing play",db);
 
 return new cljs.core.Keyword(null,"opposing-play","opposing-play",-2057160478).cljs$core$IFn$_invoke$arity$1(db);
 }));
+re_frame.core.reg_sub.call(null,new cljs.core.Keyword(null,"get-old-matches","get-old-matches",-117448356),(function (db,_){
+common.logger.info.call(null,"Getting old matches",db);
+
+return new cljs.core.Keyword(null,"old-matches","old-matches",-1690600604).cljs$core$IFn$_invoke$arity$1(db);
+}));
 
 //# sourceMappingURL=subs.js.map

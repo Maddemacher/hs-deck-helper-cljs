@@ -21250,6 +21250,7 @@ hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card \\[name\x3d.* 
 hs_deck_helper_cljs.regexps.friendly_draw = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY HAND")].join(""));
 hs_deck_helper_cljs.regexps.opposing_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("OPPOSING PLAY")].join(""));
 hs_deck_helper_cljs.regexps.friendly_play = cljs.core.re_pattern.call(null, [cljs.core.str(hs_deck_helper_cljs.regexps.transition_card), cljs.core.str("FRIENDLY PLAY")].join(""));
+hs_deck_helper_cljs.regexps.match_end = cljs.core.re_pattern.call(null, "\\[Power\\] GameState.DebugPrintPower\\(\\) - CREATE_GAME");
 hs_deck_helper_cljs.regexps.card_id = /cardId=\S+/;
 cljs.nodejs = {};
 cljs.nodejs.require = require;
@@ -22323,12 +22324,12 @@ hs_deck_helper_cljs.ipc.electron = cljs.nodejs.require.call(null, "electron");
 "undefined" === typeof hs_deck_helper_cljs.ipc.browserWindow && (hs_deck_helper_cljs.ipc.browserWindow = cljs.core.atom.call(null, null));
 hs_deck_helper_cljs.ipc.ipcMain = hs_deck_helper_cljs.ipc.electron.ipcMain;
 hs_deck_helper_cljs.ipc.send_message = function(a, b) {
-  console.log("Sending message on topic: ", a, " message ", b);
+  common.logger.info.call(null, "Sending message on topic: ", a, " message ", b);
   return cljs.core.deref.call(null, hs_deck_helper_cljs.ipc.browserWindow).webContents.send(a, b);
 };
 hs_deck_helper_cljs.ipc.setup_listeners = function(a) {
-  console.log("Setting up IPC listeners ", a);
-  console.log("Contents ", a.webContents);
+  common.logger.info.call(null, "Setting up IPC listeners ", a);
+  common.logger.info.call(null, "Contents ", a.webContents);
   return cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.ipc.browserWindow, a);
 };
 hs_deck_helper_cljs.ipc.send_friendly_play = function(a) {
@@ -22339,6 +22340,9 @@ hs_deck_helper_cljs.ipc.send_opponenet_play = function(a) {
 };
 hs_deck_helper_cljs.ipc.send_friendly_draw = function(a) {
   return hs_deck_helper_cljs.ipc.send_message.call(null, "friendly-draw", a);
+};
+hs_deck_helper_cljs.ipc.send_match_end = function() {
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "match-end");
 };
 hs_deck_helper_cljs.events = {};
 hs_deck_helper_cljs.events.on_friendly_play = function(a) {
@@ -22353,10 +22357,14 @@ hs_deck_helper_cljs.events.on_opposing_play = function(a) {
   common.logger.info.call(null, "Opposing play ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_opponenet_play.call(null, cljs.core.clj__GT_js.call(null, a));
 };
+hs_deck_helper_cljs.events.on_match_end = function() {
+  common.logger.info.call(null, "Match ended");
+  return hs_deck_helper_cljs.ipc.send_match_end.call(null);
+};
 hs_deck_helper_cljs.events.on_new_line = function(a) {
   var b = cljs.core.re_find;
   return cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_draw, a)) ? hs_deck_helper_cljs.events.on_friendly_draw.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_play, a)) ? hs_deck_helper_cljs.events.on_friendly_play.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.opposing_play, a)) ? hs_deck_helper_cljs.events.on_opposing_play.call(null, 
-  hs_deck_helper_cljs.resources.get_card.call(null, a)) : common.logger.info.call(null, "No action on line: ", a);
+  hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.match_end, a)) ? hs_deck_helper_cljs.events.on_match_end.call(null) : common.logger.info.call(null, "No action on line: ", a);
 };
 hs_deck_helper_cljs.reader = {};
 hs_deck_helper_cljs.reader.tail = cljs.nodejs.require.call(null, "tail").Tail;

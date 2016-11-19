@@ -11,9 +11,11 @@
         friendly-played (re-frame/subscribe [:get-friendly-play])
         friendly-drawn  (re-frame/subscribe [:get-friendly-draw])
         opposing-played (re-frame/subscribe [:get-opposing-play])
+        old-matches     (re-frame/subscribe [:get-old-matches])
         ]
     [:div.col-xs-12
      [:h1 "Best HS Deckhelper EU"]
+     [:h2 (str "Matches played " (count @old-matches))]
 
      [:div.col-xs-4
       [:h2 "Friendly Played"]
@@ -29,10 +31,7 @@
      [:div.col-xs-4
       [:h2 "Opposing Played"]
       [:ul (for [card (clj->js @opposing-played)]
-             [:li (str (.-name card) (.-count card))])]]
-
-
-     ]))
+             [:li (str (.-name card) (.-count card))])]]]))
 
 
 (defn mount-root [setting]
