@@ -15,6 +15,7 @@
 
 
 (defn get-block-data [content]
+  (logger/pprint "Reacting to" content)
   (let [
         block-data (atom base-block)
         block-head (first content)
@@ -22,7 +23,6 @@
 
         lines (rest content)
         ]
-
 
     (swap! block-data assoc :type (tag-handler/get-block-type (:data block-head)))
     (swap! block-data assoc :entity (tag-handler/get-entity (:data block-head)))
@@ -43,12 +43,13 @@
     (let [groups (vals (group-by :entity (:tags @block-data)))]
       (swap! block-data assoc :tags (mapv #(apply merge %) groups)))
 
+    (logger/pprint "Extracted" @block-data)
+
     @block-data))
 
 
 
 (defn parse-tags-update [tag]
-  (logger/temp "tag " tag)
   (when (= "1" (:CURRENT_PLAYER tag)) (ipc/send-current-player (:entity tag))))
 
 

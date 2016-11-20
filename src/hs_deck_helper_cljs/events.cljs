@@ -4,17 +4,25 @@
             [hs-deck-helper-cljs.tag-handler :as tag-handler]
             [hs-deck-helper-cljs.block-handler :as block-handler]
             [hs-deck-helper-cljs.resources :as resources]
-            [hs-deck-helper-cljs.regexps :as regexps]))
+            [hs-deck-helper-cljs.regexps :as regexps]
+            [clojure.string :as str]))
 
 (defonce block-buffer-init {:appending false :content [] :tag-count 0})
 (defonce block-buffer (atom block-buffer-init))
 
-(defn is-block-end-tag [line]
-  (re-find regexps/block-end-tag line))
+(defn is-block-end-tag? [line]
+  (str/includes? line "BLOCK_END"))
 
-(defn is-block-start-tag [line]
-  (re-find regexps/block-start-tag line))
+(defn is-block-start-tag? [line]
+  (str/includes? line "BLOCK_START"))
 
+(defn has-start-tag? [line]
+  (cond
+    (is-block-start-tag? line) true
+    (is-block-end-tag? line) true
+    (str/includes? line "TAG_CHANGE") true
+    (str/includes? line "SHOW_ENTITY") true
+    :else false))
 
 
 (defn on-friendly-play [card]
@@ -32,20 +40,24 @@
   (ipc/send-opponenet-play (clj->js card)))
 
 (defn on-new-line [line]
-  (when (is-block-start-tag line)
+  (when (is-block-start-tag? line)
     (do (swap! block-buffer assoc :appending true)
         (swap! block-buffer update-in [:tag-count] inc)))
 
+  (when (:appending @block-buffer)
+        (if (has-start-tag? line)
+          (swap! block-buffer update-in [:content] conj {:data line :level (:tag-count @block-buffer)})
+          (swap! block-buffer update-in [:content] #(let [last-line (last %)
+                                                          updated-last {:data (str (:data last-line) line)
+                                                                        :level (:level last-line)}]
+                                                      (conj (pop %) updated-last)
+                                                      ))))
 
-  (when (:appending @block-buffer) (swap! block-buffer update-in [:content] conj {:data line :level (:tag-count @block-buffer)}))
-
-
-  (when (is-block-end-tag line)
+  (when (is-block-end-tag? line)
     (do (swap! block-buffer update-in [:tag-count] dec)
         (when (= 0 (:tag-count @block-buffer))
           (do (block-handler/handle-block @block-buffer)
               (reset! block-buffer block-buffer-init)))))
-
 
   (when-not (:appending @block-buffer)
     (condp re-find line

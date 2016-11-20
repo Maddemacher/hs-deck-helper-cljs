@@ -1,7 +1,8 @@
 (ns hs-deck-helper-cljs.reader
   (:require [cljs.nodejs :as nodejs]
             [common.logger :as logger]
-            [hs-deck-helper-cljs.events :as events]))
+            [hs-deck-helper-cljs.events :as events]
+            [clojure.string :as str]))
 
 (def tail (.-Tail (nodejs/require "tail")))
 (def fs (nodejs/require "fs"))
@@ -34,7 +35,7 @@
 
     (.on file-tailer "line"
          (fn [data]
-         (events/on-new-line data)))
+           (events/on-new-line (str/replace data (re-pattern #"^\d{4}-\d{2}-\d{2} .+PowerTaskList.DebugPrintPower\(\) - ") ""))))
 
     (.on file-tailer "error" #(logger/error %))
 

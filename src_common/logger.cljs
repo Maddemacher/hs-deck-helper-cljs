@@ -1,4 +1,6 @@
-(ns common.logger)
+(ns common.logger
+  (:require [clojure.string :as str]
+            [clojure.pprint :as pp]))
 
 (defonce log-config {:info false :error false :block false :tag false})
 (defonce loglevel {:info "INFO" :error "ERROR" :block "BLOCK" :tag "TAG"})
@@ -21,3 +23,8 @@
 
 (defn temp [& message]
   (log "TEMP" message))
+
+
+(defn pprint [message data]
+  (log "PPrint" message)
+  (pp/pprint data))

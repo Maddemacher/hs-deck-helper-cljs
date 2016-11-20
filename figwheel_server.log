@@ -2585,3 +2585,31 @@ notifying browser that file changed:  out\hs_deck_helper_cljs_front\subs.js
 [0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
 [32mSuccessfully compiled "app/dev/js/front.js" in 1.32 seconds.[0m
 notifying browser that file changed:  out\common\logger.js
+[0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 4.766 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\common\logger.js
+[0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[36m----  Compiler Warning on   src_common/logger.cljs   line:10  column:3  ----[0m
+
+  [1mWrong number of args (3) passed to cljs.pprint/pprint[0m
+
+  [36m 6[0m  [36m(defonce loglevel {:info "INFO" :error "ERROR" :block "BLOCK" :tag "TAG"})[0m
+  [36m 7[0m  [36m[0m
+  [36m 8[0m  [36m[0m
+  [36m 9[0m  [36m(defn log [level & message][0m
+  [33m10[0m  [1m  (pp/pprint (new js/Date) level message))[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (3) passed to cljs.pprint/pprint[0m
+  [36m11[0m  [36m[0m
+  [36m12[0m  [36m(defn info [& message][0m
+  [36m13[0m  [36m  (when (:info log-config) (log (:info loglevel) message)))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn error [& message][0m
+
+[36m----  Compiler Warning : Please see src_common/logger.cljs  ----[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.383 seconds.[0m
+notifying browser that file changed:  out\common\logger.js
+[0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.633 seconds.[0m
+notifying browser that file changed:  out\common\logger.js

@@ -34,7 +34,8 @@ goog.addDependency("../re_frame/utils.js", ['re_frame.utils'], ['cljs.core', 're
 goog.addDependency("../re_frame/db.js", ['re_frame.db'], ['re_frame.interop', 'cljs.core']);
 goog.addDependency("../re_frame/events.js", ['re_frame.events'], ['re_frame.interop', 're_frame.interceptor', 're_frame.registrar', 'cljs.core', 're_frame.utils', 're_frame.loggers', 're_frame.db']);
 goog.addDependency("../re_frame/router.js", ['re_frame.router'], ['re_frame.interop', 're_frame.events', 'cljs.core', 're_frame.loggers']);
-goog.addDependency("../common/logger.js", ['common.logger'], ['cljs.core']);
+goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);
+goog.addDependency("../common/logger.js", ['common.logger'], ['cljs.core', 'cljs.pprint', 'clojure.string']);
 goog.addDependency("../re_frame/fx.js", ['re_frame.fx'], ['re_frame.interop', 're_frame.interceptor', 're_frame.events', 're_frame.registrar', 'cljs.core', 're_frame.router', 're_frame.loggers', 're_frame.db']);
 goog.addDependency("../clojure/data.js", ['clojure.data'], ['cljs.core', 'clojure.set']);
 goog.addDependency("../re_frame/std_interceptors.js", ['re_frame.std_interceptors'], ['re_frame.interceptor', 're_frame.registrar', 'cljs.core', 're_frame.loggers', 'clojure.data', 're_frame.db']);
@@ -49,7 +50,6 @@ goog.addDependency("../hs_deck_helper_cljs_front/db.js", ['hs_deck_helper_cljs_f
 goog.addDependency("../hs_deck_helper_cljs_front/events.js", ['hs_deck_helper_cljs_front.events'], ['common.logger', 'cljs.core', 'hs_deck_helper_cljs_front.db', 're_frame.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/subs.js", ['hs_deck_helper_cljs_front.subs'], ['common.logger', 'cljs.core', 're_frame.core']);
 goog.addDependency("../hs_deck_helper_cljs_front/core.js", ['hs_deck_helper_cljs_front.core'], ['hs_deck_helper_cljs_front.events', 'common.logger', 'reagent.core', 'hs_deck_helper_cljs_front.ipc', 'cljs.core', 'hs_deck_helper_cljs_front.subs', 're_frame.core']);
-goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);
 goog.addDependency("../figwheel/client/heads_up.js", ['figwheel.client.heads_up'], ['goog.dom', 'goog.string', 'cljs.core', 'goog.dom.dataset', 'goog.object', 'cljs.core.async', 'cljs.pprint', 'figwheel.client.socket', 'clojure.string']);
 goog.addDependency("../cljs/spec/impl/gen.js", ['cljs.spec.impl.gen'], ['cljs.core']);
 goog.addDependency("../cljs/spec.js", ['cljs.spec'], ['cljs.core', 'goog.object', 'cljs.spec.impl.gen', 'clojure.string', 'clojure.walk']);
