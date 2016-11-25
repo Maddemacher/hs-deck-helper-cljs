@@ -15,3 +15,4 @@ node_modules/*
 electron/*
 app/dev/js/out/
 app/prod/js/out/
+app/test/

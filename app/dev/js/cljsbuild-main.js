@@ -27427,10 +27427,9 @@ hs_deck_helper_cljs.reader.get_latest_logfile = function(a) {
   }, hs_deck_helper_cljs.reader.read_folder_file_stats.call(null, a));
 };
 hs_deck_helper_cljs.reader.setup_file_tailer = function(a) {
-  common.logger.info.call(null, "setting up tilaer on path ", a);
   cljs.core.some_QMARK_.call(null, cljs.core.deref.call(null, hs_deck_helper_cljs.reader.tailer)) && cljs.core.deref.call(null, hs_deck_helper_cljs.reader.tailer).unwatch();
   a = hs_deck_helper_cljs.reader.get_latest_logfile.call(null, a);
-  var b = new hs_deck_helper_cljs.reader.tail(a.path, cljs.core.clj__GT_js.call(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "fromBeginning", "fromBeginning", 1026070438), !1], null)));
+  var b = new hs_deck_helper_cljs.reader.tail(a.path, cljs.core.clj__GT_js.call(null, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "fromBeginning", "fromBeginning", 1026070438), !1, new cljs.core.Keyword(null, "follow", "follow", -809317662), !0, new cljs.core.Keyword(null, "logger", "logger", -220675947), console], null)));
   b.on("line", function(a, b) {
     return function(a) {
       return hs_deck_helper_cljs.events.on_new_line.call(null, clojure.string.replace.call(null, a, cljs.core.re_pattern.call(null, /^\d{4}-\d{2}-\d{2} .+PowerTaskList.DebugPrintPower\(\) - /), ""));

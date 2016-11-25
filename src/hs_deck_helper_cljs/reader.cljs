@@ -26,13 +26,9 @@
   (apply max-key #(.getTime (.-ctime (.-stats %))) (read-folder-file-stats folder-path)))
 
 (defn setup-file-tailer [folder-path]
-  (logger/info "setting up tilaer on path " folder-path)
-
   (when (some? @tailer) (.unwatch @tailer))
-
   (let [latest-log-file (get-latest-logfile folder-path)
-        file-tailer (new tail (.-path latest-log-file) (clj->js {:fromBeginning false}))]
-
+        file-tailer (new tail (.-path latest-log-file) (clj->js {:fromBeginning false :follow true :logger js/console}))]
     (.on file-tailer "line"
          (fn [data]
            (events/on-new-line (str/replace data (re-pattern #"^\d{4}-\d{2}-\d{2} .+PowerTaskList.DebugPrintPower\(\) - ") ""))))
