@@ -22,6 +22,7 @@
     (is-block-end-tag? line) true
     (str/includes? line "TAG_CHANGE") true
     (str/includes? line "SHOW_ENTITY") true
+    (str/includes? line "FULL_ENTITY") true
     :else false))
 
 

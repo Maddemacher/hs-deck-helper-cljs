@@ -82,3 +82,72 @@
    :blocks []
    :shown-entities []
    })
+
+(def nzoth-played ["BLOCK_START BlockType=PLAY Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] EffectCardId= EffectIndex=0 Target=0"
+                   "     TAG_CHANGE Entity=Madde tag=RESOURCES_USED value=1"
+                   "     TAG_CHANGE Entity=Madde tag=NUM_RESOURCES_SPENT_THIS_GAME value=1"
+                   "     TAG_CHANGE Entity=Madde tag=NUM_CARDS_PLAYED_THIS_TURN value=1"
+                   "     TAG_CHANGE Entity=Madde tag=NUM_MINIONS_PLAYED_THIS_TURN value=1"
+                   "     TAG_CHANGE Entity=[name=Gorehowl id=15 zone=HAND zonePos=6 cardId=EX1_411 player=1] tag=ZONE_POSITION value=5"
+                   "     TAG_CHANGE Entity=[name=Kor'kron Elite id=25 zone=HAND zonePos=4 cardId=NEW1_011 player=1] tag=ZONE_POSITION value=3"
+                   "     TAG_CHANGE Entity=[name=The Coin id=68 zone=HAND zonePos=5 cardId=GAME_005 player=1] tag=ZONE_POSITION value=4"
+                   "     TAG_CHANGE Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] tag=ZONE value=PLAY"
+                   "     TAG_CHANGE Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] tag=ZONE_POSITION value=1"
+                   "     TAG_CHANGE Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] tag=EXHAUSTED value=1"
+                   "     TAG_CHANGE Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] tag=JUST_PLAYED value=1"
+                   "     TAG_CHANGE Entity=Madde tag=LAST_CARD_PLAYED value=5"
+                   "     BLOCK_START BlockType=POWER Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] EffectCardId= EffectIndex=-1 Target=0"
+                   "         FULL_ENTITY - Creating ID=69 CardID=OG_058"
+                   "             tag=ATK value=1"
+                   "             tag=COST value=1"
+                   "             tag=ZONE value=PLAY"
+                   "             tag=CONTROLLER value=1"
+                   "             tag=ENTITY_ID value=69"
+                   "             tag=DURABILITY value=3"
+                   "             tag=CARDTYPE value=WEAPON"
+                   "             tag=CREATOR value=5"
+                   "             tag=TAG_LAST_KNOWN_COST_IN_HAND value=1"
+                   "         TAG_CHANGE Entity=Madde tag=334 value=69"
+                   "     BLOCK_END"
+                   "     TAG_CHANGE Entity=[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1] tag=TAG_LAST_KNOWN_COST_IN_HAND value=3"
+                   "     TAG_CHANGE Entity=[name=Garrosh Hellscream id=64 zone=PLAY zonePos=0 cardId=HERO_01 player=1] tag=ATK value=1"
+                   "     TAG_CHANGE Entity=[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1] tag=COST value=3"
+                   "     TAG_CHANGE Entity=Madde tag=COMBO_ACTIVE value=1"
+                   "     TAG_CHANGE Entity=Madde tag=NUM_OPTIONS_PLAYED_THIS_TURN value=1"
+                   "BLOCK_END"])
+
+(def nzoth-played-block {:appending true
+                         :content [{:data (get nzoth-played 0) :level 1}
+                                   {:data (get nzoth-played 1) :level 1}
+                                   {:data (get nzoth-played 2) :level 1}
+                                   {:data (get nzoth-played 3) :level 1}
+                                   {:data (get nzoth-played 4) :level 1}
+                                   {:data (get nzoth-played 5) :level 1}
+                                   {:data (get nzoth-played 6) :level 1}
+                                   {:data (get nzoth-played 7) :level 1}
+                                   {:data (get nzoth-played 8) :level 1}
+                                   {:data (get nzoth-played 9) :level 1}
+                                   {:data (get nzoth-played 10) :level 1}
+                                   {:data (get nzoth-played 11) :level 1}
+                                   {:data (get nzoth-played 12) :level 1}
+                                   {:data (get nzoth-played 13) :level 2}
+                                   {:data (str (get nzoth-played 14)
+                                               (get nzoth-played 15)
+                                               (get nzoth-played 16)
+                                               (get nzoth-played 17)
+                                               (get nzoth-played 18)
+                                               (get nzoth-played 19)
+                                               (get nzoth-played 20)
+                                               (get nzoth-played 21)
+                                               (get nzoth-played 22)
+                                               (get nzoth-played 23)) :level 2}
+                                   {:data (get nzoth-played 24) :level 2}
+                                   {:data (get nzoth-played 25) :level 2}
+                                   {:data (get nzoth-played 26) :level 1}
+                                   {:data (get nzoth-played 27) :level 1}
+                                   {:data (get nzoth-played 28) :level 1}
+                                   {:data (get nzoth-played 29) :level 1}
+                                   {:data (get nzoth-played 30) :level 1}
+                                   {:data (get nzoth-played 31) :level 1}
+                                   ]
+                         :tag-count 0})
