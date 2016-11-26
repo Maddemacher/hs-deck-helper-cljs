@@ -57,3 +57,28 @@
                                              :tag_last_known_cost_in_hand 7
                                              }]
                            })
+
+
+
+(def player-change [
+                    {:data "BLOCK_START BlockType=TRIGGER Entity=GameEntity EffectCardId= EffectIndex=-1 Target=0" :level 1}
+                    {:data "    TAG_CHANGE Entity=DoubleDamage tag=NUM_TURNS_LEFT value=0" :level 1}
+                    {:data "    TAG_CHANGE Entity=DoubleDamage tag=NUM_TURNS_LEFT value=1" :level 1}
+                    {:data "    TAG_CHANGE Entity=DoubleDamage tag=CURRENT_PLAYER value=0" :level 1}
+                    {:data "    TAG_CHANGE Entity=Madde tag=CURRENT_PLAYER value=1" :level 1}
+                    {:data "    TAG_CHANGE Entity=GameEntity tag=TURN value=2" :level 1}
+                    {:data "    TAG_CHANGE Entity=GameEntity tag=NEXT_STEP value=MAIN_READY" :level 1}
+                    {:data "BLOCK_END" :level 1}]
+  )
+
+(def player-change-parsed
+  {:type "TRIGGER"
+   :entity "GameEntity"
+   :tags [
+          {:entity "DoubleDamage" :num_turns_left 1 :current_player 0}
+          {:entity "Madde" :current_player 1}
+          {:entity "GameEntity" :turn 2 :next_step "MAIN_READY"}
+          ]
+   :blocks []
+   :shown-entities []
+   })

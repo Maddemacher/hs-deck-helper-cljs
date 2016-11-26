@@ -26,3 +26,7 @@
 
 
     (is (= parsed-block data/gorehowl-draw-parsed))))
+
+
+(deftest block-handler-gets-current-player-block-correctly
+  (is (= (block-handler/get-block-data data/player-change) data/player-change-parsed)))
