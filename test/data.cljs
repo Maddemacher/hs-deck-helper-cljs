@@ -37,22 +37,23 @@
 (def gorehowl-draw-parsed {:type "TRIGGER"
                            :entity "Madde"
                            :tags [{:entity "[id=15 cardId= type=INVALID zone=DECK zonePos=0 player=1]"
-                                   :ZONE_POSITION 6}
+                                   :zone_position 6}
 
                                   {:entity "Madde"
-                                   :NUM_CARDS_DRAWN_THIS_TURN 1}
+                                   :num_cards_drawn_this_turn 1}
 
                                   {:entity "GameEntAty"
-                                   :NEXT_STEP "MAIN_ACTION"}]
+                                   :next_step "MAIN_ACTION"}]
                            :blocks []
                            :shown-entities [{:entity "[id=15 cardId= type=INVALID zone=DECK zonePos=0 player=1]"
-                                             :ATK 7
-                                             :COST 7
-                                             :ZONE "HAND"
-                                             :DURABILITY 1
-                                             :FACTION "NEUTRAL"
-                                             :CARDTYPE "WEAPON"
-                                             :RARITY "EPIC"
-                                             :TAG_LAST_KNOWN_COST_IN_HAND 7
+                                             :cardid "EX1_411"
+                                             :atk 7
+                                             :cost 7
+                                             :zone "HAND"
+                                             :durability 1
+                                             :faction "NEUTRAL"
+                                             :cardtype "WEAPON"
+                                             :rarity "EPIC"
+                                             :tag_last_known_cost_in_hand 7
                                              }]
                            })

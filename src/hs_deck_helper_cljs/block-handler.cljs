@@ -1,6 +1,7 @@
 (ns hs-deck-helper-cljs.block-handler
   (:require [common.logger :as logger]
             [clojure.string :as str]
+            [hs-deck-helper-cljs.parsers :as parsers]
             [hs-deck-helper-cljs.tag-handler :as tag-handler]
             [hs-deck-helper-cljs.entity-handler :as entity-handler]
             [hs-deck-helper-cljs.ipc :as ipc]
@@ -24,8 +25,8 @@
         lines (rest content)
         ]
 
-    (swap! block-data assoc :type (tag-handler/get-block-type (:data block-head)))
-    (swap! block-data assoc :entity (tag-handler/get-entity (:data block-head)))
+    (swap! block-data assoc :type (parsers/get-block-type (:data block-head)))
+    (swap! block-data assoc :entity (parsers/get-entity (:data block-head)))
 
 
     (mapv
