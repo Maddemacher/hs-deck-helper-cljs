@@ -52,8 +52,6 @@
 (defn parse-tags-update [tag]
   (when (= "1" (:CURRENT_PLAYER tag)) (ipc/send-current-player (:entity tag))))
 
-
-
 (defn on-attack-block [content]
   (logger/block "Attack block" content))
 

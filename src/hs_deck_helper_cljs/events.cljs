@@ -39,25 +39,30 @@
   (logger/info "Opposing play " (clj->js card))
   (ipc/send-opponenet-play (clj->js card)))
 
-(defn on-new-line [line]
+(defn parse-line [line]
   (when (is-block-start-tag? line)
     (do (swap! block-buffer assoc :appending true)
         (swap! block-buffer update-in [:tag-count] inc)))
 
   (when (:appending @block-buffer)
-        (if (has-start-tag? line)
-          (swap! block-buffer update-in [:content] conj {:data line :level (:tag-count @block-buffer)})
-          (swap! block-buffer update-in [:content] #(let [last-line (last %)
-                                                          updated-last {:data (str (:data last-line) line)
-                                                                        :level (:level last-line)}]
-                                                      (conj (pop %) updated-last)
-                                                      ))))
+    (if (has-start-tag? line)
+      (swap! block-buffer update-in [:content] conj {:data line :level (:tag-count @block-buffer)})
+      (swap! block-buffer update-in [:content] #(let [last-line (last %)
+                                                      updated-last {:data (str (:data last-line) line)
+                                                                    :level (:level last-line)}]
+                                                  (conj (pop %) updated-last)
+                                                  ))))
 
   (when (is-block-end-tag? line)
     (do (swap! block-buffer update-in [:tag-count] dec)
         (when (= 0 (:tag-count @block-buffer))
-          (do (block-handler/handle-block @block-buffer)
-              (reset! block-buffer block-buffer-init)))))
+          (let [block @block-buffer]
+            (reset! block-buffer block-buffer-init)
+            block)))))
+
+(defn on-new-line [line]
+  (let [maybe-block (parse-line line)]
+    (when maybe-block (do (block-handler/handle-block maybe-block))))
 
   (when-not (:appending @block-buffer)
     (condp re-find line
