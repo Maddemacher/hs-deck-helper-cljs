@@ -12,3 +12,7 @@
   (merge (get-tags line) {:entity (parsers/get-entity line)
                           :cardid (get-card-id line)
                           }))
+
+
+(defn get-full-entity-data [line]
+  (merge (get-tags line) {:cardid (get-card-id line)}))

@@ -56,6 +56,7 @@
                                              :rarity "EPIC"
                                              :tag_last_known_cost_in_hand 7
                                              }]
+                           :full-entities []
                            })
 
 
@@ -81,6 +82,7 @@
           ]
    :blocks []
    :shown-entities []
+   :full-entities []
    })
 
 (def nzoth-played ["BLOCK_START BlockType=PLAY Entity=[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1] EffectCardId= EffectIndex=0 Target=0"
@@ -151,3 +153,67 @@
                                    {:data (get nzoth-played 31) :level 1}
                                    ]
                          :tag-count 0})
+
+
+(def nzoth-played-parsed
+  {:type "PLAY"
+   :entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+   :tags [{
+           :entity "Madde"
+           :resources_used 1
+           :num_resources_spent_this_game 1
+           :num_cards_played_this_turn 1
+           :num_minions_played_this_turn 1
+           :last_card_played 5
+           :combo_active 1
+           :num_options_played_this_turn 1
+           }
+          {
+           :entity "[name=Gorehowl id=15 zone=HAND zonePos=6 cardId=EX1_411 player=1]"
+           :zone_position 5
+           }
+          {
+           :entity "[name=Kor'kron Elite id=25 zone=HAND zonePos=4 cardId=NEW1_011 player=1]"
+           :zone_position 3
+           }
+          {
+           :entity "[name=The Coin id=68 zone=HAND zonePos=5 cardId=GAME_005 player=1]"
+           :zone_position 4}
+          {
+           :entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+           :zone "PLAY"
+           :zone_position 1
+           :exhausted 1
+           :just_played 1
+           }
+          {
+           :entity "[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1]"
+           :tag_last_known_cost_in_hand 3
+           :cost 3
+           }
+          {
+           :entity "[name=Garrosh Hellscream id=64 zone=PLAY zonePos=0 cardId=HERO_01 player=1]"
+           :atk 1
+           }
+
+          ]
+   :blocks [
+            {:entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+             :type "POWER"
+             :tags [{:entity "Madde" :334 69}]
+             :blocks []
+             :full-entities [{
+                              :cardid "OG_058"
+                              :atk 1
+                              :cost 1
+                              :zone "PLAY"
+                              :controller 1
+                              :entity_id 69
+                              :durability 3
+                              :cardtype "WEAPON"
+                              :creator 5
+                              :tag_last_known_cost_in_hand 1
+                              }]
+             :shown-entities []}]
+   :full-entities []
+   :shown-entities []})

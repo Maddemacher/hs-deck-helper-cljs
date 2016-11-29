@@ -30,3 +30,7 @@
 
 (deftest block-handler-gets-current-player-block-correctly
   (is (= (block-handler/get-block-data data/player-change) data/player-change-parsed)))
+
+
+(deftest block-handler-gets-nzoth-played-block-correctly
+  (is (= (block-handler/get-block-data (:content data/nzoth-played-block)) data/nzoth-played-parsed)))

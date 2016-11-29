@@ -11,40 +11,37 @@
                  :entity ""
                  :tags []
                  :blocks []
+                 :full-entities []
                  :shown-entities []})
 
-(defn get-block-data [content]
-  (logger/pprint "Reacting to" content)
-  (let [
-        block-data (atom base-block)
-        block-head (first content)
-        block-head-level (:level block-head)
+(defn get-block-data
+  ([content] (get-block-data content 1))
+  ([content level]
+   (logger/pprint "Reacting to" content)
+   (let [block-data (atom base-block)
+         lines-of-level (filter #(= (:level %) level) content)
+         lines-not-in-level (filter #(not= (:level %) level) content)]
 
-        lines (rest content)
-        ]
+     (mapv
+      #(let [data (:data %)]
+          (cond
+            (< 1 (:level line)) nil
+            (str/includes? data "TAG_CHANGE") (swap! block-data update-in [:tags] conj (tag-handler/get-tag-data data))
+            (str/includes? data "FULL_ENTITY") (swap! block-data update-in [:full-entities] conj (entity-handler/get-full-entity-data data))
+            (str/includes? data "SHOW_ENTITY") (swap! block-data update-in [:shown-entities] conj (entity-handler/get-show-entity-data data))
+            (str/includes? data "BLOCK_START") (do (swap! block-data assoc :type (parsers/get-block-type data))
+                                                   (swap! block-data assoc :entity (parsers/get-entity data)))))
+        lines-of-level)
 
-    (swap! block-data assoc :type (parsers/get-block-type (:data block-head)))
-    (swap! block-data assoc :entity (parsers/get-entity (:data block-head)))
+     (let [groups (vals (group-by :entity (:tags @block-data)))]
+       (swap! block-data assoc :tags (mapv #(apply merge %) groups)))
 
+     (when (not-empty lines-not-in-level)
+       (swap! block-data update-in [:blocks] conj (get-block-data lines-not-in-level (inc level))))
 
-    (mapv
+     (logger/pprint "Extracted" @block-data)
 
-     (fn [line]
-
-       (cond
-         (< 1 (:level line)) nil
-         (str/includes? (:data line) "TAG_CHANGE") (swap! block-data update-in [:tags] conj (tag-handler/get-tag-data (:data line)))
-         (str/includes? (:data line) "SHOW_ENTITY") (swap! block-data update-in [:shown-entities] conj (entity-handler/get-show-entity-data (:data line)))
-         (str/includes? (:data line) "BLOCK_START") (logger/temp "Block in block")))
-
-     lines)
-
-    (let [groups (vals (group-by :entity (:tags @block-data)))]
-      (swap! block-data assoc :tags (mapv #(apply merge %) groups)))
-
-    (logger/pprint "Extracted" @block-data)
-
-    @block-data))
+     @block-data)))
 
 (defn handle-shown-entity [entity]
 
