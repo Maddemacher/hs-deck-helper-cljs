@@ -38,8 +38,11 @@
                            :entity "Madde"
                            :tags [{:entity "[id=15 cardId= type=INVALID zone=DECK zonePos=0 player=1]"
                                    :current_zone "DECK"
+                                   :current_zone_position 0
+                                   :id 15
                                    :player 1
-                                   :zone_position 6}
+                                   :zone_position 6
+                                   }
 
                                   {:entity "Madde"
                                    :num_cards_drawn_this_turn 1}
@@ -158,76 +161,94 @@
 
 
 (def nzoth-played-parsed
-  {:type "PLAY"
+  {:type   "PLAY"
    :entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
-   :tags [{
-           :entity "Madde"
-           :resources_used 1
-           :num_resources_spent_this_game 1
-           :num_cards_played_this_turn 1
-           :num_minions_played_this_turn 1
-           :last_card_played 5
-           :combo_active 1
-           :num_options_played_this_turn 1
-           }
-          {
-           :entity "[name=Gorehowl id=15 zone=HAND zonePos=6 cardId=EX1_411 player=1]"
-           :current_zone "HAND"
-           :player 1
-           :zone_position 5
-           }
-          {
-           :entity "[name=Kor'kron Elite id=25 zone=HAND zonePos=4 cardId=NEW1_011 player=1]"
-           :current_zone "HAND"
-           :player 1
-           :zone_position 3
-           }
-          {
-           :entity "[name=The Coin id=68 zone=HAND zonePos=5 cardId=GAME_005 player=1]"
-           :current_zone "HAND"
-           :player 1
-           :zone_position 4}
-          {
-           :entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
-           :current_zone "HAND"
-           :zone "PLAY"
-           :zone_position 1
-           :exhausted 1
-           :player 1
-           :just_played 1
-           }
-          {
-           :entity "[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1]"
-           :current_zone "HAND"
-           :player 1
-           :tag_last_known_cost_in_hand 3
-           :cost 3
-           }
-          {
-           :entity "[name=Garrosh Hellscream id=64 zone=PLAY zonePos=0 cardId=HERO_01 player=1]"
-           :current_zone "PLAY"
-           :player 1
-           :atk 1
-           }
+   :tags   [{
+             :entity                        "Madde"
+             :resources_used                1
+             :num_resources_spent_this_game 1
+             :num_cards_played_this_turn    1
+             :num_minions_played_this_turn  1
+             :last_card_played              5
+             :combo_active                  1
+             :num_options_played_this_turn  1
+             }
+            {
+             :entity        "[name=Gorehowl id=15 zone=HAND zonePos=6 cardId=EX1_411 player=1]"
+             :current_zone  "HAND"
+             :current_zone_position 6
+             :player        1
+             :id            15
+             :card_id       "EX1_411"
+             :zone_position 5
+             }
+            {
+             :entity        "[name=Kor'kron Elite id=25 zone=HAND zonePos=4 cardId=NEW1_011 player=1]"
+             :current_zone  "HAND"
+             :current_zone_position 4
+             :player        1
+             :id            25
+             :card_id       "NEW1_011"
+             :zone_position 3
+             }
+            {
+             :entity        "[name=The Coin id=68 zone=HAND zonePos=5 cardId=GAME_005 player=1]"
+             :current_zone  "HAND"
+             :current_zone_position 5
+             :player        1
+             :id            68
+             :card_id       "GAME_005"
+             :zone_position 4}
+            {
+             :entity        "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+             :current_zone  "HAND"
+             :zone          "PLAY"
+             :id            5
+             :zone_position 1
+             :current_zone_position 3
+             :exhausted     1
+             :player        1
+             :card_id       "OG_312"
+             :just_played   1
+             }
+            {
+             :entity                      "[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1]"
+             :current_zone                "HAND"
+             :player                      1
+             :current_zone_position 2
+             :id                          14
+             :card_id                     "NEW1_022"
+             :tag_last_known_cost_in_hand 3
+             :cost                        3
+             }
+            {
+             :entity       "[name=Garrosh Hellscream id=64 zone=PLAY zonePos=0 cardId=HERO_01 player=1]"
+             :current_zone "PLAY"
+             :current_zone_position 0
+             :card_id      "HERO_01"
+             :id           64
+             :player       1
+             :atk          1
+             }
 
-          ]
-   :blocks [
-            {:entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
-             :type "POWER"
-             :tags [{:entity "Madde" :334 69}]
-             :blocks []
-             :full-entities [{
-                              :cardid "OG_058"
-                              :atk 1
-                              :cost 1
-                              :zone "PLAY"
-                              :controller 1
-                              :entity_id 69
-                              :durability 3
-                              :cardtype "WEAPON"
-                              :creator 5
-                              :tag_last_known_cost_in_hand 1
-                              }]
-             :shown-entities []}]
-   :full-entities []
+            ]
+   :blocks         [
+                    {:entity         "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+                     :type           "POWER"
+                     :tags           [{:entity "Madde" :334 69}]
+                     :blocks         []
+                     :full-entities  [{
+                                       :cardid                      "OG_058"
+                                       :atk                         1
+                                       :cost                        1
+                                       :zone                        "PLAY"
+                                       :controller                  1
+                                       :entity_id                   69
+                                       :durability                  3
+                                       :cardtype                    "WEAPON"
+                                       :creator                     5
+                                       :tag_last_known_cost_in_hand 1
+                                       }]
+                     :shown-entities []}]
+   :full-entities  []
    :shown-entities []})

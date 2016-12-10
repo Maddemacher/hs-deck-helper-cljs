@@ -24,6 +24,13 @@
   (let [found (re-find #"player=\d+" line)]
     (when found (apply str (drop 7 found)))))
 
+(defn get-name [line]
+  nil)
+
+(defn get-id [line]
+  (let [found (re-find #"id=\d+" line)]
+    (when found (apply str (drop 3 found)))))
+
 (defn get-value [line]
   (parse-value (apply str (drop 6 (re-find #"value=\S+" line)))))
 

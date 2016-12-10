@@ -26323,6 +26323,13 @@ hs_deck_helper_cljs.parsers.get_player = function(a) {
   a = cljs.core.re_find.call(null, /player=\d+/, a);
   return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, a)) : null;
 };
+hs_deck_helper_cljs.parsers.get_name = function(a) {
+  return null;
+};
+hs_deck_helper_cljs.parsers.get_id = function(a) {
+  a = cljs.core.re_find.call(null, /id=\d+/, a);
+  return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 3, a)) : null;
+};
 hs_deck_helper_cljs.parsers.get_value = function(a) {
   return hs_deck_helper_cljs.parsers.parse_value.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 6, cljs.core.re_find.call(null, /value=\S+/, a))));
 };
@@ -26343,9 +26350,13 @@ hs_deck_helper_cljs.tag_handler.handle_tag_change = function(a) {
 hs_deck_helper_cljs.tag_handler.get_tag_data = function(a) {
   var b = hs_deck_helper_cljs.parsers.get_entity.call(null, a);
   a = cljs.core.atom.call(null, cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "entity", "entity", -450970276), b, cljs.core.keyword.call(null, hs_deck_helper_cljs.parsers.get_tag.call(null, a).toLowerCase()), hs_deck_helper_cljs.parsers.get_value.call(null, a)], !0, !1));
-  var c = hs_deck_helper_cljs.parsers.get_zone.call(null, b), b = hs_deck_helper_cljs.parsers.get_player.call(null, b);
+  var c = hs_deck_helper_cljs.parsers.get_zone.call(null, b), d = hs_deck_helper_cljs.parsers.get_zone_pos.call(null, b), e = hs_deck_helper_cljs.parsers.get_id.call(null, b), f = hs_deck_helper_cljs.parsers.get_card_id.call(null, b), g = hs_deck_helper_cljs.parsers.get_name.call(null, b), b = hs_deck_helper_cljs.parsers.get_player.call(null, b);
   cljs.core.truth_(b) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "player", "player", -97687400), hs_deck_helper_cljs.parsers.parse_value.call(null, b));
   cljs.core.truth_(c) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "current_zone", "current_zone", 1514433524), c);
+  cljs.core.truth_(d) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "current_zone_position", "current_zone_position", 1374988486), hs_deck_helper_cljs.parsers.parse_value.call(null, d));
+  cljs.core.truth_(f) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "card_id", "card_id", -1010397033), f);
+  cljs.core.truth_(g) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "name", "name", 1843675177), g);
+  cljs.core.truth_(e) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "id", "id", -1388402092), hs_deck_helper_cljs.parsers.parse_value.call(null, e));
   return cljs.core.deref.call(null, a);
 };
 hs_deck_helper_cljs.regexps = {};
