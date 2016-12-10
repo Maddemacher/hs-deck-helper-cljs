@@ -49,3 +49,10 @@
  (fn [db [_ player]]
    (logger/info "current player event" player)
    (assoc db :current-player player)))
+
+(reg-event-db
+ :card-played
+ (fn [db [_ card]]
+   (if (= "Madde" (:current-player db))
+     (assoc db :friendly-play (conj (:friendly-play db) card))
+     (assoc db :opposing-play (conj (:opposing-play db) card)))))

@@ -37,6 +37,8 @@
 (def gorehowl-draw-parsed {:type "TRIGGER"
                            :entity "Madde"
                            :tags [{:entity "[id=15 cardId= type=INVALID zone=DECK zonePos=0 player=1]"
+                                   :current_zone "DECK"
+                                   :player 1
                                    :zone_position 6}
 
                                   {:entity "Madde"
@@ -170,29 +172,41 @@
            }
           {
            :entity "[name=Gorehowl id=15 zone=HAND zonePos=6 cardId=EX1_411 player=1]"
+           :current_zone "HAND"
+           :player 1
            :zone_position 5
            }
           {
            :entity "[name=Kor'kron Elite id=25 zone=HAND zonePos=4 cardId=NEW1_011 player=1]"
+           :current_zone "HAND"
+           :player 1
            :zone_position 3
            }
           {
            :entity "[name=The Coin id=68 zone=HAND zonePos=5 cardId=GAME_005 player=1]"
+           :current_zone "HAND"
+           :player 1
            :zone_position 4}
           {
            :entity "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+           :current_zone "HAND"
            :zone "PLAY"
            :zone_position 1
            :exhausted 1
+           :player 1
            :just_played 1
            }
           {
            :entity "[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1]"
+           :current_zone "HAND"
+           :player 1
            :tag_last_known_cost_in_hand 3
            :cost 3
            }
           {
            :entity "[name=Garrosh Hellscream id=64 zone=PLAY zonePos=0 cardId=HERO_01 player=1]"
+           :current_zone "PLAY"
+           :player 1
            :atk 1
            }
 

@@ -34,5 +34,10 @@
          (logger/info "Current player changed")
          (re-frame/dispatch [:current-player player])))
 
+  (.on ipcRenderer "card-played"
+       (fn [event card]
+         (logger/info "Card played:" card)
+         (re-frame/dispatch [:card-played card])))
+
 
   )

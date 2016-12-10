@@ -40,3 +40,7 @@
 
 (defn send-current-player [player]
   (send-message "current-player" player))
+
+(defn send-card-played [tag]
+  (logger/temp "sendingin card played" tag)
+  (send-message "card-played" tag))

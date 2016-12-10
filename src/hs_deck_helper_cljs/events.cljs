@@ -65,10 +65,12 @@
   (let [maybe-block (parse-line line)]
     (when maybe-block (do (block-handler/handle-block maybe-block))))
 
-  (when-not (:appending @block-buffer)
-    (condp re-find line
-      regexps/friendly-draw (on-friendly-draw (resources/get-card line))
-      regexps/friendly-play (on-friendly-play (resources/get-card line))
-      regexps/opposing-play (on-opposing-play (resources/get-card line))
-      regexps/tag-change    (tag-handler/handle-tag-change line)
-      (logger/info "No action on line: " line))))
+  ;  (when-not (:appending @block-buffer)
+  ;  (condp re-find line
+  ;  regexps/friendly-draw (on-friendly-draw (resources/get-card line))
+  ; regexps/friendly-play (on-friendly-play (resources/get-card line))
+  ;  regexps/opposing-play (on-opposing-play (resources/get-card line))
+  ;  regexps/tag-change    (tag-handler/handle-tag-change line)
+   ; (logger/info "No action on line: " line)
+ ;  ))
+)

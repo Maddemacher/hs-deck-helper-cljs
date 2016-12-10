@@ -7,7 +7,7 @@
             [hs-deck-helper-cljs.ipc :as ipc]
             [hs-deck-helper-cljs.regexps :as regexps]))
 
-(def base-block {:type ""
+(defonce base-block {:type ""
                  :entity ""
                  :tags []
                  :blocks []
@@ -45,13 +45,17 @@
 
 (defn handle-shown-entity [entity]
 
+
   )
 
 (defn handle-tag [tag]
-  (when (= 1 (:current_player tag)) (ipc/send-current-player (:entity tag))))
+  (when (and (= 1 (:just_played tag)) (= "PLAY" (:zone tag))) (ipc/send-card-played tag))
+  (when (= 1 (:current_player tag))  (ipc/send-current-player (:entity tag))))
 
 (defn handle-block [block-buffer]
-  (let [block-data (get-block-data (:content block-buffer))]
-    (mapv handle-shown-entity (:shown-entities block-data))
-    (mapv handle-block (:blocks block-data))
-    (mapv handle-tag (:tags block-data))))
+  (act-on-block (get-block-data (:content block-buffer))))
+
+(defn act-on-block [block]
+  (mapv handle-shown-entity (:shown-entities block))
+  (mapv handle-block (:blocks block))
+  (mapv handle-tag (:tags block)))

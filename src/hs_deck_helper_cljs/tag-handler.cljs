@@ -12,4 +12,10 @@
     :else nil))
 
 (defn get-tag-data [line]
-  {:entity (parsers/get-entity line) (keyword (.toLowerCase (parsers/get-tag line))) (parsers/get-value line)})
+  (let [entity (parsers/get-entity line)
+        base (atom {:entity entity (keyword (.toLowerCase (parsers/get-tag line))) (parsers/get-value line)})
+        currentZone (parsers/get-zone entity)
+        player (parsers/get-player entity)]
+    (when player (swap! base assoc :player (parsers/parse-value player)))
+    (when currentZone (swap! base assoc :current_zone currentZone))
+    @base))

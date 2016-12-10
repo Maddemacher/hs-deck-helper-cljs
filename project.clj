@@ -57,6 +57,7 @@
                                       :main hs-deck-helper-cljs-test.runner
                                       :optimizations :none
                                       :target :nodejs
+                                      :output-dir "app/test/js/out/"
                                       }}
               :dev-main {:source-paths ["src_common" "src"]
                           :incremental true
@@ -121,12 +122,12 @@
                                       :target :nodejs
 
                                       ;; no optimize compile (dev)
-                                      ;;:optimizations :none
+                                      :optimizations :none
                                       ;; when no optimize uncomment
-                                      ;;:output-dir "app/prod/js/out"
+                                      :output-dir "app/prod/js/out"
 
                                       ;; simple compile (dev)
-                                      :optimizations :simple
+                                      ;:optimizations :simple
 
                                       ;; advanced compile (prod)
                                       ;;:optimizations :advanced
@@ -145,12 +146,12 @@
                                        ;; :target :nodejs
 
                                        ;; no optimize compile (dev)
-                                       ;;:optimizations :none
+                                       :optimizations :none
                                        ;; when no optimize uncomment
-                                       ;;:output-dir "app/prod/js/out"
+                                       :output-dir "app/prod/js/front/out"
 
                                        ;; simple compile (dev)
-                                       :optimizations :simple
+                                       ;;:optimizations :simple
 
                                        ;; advanced compile (prod)
                                        ;;:optimizations :advanced

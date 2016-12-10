@@ -21878,30 +21878,30 @@ cljs.pprint.column_writer.cljs$core$IFn$_invoke$arity$1 = function(a) {
 };
 cljs.pprint.column_writer.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
   var c = cljs.core.atom.call(null, new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "max", "max", 61366548), b, new cljs.core.Keyword(null, "cur", "cur", 1153190599), 0, new cljs.core.Keyword(null, "line", "line", 212345235), 0, new cljs.core.Keyword(null, "base", "base", 185279322), a], null));
-  "undefined" === typeof cljs.pprint.t_cljs$pprint10930 && (cljs.pprint.t_cljs$pprint10930 = function(a, b, c, g) {
+  "undefined" === typeof cljs.pprint.t_cljs$pprint12644 && (cljs.pprint.t_cljs$pprint12644 = function(a, b, c, g) {
     this.writer = a;
     this.max_columns = b;
     this.fields = c;
-    this.meta10931 = g;
+    this.meta12645 = g;
     this.cljs$lang$protocol_mask$partition0$ = 1074167808;
     this.cljs$lang$protocol_mask$partition1$ = 0;
-  }, cljs.pprint.t_cljs$pprint10930.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a) {
+  }, cljs.pprint.t_cljs$pprint12644.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a) {
     return function(a, b) {
-      return new cljs.pprint.t_cljs$pprint10930(this.writer, this.max_columns, this.fields, b);
+      return new cljs.pprint.t_cljs$pprint12644(this.writer, this.max_columns, this.fields, b);
     };
-  }(c), cljs.pprint.t_cljs$pprint10930.prototype.cljs$core$IMeta$_meta$arity$1 = function(a) {
+  }(c), cljs.pprint.t_cljs$pprint12644.prototype.cljs$core$IMeta$_meta$arity$1 = function(a) {
     return function(a) {
-      return this.meta10931;
+      return this.meta12645;
     };
-  }(c), cljs.pprint.t_cljs$pprint10930.prototype.cljs$core$IDeref$_deref$arity$1 = function(a) {
+  }(c), cljs.pprint.t_cljs$pprint12644.prototype.cljs$core$IDeref$_deref$arity$1 = function(a) {
     return function(a) {
       return this.fields;
     };
-  }(c), cljs.pprint.t_cljs$pprint10930.prototype.cljs$core$IWriter$_flush$arity$1 = function(a) {
+  }(c), cljs.pprint.t_cljs$pprint12644.prototype.cljs$core$IWriter$_flush$arity$1 = function(a) {
     return function(a) {
       return cljs.core._flush.call(null, this.writer);
     };
-  }(c), cljs.pprint.t_cljs$pprint10930.prototype.cljs$core$IWriter$_write$arity$2 = function(a) {
+  }(c), cljs.pprint.t_cljs$pprint12644.prototype.cljs$core$IWriter$_write$arity$2 = function(a) {
     return function(b, c) {
       var g = cljs.core._EQ_, h = cljs.core.type.call(null, c);
       if (cljs.core.truth_(g.call(null, String, h))) {
@@ -21919,20 +21919,20 @@ cljs.pprint.column_writer.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
       }
       throw Error([cljs.core.str("No matching clause: "), cljs.core.str(h)].join(""));
     };
-  }(c), cljs.pprint.t_cljs$pprint10930.getBasis = function(a) {
+  }(c), cljs.pprint.t_cljs$pprint12644.getBasis = function(a) {
     return function() {
-      return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "max-columns", "max-columns", -912112507, null), new cljs.core.Symbol(null, "fields", "fields", -291534703, null), new cljs.core.Symbol(null, "meta10931", "meta10931", 1221628379, null)], null);
+      return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "max-columns", "max-columns", -912112507, null), new cljs.core.Symbol(null, "fields", "fields", -291534703, null), new cljs.core.Symbol(null, "meta12645", "meta12645", 1670007546, null)], null);
     };
-  }(c), cljs.pprint.t_cljs$pprint10930.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint10930.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint10930", cljs.pprint.t_cljs$pprint10930.cljs$lang$ctorPrWriter = function(a) {
+  }(c), cljs.pprint.t_cljs$pprint12644.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint12644.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint12644", cljs.pprint.t_cljs$pprint12644.cljs$lang$ctorPrWriter = function(a) {
     return function(a, b, c) {
-      return cljs.core._write.call(null, b, "cljs.pprint/t_cljs$pprint10930");
+      return cljs.core._write.call(null, b, "cljs.pprint/t_cljs$pprint12644");
     };
-  }(c), cljs.pprint.__GT_t_cljs$pprint10930 = function(a) {
+  }(c), cljs.pprint.__GT_t_cljs$pprint12644 = function(a) {
     return function(a, b, c, d) {
-      return new cljs.pprint.t_cljs$pprint10930(a, b, c, d);
+      return new cljs.pprint.t_cljs$pprint12644(a, b, c, d);
     };
   }(c));
-  return new cljs.pprint.t_cljs$pprint10930(a, b, c, cljs.core.PersistentArrayMap.EMPTY);
+  return new cljs.pprint.t_cljs$pprint12644(a, b, c, cljs.core.PersistentArrayMap.EMPTY);
 };
 cljs.pprint.column_writer.cljs$lang$maxFixedArity = 2;
 cljs.pprint.logical_block = function(a, b, c, d, e, f, g, h, k, l, m, n, p) {
@@ -22891,29 +22891,29 @@ cljs.pprint.pretty_writer = function cljs$pprint$pretty_writer(b, c, d) {
   var e = new cljs.pprint.logical_block(null, null, cljs.core.atom.call(null, 0), cljs.core.atom.call(null, 0), cljs.core.atom.call(null, !1), cljs.core.atom.call(null, !1), null, null, null, null, null, null, null), f = cljs.core.atom.call(null, cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "logical-blocks", "logical-blocks", -1466339776), new cljs.core.Keyword(null, "miser-width", "miser-width", -1310049437), new cljs.core.Keyword(null, "buffer-block", "buffer-block", -10937307), 
   new cljs.core.Keyword(null, "pretty-writer", "pretty-writer", -1222834267), new cljs.core.Keyword(null, "sections", "sections", -886710106), new cljs.core.Keyword(null, "mode", "mode", 654403691), new cljs.core.Keyword(null, "pos", "pos", -864607220), new cljs.core.Keyword(null, "trailing-white-space", "trailing-white-space", 1496006996), new cljs.core.Keyword(null, "base", "base", 185279322), new cljs.core.Keyword(null, "buffer-level", "buffer-level", 928864731), new cljs.core.Keyword(null, "buffer", 
   "buffer", 617295198)], [e, d, e, !0, null, new cljs.core.Keyword(null, "writing", "writing", -1486865108), 0, null, cljs.pprint.column_writer.call(null, b, c), 1, cljs.core.PersistentVector.EMPTY]));
-  "undefined" === typeof cljs.pprint.t_cljs$pprint11083 && (cljs.pprint.t_cljs$pprint11083 = function(b, c, d, e, f, n, p) {
+  "undefined" === typeof cljs.pprint.t_cljs$pprint12797 && (cljs.pprint.t_cljs$pprint12797 = function(b, c, d, e, f, n, p) {
     this.pretty_writer = b;
     this.writer = c;
     this.max_columns = d;
     this.miser_width = e;
     this.lb = f;
     this.fields = n;
-    this.meta11084 = p;
+    this.meta12798 = p;
     this.cljs$lang$protocol_mask$partition0$ = 1074167808;
     this.cljs$lang$protocol_mask$partition1$ = 0;
-  }, cljs.pprint.t_cljs$pprint11083.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+  }, cljs.pprint.t_cljs$pprint12797.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
     return function(b, c) {
-      return new cljs.pprint.t_cljs$pprint11083(this.pretty_writer, this.writer, this.max_columns, this.miser_width, this.lb, this.fields, c);
+      return new cljs.pprint.t_cljs$pprint12797(this.pretty_writer, this.writer, this.max_columns, this.miser_width, this.lb, this.fields, c);
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.prototype.cljs$core$IMeta$_meta$arity$1 = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.prototype.cljs$core$IMeta$_meta$arity$1 = function(b, c) {
     return function(b) {
-      return this.meta11084;
+      return this.meta12798;
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.prototype.cljs$core$IDeref$_deref$arity$1 = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.prototype.cljs$core$IDeref$_deref$arity$1 = function(b, c) {
     return function(b) {
       return this.fields;
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.prototype.cljs$core$IWriter$_write$arity$2 = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.prototype.cljs$core$IWriter$_write$arity$2 = function(b, c) {
     return function(b, c) {
       var d = cljs.core._EQ_, e = cljs.core.type.call(null, c);
       if (cljs.core.truth_(d.call(null, String, e))) {
@@ -22931,32 +22931,32 @@ cljs.pprint.pretty_writer = function cljs$pprint$pretty_writer(b, c, d) {
       }
       throw Error([cljs.core.str("No matching clause: "), cljs.core.str(e)].join(""));
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.prototype.cljs$core$IWriter$_flush$arity$1 = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.prototype.cljs$core$IWriter$_flush$arity$1 = function(b, c) {
     return function(b) {
       cljs.pprint._ppflush.call(null, this);
       return cljs.core._flush.call(null, (new cljs.core.Keyword(null, "base", "base", 185279322)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, cljs.core.deref.call(null, this))));
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.prototype.cljs$pprint$IPrettyFlush$ = !0, cljs.pprint.t_cljs$pprint11083.prototype.cljs$pprint$IPrettyFlush$_ppflush$arity$1 = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.prototype.cljs$pprint$IPrettyFlush$ = !0, cljs.pprint.t_cljs$pprint12797.prototype.cljs$pprint$IPrettyFlush$_ppflush$arity$1 = function(b, c) {
     return function(b) {
       return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "mode", "mode", 654403691)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, cljs.core.deref.call(null, this))), new cljs.core.Keyword(null, "buffering", "buffering", -876713613)) ? (cljs.pprint.write_tokens.call(null, this, (new cljs.core.Keyword(null, "buffer", "buffer", 617295198)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, cljs.core.deref.call(null, this))), !0), cljs.core.swap_BANG_.call(null, cljs.core.deref.call(null, 
       this), cljs.core.assoc, new cljs.core.Keyword(null, "buffer", "buffer", 617295198), cljs.core.PersistentVector.EMPTY)) : cljs.pprint.write_white_space.call(null, this);
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.getBasis = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.getBasis = function(b, c) {
     return function() {
       return new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.with_meta(new cljs.core.Symbol(null, "pretty-writer", "pretty-writer", 417697260, null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "private", "private", -558947994), !0, new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), cljs.core.list(new cljs.core.Symbol(null, "quote", "quote", 1377916282, null), cljs.core.list(new cljs.core.PersistentVector(null, 
       3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "max-columns", "max-columns", -912112507, null), new cljs.core.Symbol(null, "miser-width", "miser-width", 330482090, null)], null)))], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "max-columns", "max-columns", -912112507, null), new cljs.core.Symbol(null, "miser-width", "miser-width", 330482090, null), 
-      new cljs.core.Symbol(null, "lb", "lb", 950310490, null), new cljs.core.Symbol(null, "fields", "fields", -291534703, null), new cljs.core.Symbol(null, "meta11084", "meta11084", 1636655911, null)], null);
+      new cljs.core.Symbol(null, "lb", "lb", 950310490, null), new cljs.core.Symbol(null, "fields", "fields", -291534703, null), new cljs.core.Symbol(null, "meta12798", "meta12798", -1746335667, null)], null);
     };
-  }(e, f), cljs.pprint.t_cljs$pprint11083.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint11083.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint11083", cljs.pprint.t_cljs$pprint11083.cljs$lang$ctorPrWriter = function(b, c) {
+  }(e, f), cljs.pprint.t_cljs$pprint12797.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint12797.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint12797", cljs.pprint.t_cljs$pprint12797.cljs$lang$ctorPrWriter = function(b, c) {
     return function(b, c, d) {
-      return cljs.core._write.call(null, c, "cljs.pprint/t_cljs$pprint11083");
+      return cljs.core._write.call(null, c, "cljs.pprint/t_cljs$pprint12797");
     };
-  }(e, f), cljs.pprint.__GT_t_cljs$pprint11083 = function(b, c) {
+  }(e, f), cljs.pprint.__GT_t_cljs$pprint12797 = function(b, c) {
     return function(b, c, d, e, f, g, h) {
-      return new cljs.pprint.t_cljs$pprint11083(b, c, d, e, f, g, h);
+      return new cljs.pprint.t_cljs$pprint12797(b, c, d, e, f, g, h);
     };
   }(e, f));
-  return new cljs.pprint.t_cljs$pprint11083(cljs$pprint$pretty_writer, b, c, d, e, f, cljs.core.PersistentArrayMap.EMPTY);
+  return new cljs.pprint.t_cljs$pprint12797(cljs$pprint$pretty_writer, b, c, d, e, f, cljs.core.PersistentArrayMap.EMPTY);
 };
 cljs.pprint.start_block = function(a, b, c, d) {
   c = new cljs.pprint.logical_block((new cljs.core.Keyword(null, "logical-blocks", "logical-blocks", -1466339776)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, cljs.core.deref.call(null, a))), null, cljs.core.atom.call(null, 0), cljs.core.atom.call(null, 0), cljs.core.atom.call(null, !1), cljs.core.atom.call(null, !1), b, c, d, null, null, null, null);
@@ -23024,26 +23024,26 @@ cljs.pprint.write_option_table = cljs.core.PersistentHashMap.fromArrays([new clj
   return cljs.pprint._STAR_print_miser_width_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-miser-width*", "cljs.pprint/*print-miser-width*", 1588913450, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "added", "added", 2057651688), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), 
 new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-miser-width*", "*print-miser-width*", 
-1206624211, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 21, 1, !0, 632, 637, cljs.core.List.EMPTY, "The column at which to enter miser style. Depending on the dispatch table,\nmiser style add newlines in more places to try to keep lines short allowing for further\nlevels of nesting.", cljs.core.truth_(cljs.pprint._STAR_print_miser_width_STAR_) ? cljs.pprint._STAR_print_miser_width_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
+1206624211, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 21, 1, !0, 632, 637, cljs.core.List.EMPTY, "The column at which to enter miser style. Depending on the dispatch table,\nmiser style add newlines in more places to try to keep lines short allowing for further\nlevels of nesting.", cljs.core.truth_(cljs.pprint._STAR_print_miser_width_STAR_) ? cljs.pprint._STAR_print_miser_width_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_right_margin_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-right-margin*", "cljs.pprint/*print-right-margin*", -56183119, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "added", "added", 2057651688), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), 
 new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-right-margin*", "*print-right-margin*", 
--437272454, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 22, 1, !0, 625, 630, cljs.core.List.EMPTY, "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.", cljs.core.truth_(cljs.pprint._STAR_print_right_margin_STAR_) ? cljs.pprint._STAR_print_right_margin_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
+-437272454, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 22, 1, !0, 625, 630, cljs.core.List.EMPTY, "Pretty printing will try to avoid anything going beyond this column.\nSet it to nil to have pprint let the line be arbitrarily long. This will ignore all\nnon-mandatory newlines.", cljs.core.truth_(cljs.pprint._STAR_print_right_margin_STAR_) ? cljs.pprint._STAR_print_right_margin_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_circle_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-circle*", "cljs.pprint/*print-circle*", 1606185849, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "private", "private", -558947994), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), 
 new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], [!0, new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-circle*", "*print-circle*", 
-1148404994, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 15, 1, !0, 646, 649, cljs.core.List.EMPTY, "Mark circular structures (N.B. This is not yet used)", cljs.core.truth_(cljs.pprint._STAR_print_circle_STAR_) ? cljs.pprint._STAR_print_circle_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
+1148404994, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 15, 1, !0, 646, 649, cljs.core.List.EMPTY, "Mark circular structures (N.B. This is not yet used)", cljs.core.truth_(cljs.pprint._STAR_print_circle_STAR_) ? cljs.pprint._STAR_print_circle_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_lines_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-lines*", "cljs.pprint/*print-lines*", 534683484, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "private", "private", -558947994), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), 
 new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], [!0, new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-lines*", "*print-lines*", 
-75920659, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 14, 1, !0, 640, 643, cljs.core.List.EMPTY, "Maximum number of lines to print in a pretty print instance (N.B. This is not yet used)", cljs.core.truth_(cljs.pprint._STAR_print_lines_STAR_) ? cljs.pprint._STAR_print_lines_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
+75920659, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 14, 1, !0, 640, 643, cljs.core.List.EMPTY, "Maximum number of lines to print in a pretty print instance (N.B. This is not yet used)", cljs.core.truth_(cljs.pprint._STAR_print_lines_STAR_) ? cljs.pprint._STAR_print_lines_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_suppress_namespaces_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-suppress-namespaces*", "cljs.pprint/*print-suppress-namespaces*", 1649488204, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "added", "added", 2057651688), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", 
 "column", 2078222095), new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-suppress-namespaces*", 
-"*print-suppress-namespaces*", 1795828355, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 28, 1, !0, 657, 661, cljs.core.List.EMPTY, "Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions", cljs.core.truth_(cljs.pprint._STAR_print_suppress_namespaces_STAR_) ? cljs.pprint._STAR_print_suppress_namespaces_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
+"*print-suppress-namespaces*", 1795828355, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 28, 1, !0, 657, 661, cljs.core.List.EMPTY, "Don't print namespaces with symbols. This is particularly useful when\npretty printing the results of macro expansions", cljs.core.truth_(cljs.pprint._STAR_print_suppress_namespaces_STAR_) ? cljs.pprint._STAR_print_suppress_namespaces_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_radix_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-radix*", "cljs.pprint/*print-radix*", 1558253641, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "added", "added", 2057651688), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), new cljs.core.Keyword(null, 
-"dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-radix*", "*print-radix*", 1168517744, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 
+"dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-radix*", "*print-radix*", 1168517744, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 
 14, 1, !0, 665, 670, cljs.core.List.EMPTY, "Print a radix specifier in front of integers and rationals. If *print-base* is 2, 8,\nor 16, then the radix specifier used is #b, #o, or #x, respectively. Otherwise the\nradix specifier is in the form #XXr where XX is the decimal value of *print-base* ", cljs.core.truth_(cljs.pprint._STAR_print_radix_STAR_) ? cljs.pprint._STAR_print_radix_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.core._STAR_print_level_STAR_;
 }, new cljs.core.Symbol("cljs.core", "*print-level*", "cljs.core/*print-level*", 65848482, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, 
@@ -23057,7 +23057,7 @@ new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(nu
   return cljs.pprint._STAR_print_pprint_dispatch_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-pprint-dispatch*", "cljs.pprint/*print-pprint-dispatch*", -1820734013, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "added", "added", 2057651688), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 
 2078222095), new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-pprint-dispatch*", 
-"*print-pprint-dispatch*", -1709114492, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 25, 1, !0, 619, 623, cljs.core.List.EMPTY, "The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.", cljs.core.truth_(cljs.pprint._STAR_print_pprint_dispatch_STAR_) ? cljs.pprint._STAR_print_pprint_dispatch_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
+"*print-pprint-dispatch*", -1709114492, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 25, 1, !0, 619, 623, cljs.core.List.EMPTY, "The pretty print dispatch function. Use with-pprint-dispatch or\nset-pprint-dispatch to modify.", cljs.core.truth_(cljs.pprint._STAR_print_pprint_dispatch_STAR_) ? cljs.pprint._STAR_print_pprint_dispatch_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.core._STAR_print_length_STAR_;
 }, new cljs.core.Symbol("cljs.core", "*print-length*", "cljs.core/*print-length*", -20766927, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, 
 "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "jsdoc", "jsdoc", 1745183516), new cljs.core.Keyword(null, "test", "test", 577538877)], [new cljs.core.Symbol(null, "cljs.core", "cljs.core", 770546058, null), new cljs.core.Symbol(null, "*print-length*", "*print-length*", -687693654, null), "cljs/core.cljs", 
@@ -23065,11 +23065,11 @@ new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(nu
 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["@type {null|number}"], null), cljs.core.truth_(cljs.core._STAR_print_length_STAR_) ? cljs.core._STAR_print_length_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_pretty_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-pretty*", "cljs.pprint/*print-pretty*", -762636861, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571), 
-new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], [new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-pretty*", "*print-pretty*", 726795140, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 
+new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], [new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-pretty*", "*print-pretty*", 726795140, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 
 16, 1, !0, 615, 617, cljs.core.List.EMPTY, "Bind to true if you want write to use pretty printing", cljs.core.truth_(cljs.pprint._STAR_print_pretty_STAR_) ? cljs.pprint._STAR_print_pretty_STAR_.cljs$lang$test : null])), new cljs.core.Var(function() {
   return cljs.pprint._STAR_print_base_STAR_;
 }, new cljs.core.Symbol("cljs.pprint", "*print-base*", "cljs.pprint/*print-base*", 1887526790, null), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "added", "added", 2057651688), new cljs.core.Keyword(null, "ns", "ns", 441598760), new cljs.core.Keyword(null, "name", "name", 1843675177), new cljs.core.Keyword(null, "file", "file", -1269645878), new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), new cljs.core.Keyword(null, "column", "column", 2078222095), new cljs.core.Keyword(null, 
-"dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-base*", "*print-base*", 2037937791, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-0\\cljs\\pprint.cljs", 
+"dynamic", "dynamic", 704819571), new cljs.core.Keyword(null, "line", "line", 212345235), new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), new cljs.core.Keyword(null, "doc", "doc", 1913296891), new cljs.core.Keyword(null, "test", "test", 577538877)], ["1.2", new cljs.core.Symbol(null, "cljs.pprint", "cljs.pprint", -966900911, null), new cljs.core.Symbol(null, "*print-base*", "*print-base*", 2037937791, null), "C:\\Git\\hs-deck-helper-cljs\\target\\cljsbuild-compiler-1\\cljs\\pprint.cljs", 
 13, 1, !0, 672, 675, cljs.core.List.EMPTY, "The base to use for printing integers and rationals.", cljs.core.truth_(cljs.pprint._STAR_print_base_STAR_) ? cljs.pprint._STAR_print_base_STAR_.cljs$lang$test : null]))]);
 cljs.pprint.table_ize = function(a, b) {
   return cljs.core.apply.call(null, cljs.core.hash_map, cljs.core.mapcat.call(null, function(b) {
@@ -24055,19 +24055,19 @@ cljs.pprint.justify_clauses = function(a, b, c) {
   return g;
 };
 cljs.pprint.downcase_writer = function cljs$pprint$downcase_writer(b) {
-  "undefined" === typeof cljs.pprint.t_cljs$pprint11557 && (cljs.pprint.t_cljs$pprint11557 = function(b, d, e) {
+  "undefined" === typeof cljs.pprint.t_cljs$pprint13271 && (cljs.pprint.t_cljs$pprint13271 = function(b, d, e) {
     this.downcase_writer = b;
     this.writer = d;
-    this.meta11558 = e;
+    this.meta13272 = e;
     this.cljs$lang$protocol_mask$partition0$ = 1074135040;
     this.cljs$lang$protocol_mask$partition1$ = 0;
-  }, cljs.pprint.t_cljs$pprint11557.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, d) {
-    return new cljs.pprint.t_cljs$pprint11557(this.downcase_writer, this.writer, d);
-  }, cljs.pprint.t_cljs$pprint11557.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta11558;
-  }, cljs.pprint.t_cljs$pprint11557.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
+  }, cljs.pprint.t_cljs$pprint13271.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, d) {
+    return new cljs.pprint.t_cljs$pprint13271(this.downcase_writer, this.writer, d);
+  }, cljs.pprint.t_cljs$pprint13271.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta13272;
+  }, cljs.pprint.t_cljs$pprint13271.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
     return cljs.core._flush.call(null, this.writer);
-  }, cljs.pprint.t_cljs$pprint11557.prototype.cljs$core$IWriter$_write$arity$2 = function(b, d) {
+  }, cljs.pprint.t_cljs$pprint13271.prototype.cljs$core$IWriter$_write$arity$2 = function(b, d) {
     var e = cljs.core._EQ_, f = cljs.core.type.call(null, d);
     if (cljs.core.truth_(e.call(null, String, f))) {
       return cljs.core._write.call(null, this.writer, clojure.string.lower_case.call(null, d));
@@ -24076,30 +24076,30 @@ cljs.pprint.downcase_writer = function cljs$pprint$downcase_writer(b) {
       return cljs.core._write.call(null, this.writer, clojure.string.lower_case.call(null, cljs.core.char$.call(null, d)));
     }
     throw Error([cljs.core.str("No matching clause: "), cljs.core.str(f)].join(""));
-  }, cljs.pprint.t_cljs$pprint11557.getBasis = function() {
+  }, cljs.pprint.t_cljs$pprint13271.getBasis = function() {
     return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.with_meta(new cljs.core.Symbol(null, "downcase-writer", "downcase-writer", 37286911, null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "private", "private", -558947994), !0, new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), cljs.core.list(new cljs.core.Symbol(null, "quote", "quote", 1377916282, null), cljs.core.list(new cljs.core.PersistentVector(null, 
-    1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, converting all characters to lower case"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "meta11558", "meta11558", -1266795153, null)], null);
-  }, cljs.pprint.t_cljs$pprint11557.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint11557.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint11557", cljs.pprint.t_cljs$pprint11557.cljs$lang$ctorPrWriter = function(b, d, e) {
-    return cljs.core._write.call(null, d, "cljs.pprint/t_cljs$pprint11557");
-  }, cljs.pprint.__GT_t_cljs$pprint11557 = function(b, d, e) {
-    return new cljs.pprint.t_cljs$pprint11557(b, d, e);
+    1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, converting all characters to lower case"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "meta13272", "meta13272", -909263456, null)], null);
+  }, cljs.pprint.t_cljs$pprint13271.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint13271.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint13271", cljs.pprint.t_cljs$pprint13271.cljs$lang$ctorPrWriter = function(b, d, e) {
+    return cljs.core._write.call(null, d, "cljs.pprint/t_cljs$pprint13271");
+  }, cljs.pprint.__GT_t_cljs$pprint13271 = function(b, d, e) {
+    return new cljs.pprint.t_cljs$pprint13271(b, d, e);
   });
-  return new cljs.pprint.t_cljs$pprint11557(cljs$pprint$downcase_writer, b, cljs.core.PersistentArrayMap.EMPTY);
+  return new cljs.pprint.t_cljs$pprint13271(cljs$pprint$downcase_writer, b, cljs.core.PersistentArrayMap.EMPTY);
 };
 cljs.pprint.upcase_writer = function cljs$pprint$upcase_writer(b) {
-  "undefined" === typeof cljs.pprint.t_cljs$pprint11569 && (cljs.pprint.t_cljs$pprint11569 = function(b, d, e) {
+  "undefined" === typeof cljs.pprint.t_cljs$pprint13283 && (cljs.pprint.t_cljs$pprint13283 = function(b, d, e) {
     this.upcase_writer = b;
     this.writer = d;
-    this.meta11570 = e;
+    this.meta13284 = e;
     this.cljs$lang$protocol_mask$partition0$ = 1074135040;
     this.cljs$lang$protocol_mask$partition1$ = 0;
-  }, cljs.pprint.t_cljs$pprint11569.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, d) {
-    return new cljs.pprint.t_cljs$pprint11569(this.upcase_writer, this.writer, d);
-  }, cljs.pprint.t_cljs$pprint11569.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta11570;
-  }, cljs.pprint.t_cljs$pprint11569.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
+  }, cljs.pprint.t_cljs$pprint13283.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, d) {
+    return new cljs.pprint.t_cljs$pprint13283(this.upcase_writer, this.writer, d);
+  }, cljs.pprint.t_cljs$pprint13283.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta13284;
+  }, cljs.pprint.t_cljs$pprint13283.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
     return cljs.core._flush.call(null, this.writer);
-  }, cljs.pprint.t_cljs$pprint11569.prototype.cljs$core$IWriter$_write$arity$2 = function(b, d) {
+  }, cljs.pprint.t_cljs$pprint13283.prototype.cljs$core$IWriter$_write$arity$2 = function(b, d) {
     var e = cljs.core._EQ_, f = cljs.core.type.call(null, d);
     if (cljs.core.truth_(e.call(null, String, f))) {
       return cljs.core._write.call(null, this.writer, clojure.string.upper_case.call(null, d));
@@ -24108,15 +24108,15 @@ cljs.pprint.upcase_writer = function cljs$pprint$upcase_writer(b) {
       return cljs.core._write.call(null, this.writer, clojure.string.upper_case.call(null, cljs.core.char$.call(null, d)));
     }
     throw Error([cljs.core.str("No matching clause: "), cljs.core.str(f)].join(""));
-  }, cljs.pprint.t_cljs$pprint11569.getBasis = function() {
+  }, cljs.pprint.t_cljs$pprint13283.getBasis = function() {
     return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.with_meta(new cljs.core.Symbol(null, "upcase-writer", "upcase-writer", 51077317, null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "private", "private", -558947994), !0, new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), cljs.core.list(new cljs.core.Symbol(null, "quote", "quote", 1377916282, null), cljs.core.list(new cljs.core.PersistentVector(null, 1, 
-    5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, converting all characters to upper case"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "meta11570", "meta11570", -157952667, null)], null);
-  }, cljs.pprint.t_cljs$pprint11569.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint11569.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint11569", cljs.pprint.t_cljs$pprint11569.cljs$lang$ctorPrWriter = function(b, d, e) {
-    return cljs.core._write.call(null, d, "cljs.pprint/t_cljs$pprint11569");
-  }, cljs.pprint.__GT_t_cljs$pprint11569 = function(b, d, e) {
-    return new cljs.pprint.t_cljs$pprint11569(b, d, e);
+    5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, converting all characters to upper case"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "meta13284", "meta13284", 1510191412, null)], null);
+  }, cljs.pprint.t_cljs$pprint13283.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint13283.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint13283", cljs.pprint.t_cljs$pprint13283.cljs$lang$ctorPrWriter = function(b, d, e) {
+    return cljs.core._write.call(null, d, "cljs.pprint/t_cljs$pprint13283");
+  }, cljs.pprint.__GT_t_cljs$pprint13283 = function(b, d, e) {
+    return new cljs.pprint.t_cljs$pprint13283(b, d, e);
   });
-  return new cljs.pprint.t_cljs$pprint11569(cljs$pprint$upcase_writer, b, cljs.core.PersistentArrayMap.EMPTY);
+  return new cljs.pprint.t_cljs$pprint13283(cljs$pprint$upcase_writer, b, cljs.core.PersistentArrayMap.EMPTY);
 };
 cljs.pprint.capitalize_string = function(a, b) {
   var c = cljs.core.first.call(null, a), d = cljs.core.truth_(cljs.core.truth_(b) ? cljs.core.truth_(c) ? goog.string.isUnicodeChar(c) : c : b) ? [cljs.core.str(clojure.string.upper_case.call(null, c)), cljs.core.str(cljs.core.subs.call(null, a, 1))].join("") : a;
@@ -24133,26 +24133,26 @@ cljs.pprint.capitalize_string = function(a, b) {
 };
 cljs.pprint.capitalize_word_writer = function cljs$pprint$capitalize_word_writer(b) {
   var c = cljs.core.atom.call(null, !0);
-  "undefined" === typeof cljs.pprint.t_cljs$pprint11581 && (cljs.pprint.t_cljs$pprint11581 = function(b, c, f, g) {
+  "undefined" === typeof cljs.pprint.t_cljs$pprint13295 && (cljs.pprint.t_cljs$pprint13295 = function(b, c, f, g) {
     this.capitalize_word_writer = b;
     this.writer = c;
     this.last_was_whitespace_QMARK_ = f;
-    this.meta11582 = g;
+    this.meta13296 = g;
     this.cljs$lang$protocol_mask$partition0$ = 1074135040;
     this.cljs$lang$protocol_mask$partition1$ = 0;
-  }, cljs.pprint.t_cljs$pprint11581.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b) {
+  }, cljs.pprint.t_cljs$pprint13295.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b) {
     return function(b, c) {
-      return new cljs.pprint.t_cljs$pprint11581(this.capitalize_word_writer, this.writer, this.last_was_whitespace_QMARK_, c);
+      return new cljs.pprint.t_cljs$pprint13295(this.capitalize_word_writer, this.writer, this.last_was_whitespace_QMARK_, c);
     };
-  }(c), cljs.pprint.t_cljs$pprint11581.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13295.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
     return function(b) {
-      return this.meta11582;
+      return this.meta13296;
     };
-  }(c), cljs.pprint.t_cljs$pprint11581.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13295.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
     return function(b) {
       return cljs.core._flush.call(null, this.writer);
     };
-  }(c), cljs.pprint.t_cljs$pprint11581.prototype.cljs$core$IWriter$_write$arity$2 = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13295.prototype.cljs$core$IWriter$_write$arity$2 = function(b) {
     return function(b, c) {
       var d = cljs.core._EQ_, h = cljs.core.type.call(null, c);
       if (cljs.core.truth_(d.call(null, String, h))) {
@@ -24163,44 +24163,44 @@ cljs.pprint.capitalize_word_writer = function cljs$pprint$capitalize_word_writer
       }
       throw Error([cljs.core.str("No matching clause: "), cljs.core.str(h)].join(""));
     };
-  }(c), cljs.pprint.t_cljs$pprint11581.getBasis = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13295.getBasis = function(b) {
     return function() {
       return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.with_meta(new cljs.core.Symbol(null, "capitalize-word-writer", "capitalize-word-writer", 196688059, null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "private", "private", -558947994), !0, new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), cljs.core.list(new cljs.core.Symbol(null, "quote", "quote", 1377916282, null), cljs.core.list(new cljs.core.PersistentVector(null, 
-      1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, capitalizing all words"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "last-was-whitespace?", "last-was-whitespace?", -1073928093, null), new cljs.core.Symbol(null, "meta11582", "meta11582", -1605791218, null)], null);
+      1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, capitalizing all words"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "last-was-whitespace?", "last-was-whitespace?", -1073928093, null), new cljs.core.Symbol(null, "meta13296", "meta13296", -1266064342, null)], null);
     };
-  }(c), cljs.pprint.t_cljs$pprint11581.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint11581.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint11581", cljs.pprint.t_cljs$pprint11581.cljs$lang$ctorPrWriter = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13295.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint13295.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint13295", cljs.pprint.t_cljs$pprint13295.cljs$lang$ctorPrWriter = function(b) {
     return function(b, c, d) {
-      return cljs.core._write.call(null, c, "cljs.pprint/t_cljs$pprint11581");
+      return cljs.core._write.call(null, c, "cljs.pprint/t_cljs$pprint13295");
     };
-  }(c), cljs.pprint.__GT_t_cljs$pprint11581 = function(b) {
+  }(c), cljs.pprint.__GT_t_cljs$pprint13295 = function(b) {
     return function(b, c, d, h) {
-      return new cljs.pprint.t_cljs$pprint11581(b, c, d, h);
+      return new cljs.pprint.t_cljs$pprint13295(b, c, d, h);
     };
   }(c));
-  return new cljs.pprint.t_cljs$pprint11581(cljs$pprint$capitalize_word_writer, b, c, cljs.core.PersistentArrayMap.EMPTY);
+  return new cljs.pprint.t_cljs$pprint13295(cljs$pprint$capitalize_word_writer, b, c, cljs.core.PersistentArrayMap.EMPTY);
 };
 cljs.pprint.init_cap_writer = function cljs$pprint$init_cap_writer(b) {
   var c = cljs.core.atom.call(null, !1);
-  "undefined" === typeof cljs.pprint.t_cljs$pprint11593 && (cljs.pprint.t_cljs$pprint11593 = function(b, c, f, g) {
+  "undefined" === typeof cljs.pprint.t_cljs$pprint13307 && (cljs.pprint.t_cljs$pprint13307 = function(b, c, f, g) {
     this.init_cap_writer = b;
     this.writer = c;
     this.capped = f;
-    this.meta11594 = g;
+    this.meta13308 = g;
     this.cljs$lang$protocol_mask$partition0$ = 1074135040;
     this.cljs$lang$protocol_mask$partition1$ = 0;
-  }, cljs.pprint.t_cljs$pprint11593.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b) {
+  }, cljs.pprint.t_cljs$pprint13307.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b) {
     return function(b, c) {
-      return new cljs.pprint.t_cljs$pprint11593(this.init_cap_writer, this.writer, this.capped, c);
+      return new cljs.pprint.t_cljs$pprint13307(this.init_cap_writer, this.writer, this.capped, c);
     };
-  }(c), cljs.pprint.t_cljs$pprint11593.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13307.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
     return function(b) {
-      return this.meta11594;
+      return this.meta13308;
     };
-  }(c), cljs.pprint.t_cljs$pprint11593.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13307.prototype.cljs$core$IWriter$_flush$arity$1 = function(b) {
     return function(b) {
       return cljs.core._flush.call(null, this.writer);
     };
-  }(c), cljs.pprint.t_cljs$pprint11593.prototype.cljs$core$IWriter$_write$arity$2 = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13307.prototype.cljs$core$IWriter$_write$arity$2 = function(b) {
     return function(b, c) {
       var d = this, h = cljs.core._EQ_, k = cljs.core.type.call(null, c);
       if (cljs.core.truth_(h.call(null, String, k))) {
@@ -24216,21 +24216,21 @@ cljs.pprint.init_cap_writer = function cljs$pprint$init_cap_writer(b) {
       }
       throw Error([cljs.core.str("No matching clause: "), cljs.core.str(k)].join(""));
     };
-  }(c), cljs.pprint.t_cljs$pprint11593.getBasis = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13307.getBasis = function(b) {
     return function() {
       return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.with_meta(new cljs.core.Symbol(null, "init-cap-writer", "init-cap-writer", -861558336, null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "private", "private", -558947994), !0, new cljs.core.Keyword(null, "arglists", "arglists", 1661989754), cljs.core.list(new cljs.core.Symbol(null, "quote", "quote", 1377916282, null), cljs.core.list(new cljs.core.PersistentVector(null, 
-      1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, capitalizing the first word"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "capped", "capped", -1650988402, null), new cljs.core.Symbol(null, "meta11594", "meta11594", -1877342575, null)], null);
+      1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null, "writer", "writer", 1362963291, null)], null))), new cljs.core.Keyword(null, "doc", "doc", 1913296891), "Returns a proxy that wraps writer, capitalizing the first word"], null)), new cljs.core.Symbol(null, "writer", "writer", 1362963291, null), new cljs.core.Symbol(null, "capped", "capped", -1650988402, null), new cljs.core.Symbol(null, "meta13308", "meta13308", 1725078355, null)], null);
     };
-  }(c), cljs.pprint.t_cljs$pprint11593.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint11593.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint11593", cljs.pprint.t_cljs$pprint11593.cljs$lang$ctorPrWriter = function(b) {
+  }(c), cljs.pprint.t_cljs$pprint13307.cljs$lang$type = !0, cljs.pprint.t_cljs$pprint13307.cljs$lang$ctorStr = "cljs.pprint/t_cljs$pprint13307", cljs.pprint.t_cljs$pprint13307.cljs$lang$ctorPrWriter = function(b) {
     return function(b, c, d) {
-      return cljs.core._write.call(null, c, "cljs.pprint/t_cljs$pprint11593");
+      return cljs.core._write.call(null, c, "cljs.pprint/t_cljs$pprint13307");
     };
-  }(c), cljs.pprint.__GT_t_cljs$pprint11593 = function(b) {
+  }(c), cljs.pprint.__GT_t_cljs$pprint13307 = function(b) {
     return function(b, c, d, h) {
-      return new cljs.pprint.t_cljs$pprint11593(b, c, d, h);
+      return new cljs.pprint.t_cljs$pprint13307(b, c, d, h);
     };
   }(c));
-  return new cljs.pprint.t_cljs$pprint11593(cljs$pprint$init_cap_writer, b, c, cljs.core.PersistentArrayMap.EMPTY);
+  return new cljs.pprint.t_cljs$pprint13307(cljs$pprint$init_cap_writer, b, c, cljs.core.PersistentArrayMap.EMPTY);
 };
 cljs.pprint.modify_case = function(a, b, c, d) {
   d = cljs.core.first.call(null, (new cljs.core.Keyword(null, "clauses", "clauses", 1454841241)).cljs$core$IFn$_invoke$arity$1(b));
@@ -26297,25 +26297,56 @@ hs_deck_helper_cljs.ipc.send_game_lost = function() {
 hs_deck_helper_cljs.ipc.send_current_player = function(a) {
   return hs_deck_helper_cljs.ipc.send_message.call(null, "current-player", a);
 };
+hs_deck_helper_cljs.ipc.send_card_played = function(a) {
+  common.logger.temp.call(null, "sendingin card played", a);
+  return hs_deck_helper_cljs.ipc.send_message.call(null, "card-played", a);
+};
+hs_deck_helper_cljs.parsers = {};
+hs_deck_helper_cljs.parsers.get_entity = function(a) {
+  var b = cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, cljs.core.re_find.call(null, /Entity=\[.+\]/, a)));
+  a = cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, cljs.core.re_find.call(null, /Entity=\S+/, a)));
+  return b > a ? b : a;
+};
+hs_deck_helper_cljs.parsers.get_zone = function(a) {
+  a = cljs.core.re_find.call(null, /zone=\S+/, a);
+  return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 5, a)) : null;
+};
+hs_deck_helper_cljs.parsers.get_card_id = function(a) {
+  a = cljs.core.re_find.call(null, /cardId=\S+/, a);
+  return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, a)) : null;
+};
+hs_deck_helper_cljs.parsers.get_zone_pos = function(a) {
+  a = cljs.core.re_find.call(null, /zonePos=\S+/, a);
+  return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 8, a)) : null;
+};
+hs_deck_helper_cljs.parsers.get_player = function(a) {
+  a = cljs.core.re_find.call(null, /player=\d+/, a);
+  return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, a)) : null;
+};
+hs_deck_helper_cljs.parsers.get_value = function(a) {
+  return hs_deck_helper_cljs.parsers.parse_value.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 6, cljs.core.re_find.call(null, /value=\S+/, a))));
+};
+hs_deck_helper_cljs.parsers.get_block_type = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 10, cljs.core.re_find.call(null, /BlockType=\S+/, a)));
+};
+hs_deck_helper_cljs.parsers.get_tag = function(a) {
+  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 4, cljs.core.re_find.call(null, /tag=\S+/, a)));
+};
+hs_deck_helper_cljs.parsers.parse_value = function(a) {
+  return cljs.core.not.call(null, isNaN(a)) ? Number(a) : a;
+};
 hs_deck_helper_cljs.tag_handler = {};
 hs_deck_helper_cljs.tag_handler.handle_tag_change = function(a) {
   common.logger.tag.call(null, "in handle tag", a);
   return clojure.string.includes_QMARK_.call(null, a, "Entity\x3dMadde tag\x3dPLAYSTATE value\x3dWON") ? hs_deck_helper_cljs.ipc.send_game_won.call(null) : clojure.string.includes_QMARK_.call(null, a, "Entity\x3dMadde tag\x3dPLAYSTATE value\x3dLOST") ? hs_deck_helper_cljs.ipc.send_game_lost.call(null) : null;
 };
-hs_deck_helper_cljs.tag_handler.get_entity = function(a) {
-  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, cljs.core.re_find.call(null, /Entity=\S+/, a)));
-};
-hs_deck_helper_cljs.tag_handler.get_tag = function(a) {
-  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 4, cljs.core.re_find.call(null, /tag=\S+/, a)));
-};
-hs_deck_helper_cljs.tag_handler.get_value = function(a) {
-  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 6, cljs.core.re_find.call(null, /value=\S+/, a)));
-};
-hs_deck_helper_cljs.tag_handler.get_block_type = function(a) {
-  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 10, cljs.core.re_find.call(null, /BlockType=\S+/, a)));
-};
 hs_deck_helper_cljs.tag_handler.get_tag_data = function(a) {
-  return cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "entity", "entity", -450970276), hs_deck_helper_cljs.tag_handler.get_entity.call(null, a), cljs.core.keyword.call(null, hs_deck_helper_cljs.tag_handler.get_tag.call(null, a)), hs_deck_helper_cljs.tag_handler.get_value.call(null, a)], !0, !1);
+  var b = hs_deck_helper_cljs.parsers.get_entity.call(null, a);
+  a = cljs.core.atom.call(null, cljs.core.PersistentArrayMap.fromArray([new cljs.core.Keyword(null, "entity", "entity", -450970276), b, cljs.core.keyword.call(null, hs_deck_helper_cljs.parsers.get_tag.call(null, a).toLowerCase()), hs_deck_helper_cljs.parsers.get_value.call(null, a)], !0, !1));
+  var c = hs_deck_helper_cljs.parsers.get_zone.call(null, b), b = hs_deck_helper_cljs.parsers.get_player.call(null, b);
+  cljs.core.truth_(b) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "player", "player", -97687400), hs_deck_helper_cljs.parsers.parse_value.call(null, b));
+  cljs.core.truth_(c) && cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "current_zone", "current_zone", 1514433524), c);
+  return cljs.core.deref.call(null, a);
 };
 hs_deck_helper_cljs.regexps = {};
 hs_deck_helper_cljs.regexps.transition_card = "TRANSITIONING card .* to ";
@@ -26332,74 +26363,88 @@ hs_deck_helper_cljs.entity_handler = {};
 hs_deck_helper_cljs.entity_handler.get_card_id = function(a) {
   return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, cljs.core.re_find.call(null, /CardID=\S+/, a)));
 };
-hs_deck_helper_cljs.entity_handler.get_zone = function(a) {
-  return cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 5, cljs.core.re_find.call(null, /zone=\S+/, a)));
+hs_deck_helper_cljs.entity_handler.get_tags = function(a) {
+  var b = /tag=.+?value=\S+/;
+  return cljs.core.apply.call(null, cljs.core.merge, cljs.core.mapv.call(null, function(a) {
+    return function(a) {
+      return cljs.core.PersistentHashMap.fromArrays([cljs.core.keyword.call(null, hs_deck_helper_cljs.parsers.get_tag.call(null, a).toLowerCase())], [hs_deck_helper_cljs.parsers.get_value.call(null, a)]);
+    };
+  }(b), cljs.core.re_seq.call(null, b, a)));
 };
 hs_deck_helper_cljs.entity_handler.get_show_entity_data = function(a) {
-  return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "card-id", "card-id", -1770060179), hs_deck_helper_cljs.entity_handler.get_card_id.call(null, a), new cljs.core.Keyword(null, "zone", "zone", 2068674983), hs_deck_helper_cljs.entity_handler.get_zone.call(null, a)], null);
+  return cljs.core.merge.call(null, hs_deck_helper_cljs.entity_handler.get_tags.call(null, a), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "entity", "entity", -450970276), hs_deck_helper_cljs.parsers.get_entity.call(null, a), new cljs.core.Keyword(null, "cardid", "cardid", -67546639), hs_deck_helper_cljs.entity_handler.get_card_id.call(null, a)], null));
+};
+hs_deck_helper_cljs.entity_handler.get_full_entity_data = function(a) {
+  return cljs.core.merge.call(null, hs_deck_helper_cljs.entity_handler.get_tags.call(null, a), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "cardid", "cardid", -67546639), hs_deck_helper_cljs.entity_handler.get_card_id.call(null, a)], null));
 };
 hs_deck_helper_cljs.block_handler = {};
-hs_deck_helper_cljs.block_handler.base_block = new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "type", "type", 1174270348), "", new cljs.core.Keyword(null, "entity", "entity", -450970276), "", new cljs.core.Keyword(null, "tags", "tags", 1771418977), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "blocks", "blocks", -610462153), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809), cljs.core.PersistentVector.EMPTY], 
-null);
+"undefined" === typeof hs_deck_helper_cljs.block_handler.base_block && (hs_deck_helper_cljs.block_handler.base_block = new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null, "type", "type", 1174270348), "", new cljs.core.Keyword(null, "entity", "entity", -450970276), "", new cljs.core.Keyword(null, "tags", "tags", 1771418977), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "blocks", "blocks", -610462153), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, 
+"full-entities", "full-entities", 1607319983), cljs.core.PersistentVector.EMPTY, new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809), cljs.core.PersistentVector.EMPTY], null));
 hs_deck_helper_cljs.block_handler.get_block_data = function(a) {
+  for (var b = [], c = arguments.length, d = 0;;) {
+    if (d < c) {
+      b.push(arguments[d]), d += 1;
+    } else {
+      break;
+    }
+  }
+  switch(b.length) {
+    case 1:
+      return hs_deck_helper_cljs.block_handler.get_block_data.cljs$core$IFn$_invoke$arity$1(arguments[0]);
+    case 2:
+      return hs_deck_helper_cljs.block_handler.get_block_data.cljs$core$IFn$_invoke$arity$2(arguments[0], arguments[1]);
+    default:
+      throw Error([cljs.core.str("Invalid arity: "), cljs.core.str(b.length)].join(""));;
+  }
+};
+hs_deck_helper_cljs.block_handler.get_block_data.cljs$core$IFn$_invoke$arity$1 = function(a) {
+  return hs_deck_helper_cljs.block_handler.get_block_data.call(null, a, 1);
+};
+hs_deck_helper_cljs.block_handler.get_block_data.cljs$core$IFn$_invoke$arity$2 = function(a, b) {
   common.logger.pprint.call(null, "Reacting to", a);
-  var b = cljs.core.atom.call(null, hs_deck_helper_cljs.block_handler.base_block), c = cljs.core.first.call(null, a), d = (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(c);
-  a = cljs.core.rest.call(null, a);
-  cljs.core.swap_BANG_.call(null, b, cljs.core.assoc, new cljs.core.Keyword(null, "type", "type", 1174270348), hs_deck_helper_cljs.tag_handler.get_block_type.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(c)));
-  cljs.core.swap_BANG_.call(null, b, cljs.core.assoc, new cljs.core.Keyword(null, "entity", "entity", -450970276), hs_deck_helper_cljs.tag_handler.get_entity.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(c)));
-  cljs.core.mapv.call(null, function(a, b, c, d) {
-    return function(b) {
-      return 1 < (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(b) ? null : clojure.string.includes_QMARK_.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b), "TAG_CHANGE") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tags", "tags", 1771418977)], null), cljs.core.conj, hs_deck_helper_cljs.tag_handler.get_tag_data.call(null, 
-      (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b))) : clojure.string.includes_QMARK_.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b), "SHOW_ENTITY") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)], null), cljs.core.conj, hs_deck_helper_cljs.entity_handler.get_show_entity_data.call(null, 
-      (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b))) : clojure.string.includes_QMARK_.call(null, (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b), "BLOCK_START") ? common.logger.temp.call(null, "Block in block") : null;
+  var c = cljs.core.atom.call(null, hs_deck_helper_cljs.block_handler.base_block), d = cljs.core.filter.call(null, function(a) {
+    return function(a) {
+      return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(a), b);
     };
-  }(b, c, d, a), a);
-  var e = cljs.core.vals.call(null, cljs.core.group_by.call(null, new cljs.core.Keyword(null, "entity", "entity", -450970276), (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, b))));
-  cljs.core.swap_BANG_.call(null, b, cljs.core.assoc, new cljs.core.Keyword(null, "tags", "tags", 1771418977), cljs.core.mapv.call(null, function(a, b, c, d, e) {
+  }(c), a), e = cljs.core.filter.call(null, function(a, c) {
+    return function(a) {
+      return cljs.core.not_EQ_.call(null, (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(a), b);
+    };
+  }(c, d), a);
+  cljs.core.mapv.call(null, function(a, b, c) {
+    return function(b) {
+      b = (new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(b);
+      return 1 < (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(hs_deck_helper_cljs.block_handler.line) ? null : clojure.string.includes_QMARK_.call(null, b, "TAG_CHANGE") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tags", "tags", 1771418977)], null), cljs.core.conj, hs_deck_helper_cljs.tag_handler.get_tag_data.call(null, b)) : clojure.string.includes_QMARK_.call(null, 
+      b, "FULL_ENTITY") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "full-entities", "full-entities", 1607319983)], null), cljs.core.conj, hs_deck_helper_cljs.entity_handler.get_full_entity_data.call(null, b)) : clojure.string.includes_QMARK_.call(null, b, "SHOW_ENTITY") ? cljs.core.swap_BANG_.call(null, a, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+      [new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)], null), cljs.core.conj, hs_deck_helper_cljs.entity_handler.get_show_entity_data.call(null, b)) : clojure.string.includes_QMARK_.call(null, b, "BLOCK_START") ? (cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "type", "type", 1174270348), hs_deck_helper_cljs.parsers.get_block_type.call(null, b)), cljs.core.swap_BANG_.call(null, a, cljs.core.assoc, new cljs.core.Keyword(null, "entity", 
+      "entity", -450970276), hs_deck_helper_cljs.parsers.get_entity.call(null, b))) : null;
+    };
+  }(c, d, e), d);
+  var f = cljs.core.vals.call(null, cljs.core.group_by.call(null, new cljs.core.Keyword(null, "entity", "entity", -450970276), (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, c))));
+  cljs.core.swap_BANG_.call(null, c, cljs.core.assoc, new cljs.core.Keyword(null, "tags", "tags", 1771418977), cljs.core.mapv.call(null, function(a, b, c, d) {
     return function(a) {
       return cljs.core.apply.call(null, cljs.core.merge, a);
     };
-  }(e, b, c, d, a), e));
-  common.logger.pprint.call(null, "Extracted", cljs.core.deref.call(null, b));
-  return cljs.core.deref.call(null, b);
+  }(f, c, d, e), f));
+  cljs.core.truth_(cljs.core.not_empty.call(null, e)) && cljs.core.swap_BANG_.call(null, c, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "blocks", "blocks", -610462153)], null), cljs.core.conj, hs_deck_helper_cljs.block_handler.get_block_data.call(null, e, b + 1));
+  common.logger.pprint.call(null, "Extracted", cljs.core.deref.call(null, c));
+  return cljs.core.deref.call(null, c);
 };
-hs_deck_helper_cljs.block_handler.parse_tags_update = function(a) {
-  return cljs.core._EQ_.call(null, "1", (new cljs.core.Keyword(null, "CURRENT_PLAYER", "CURRENT_PLAYER", -831145661)).cljs$core$IFn$_invoke$arity$1(a)) ? hs_deck_helper_cljs.ipc.send_current_player.call(null, (new cljs.core.Keyword(null, "entity", "entity", -450970276)).cljs$core$IFn$_invoke$arity$1(a)) : null;
+hs_deck_helper_cljs.block_handler.get_block_data.cljs$lang$maxFixedArity = 2;
+hs_deck_helper_cljs.block_handler.handle_shown_entity = function(a) {
+  return null;
 };
-hs_deck_helper_cljs.block_handler.on_attack_block = function(a) {
-  return common.logger.block.call(null, "Attack block", a);
-};
-hs_deck_helper_cljs.block_handler.on_play_block = function(a) {
-  common.logger.block.call(null, "Play block");
-  return cljs.core.some_QMARK_.call(null, (new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)).cljs$core$IFn$_invoke$arity$1(a)) ? common.logger.block.call(null, "Stuff shown") : null;
-};
-hs_deck_helper_cljs.block_handler.on_trigger_block = function(a) {
-  common.logger.block.call(null, "Trigger block");
-  cljs.core.some_QMARK_.call(null, (new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)).cljs$core$IFn$_invoke$arity$1(a)) && common.logger.block.call(null, "Stuff shown");
-  return cljs.core.mapv.call(null, hs_deck_helper_cljs.block_handler.parse_tags_update, (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(a));
-};
-hs_deck_helper_cljs.block_handler.on_power_block = function(a) {
-  return common.logger.block.call(null, "Power block", a);
-};
-hs_deck_helper_cljs.block_handler.on_deaths_block = function(a) {
-  return common.logger.block.call(null, "Deaths block");
+hs_deck_helper_cljs.block_handler.handle_tag = function(a) {
+  cljs.core._EQ_.call(null, 1, (new cljs.core.Keyword(null, "just_played", "just_played", 211954248)).cljs$core$IFn$_invoke$arity$1(a)) && cljs.core._EQ_.call(null, "PLAY", (new cljs.core.Keyword(null, "zone", "zone", 2068674983)).cljs$core$IFn$_invoke$arity$1(a)) && hs_deck_helper_cljs.ipc.send_card_played.call(null, a);
+  return cljs.core._EQ_.call(null, 1, (new cljs.core.Keyword(null, "current_player", "current_player", 1170669632)).cljs$core$IFn$_invoke$arity$1(a)) ? hs_deck_helper_cljs.ipc.send_current_player.call(null, (new cljs.core.Keyword(null, "entity", "entity", -450970276)).cljs$core$IFn$_invoke$arity$1(a)) : null;
 };
 hs_deck_helper_cljs.block_handler.handle_block = function(a) {
-  a = hs_deck_helper_cljs.block_handler.get_block_data.call(null, (new cljs.core.Keyword(null, "content", "content", 15833224)).cljs$core$IFn$_invoke$arity$1(a));
-  switch((new cljs.core.Keyword(null, "type", "type", 1174270348)).cljs$core$IFn$_invoke$arity$1(a)) {
-    case "ATTACK":
-      return hs_deck_helper_cljs.block_handler.on_attack_block.call(null, a);
-    case "PLAY":
-      return hs_deck_helper_cljs.block_handler.on_play_block.call(null, a);
-    case "TRIGGER":
-      return hs_deck_helper_cljs.block_handler.on_trigger_block.call(null, a);
-    case "POWER":
-      return hs_deck_helper_cljs.block_handler.on_power_block.call(null, a);
-    case "DEATHS":
-      return hs_deck_helper_cljs.block_handler.on_deaths_block.call(null, a);
-    default:
-      return common.logger.error.call(null, "Uknown block found");
-  }
+  return hs_deck_helper_cljs.block_handler.act_on_block.call(null, hs_deck_helper_cljs.block_handler.get_block_data.call(null, (new cljs.core.Keyword(null, "content", "content", 15833224)).cljs$core$IFn$_invoke$arity$1(a)));
+};
+hs_deck_helper_cljs.block_handler.act_on_block = function(a) {
+  cljs.core.mapv.call(null, hs_deck_helper_cljs.block_handler.handle_shown_entity, (new cljs.core.Keyword(null, "shown-entities", "shown-entities", -1213066809)).cljs$core$IFn$_invoke$arity$1(a));
+  cljs.core.mapv.call(null, hs_deck_helper_cljs.block_handler.handle_block, (new cljs.core.Keyword(null, "blocks", "blocks", -610462153)).cljs$core$IFn$_invoke$arity$1(a));
+  return cljs.core.mapv.call(null, hs_deck_helper_cljs.block_handler.handle_tag, (new cljs.core.Keyword(null, "tags", "tags", 1771418977)).cljs$core$IFn$_invoke$arity$1(a));
 };
 hs_deck_helper_cljs.cards = {};
 hs_deck_helper_cljs.cards.cards = cljs.core.PersistentVector.fromArray([new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "KARA_13_23", new cljs.core.Keyword(null, "name", "name", 1843675177), "Romulo"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "id", "id", -1388402092), "LOE_115b", new cljs.core.Keyword(null, "name", "name", 1843675177), "Raven Idol"], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
@@ -27370,7 +27415,7 @@ hs_deck_helper_cljs.events.is_block_start_tag_QMARK_ = function(a) {
   return clojure.string.includes_QMARK_.call(null, a, "BLOCK_START");
 };
 hs_deck_helper_cljs.events.has_start_tag_QMARK_ = function(a) {
-  return cljs.core.truth_(hs_deck_helper_cljs.events.is_block_start_tag_QMARK_.call(null, a)) ? !0 : cljs.core.truth_(hs_deck_helper_cljs.events.is_block_end_tag_QMARK_.call(null, a)) ? !0 : clojure.string.includes_QMARK_.call(null, a, "TAG_CHANGE") ? !0 : clojure.string.includes_QMARK_.call(null, a, "SHOW_ENTITY") ? !0 : !1;
+  return cljs.core.truth_(hs_deck_helper_cljs.events.is_block_start_tag_QMARK_.call(null, a)) ? !0 : cljs.core.truth_(hs_deck_helper_cljs.events.is_block_end_tag_QMARK_.call(null, a)) ? !0 : clojure.string.includes_QMARK_.call(null, a, "TAG_CHANGE") ? !0 : clojure.string.includes_QMARK_.call(null, a, "SHOW_ENTITY") ? !0 : clojure.string.includes_QMARK_.call(null, a, "FULL_ENTITY") ? !0 : !1;
 };
 hs_deck_helper_cljs.events.on_friendly_play = function(a) {
   common.logger.info.call(null, "Friendly play ", cljs.core.clj__GT_js.call(null, a));
@@ -27384,7 +27429,7 @@ hs_deck_helper_cljs.events.on_opposing_play = function(a) {
   common.logger.info.call(null, "Opposing play ", cljs.core.clj__GT_js.call(null, a));
   return hs_deck_helper_cljs.ipc.send_opponenet_play.call(null, cljs.core.clj__GT_js.call(null, a));
 };
-hs_deck_helper_cljs.events.on_new_line = function(a) {
+hs_deck_helper_cljs.events.parse_line = function(a) {
   cljs.core.truth_(hs_deck_helper_cljs.events.is_block_start_tag_QMARK_.call(null, a)) && (cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.assoc, new cljs.core.Keyword(null, "appending", "appending", -1068836078), !0), cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)], null), 
   cljs.core.inc));
   cljs.core.truth_((new cljs.core.Keyword(null, "appending", "appending", -1068836078)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer))) && (cljs.core.truth_(hs_deck_helper_cljs.events.has_start_tag_QMARK_.call(null, a)) ? cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "content", "content", 
@@ -27393,14 +27438,17 @@ hs_deck_helper_cljs.events.on_new_line = function(a) {
     var d = cljs.core.last.call(null, b), d = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "data", "data", -232669377), [cljs.core.str((new cljs.core.Keyword(null, "data", "data", -232669377)).cljs$core$IFn$_invoke$arity$1(d)), cljs.core.str(a)].join(""), new cljs.core.Keyword(null, "level", "level", 1290497552), (new cljs.core.Keyword(null, "level", "level", 1290497552)).cljs$core$IFn$_invoke$arity$1(d)], null);
     return cljs.core.conj.call(null, cljs.core.pop.call(null, b), d);
   }));
-  cljs.core.truth_(hs_deck_helper_cljs.events.is_block_end_tag_QMARK_.call(null, a)) && (cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)], null), cljs.core.dec), cljs.core._EQ_.call(null, 0, (new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
-  hs_deck_helper_cljs.events.block_buffer))) && (hs_deck_helper_cljs.block_handler.handle_block.call(null, cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer)), cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, hs_deck_helper_cljs.events.block_buffer_init)));
-  if (cljs.core.truth_((new cljs.core.Keyword(null, "appending", "appending", -1068836078)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer)))) {
-    return null;
+  if (cljs.core.truth_(hs_deck_helper_cljs.events.is_block_end_tag_QMARK_.call(null, a)) && (cljs.core.swap_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)], null), cljs.core.dec), cljs.core._EQ_.call(null, 0, (new cljs.core.Keyword(null, "tag-count", "tag-count", 1676153422)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
+  hs_deck_helper_cljs.events.block_buffer))))) {
+    var b = cljs.core.deref.call(null, hs_deck_helper_cljs.events.block_buffer);
+    cljs.core.reset_BANG_.call(null, hs_deck_helper_cljs.events.block_buffer, hs_deck_helper_cljs.events.block_buffer_init);
+    return b;
   }
-  var b = cljs.core.re_find;
-  return cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_draw, a)) ? hs_deck_helper_cljs.events.on_friendly_draw.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.friendly_play, a)) ? hs_deck_helper_cljs.events.on_friendly_play.call(null, hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.opposing_play, a)) ? hs_deck_helper_cljs.events.on_opposing_play.call(null, 
-  hs_deck_helper_cljs.resources.get_card.call(null, a)) : cljs.core.truth_(b.call(null, hs_deck_helper_cljs.regexps.tag_change, a)) ? hs_deck_helper_cljs.tag_handler.handle_tag_change.call(null, a) : common.logger.info.call(null, "No action on line: ", a);
+  return null;
+};
+hs_deck_helper_cljs.events.on_new_line = function(a) {
+  a = hs_deck_helper_cljs.events.parse_line.call(null, a);
+  return cljs.core.truth_(a) ? hs_deck_helper_cljs.block_handler.handle_block.call(null, a) : null;
 };
 hs_deck_helper_cljs.reader = {};
 hs_deck_helper_cljs.reader.tail = cljs.nodejs.require.call(null, "tail").Tail;

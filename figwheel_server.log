@@ -2613,3 +2613,11 @@ notifying browser that file changed:  out\common\logger.js
 [0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
 [32mSuccessfully compiled "app/dev/js/front.js" in 1.633 seconds.[0m
 notifying browser that file changed:  out\common\logger.js
+[0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 1.169 seconds.[0m
+notifying browser that file changed:  app/dev/js/front.js
+notifying browser that file changed:  app/dev/js/out/goog/deps.js
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
+[0mCompiling "app/dev/js/front.js" from ["src_common" "src_front" "src_front_profile/hs_deck_helper_cljs_front/dev"]...[0m
+[32mSuccessfully compiled "app/dev/js/front.js" in 0.901 seconds.[0m
+notifying browser that file changed:  out\hs_deck_helper_cljs_front\events.js
