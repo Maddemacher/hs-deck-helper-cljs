@@ -26324,7 +26324,8 @@ hs_deck_helper_cljs.parsers.get_player = function(a) {
   return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 7, a)) : null;
 };
 hs_deck_helper_cljs.parsers.get_name = function(a) {
-  return null;
+  a = cljs.core.re_find.call(null, /name=(?:(?! id=).)*/, a);
+  return cljs.core.truth_(a) ? cljs.core.apply.call(null, cljs.core.str, cljs.core.drop.call(null, 5, a)) : null;
 };
 hs_deck_helper_cljs.parsers.get_id = function(a) {
   a = cljs.core.re_find.call(null, /id=\d+/, a);

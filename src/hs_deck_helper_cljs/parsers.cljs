@@ -25,7 +25,8 @@
     (when found (apply str (drop 7 found)))))
 
 (defn get-name [line]
-  nil)
+  (let [found (re-find #"name=(?:(?! id=).)*" line)]
+    (when found (apply str (drop 5 found)))))
 
 (defn get-id [line]
   (let [found (re-find #"id=\d+" line)]

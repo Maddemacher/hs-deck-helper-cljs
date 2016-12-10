@@ -175,6 +175,7 @@
              }
             {
              :entity        "[name=Gorehowl id=15 zone=HAND zonePos=6 cardId=EX1_411 player=1]"
+             :name "Gorehowl"
              :current_zone  "HAND"
              :current_zone_position 6
              :player        1
@@ -184,6 +185,7 @@
              }
             {
              :entity        "[name=Kor'kron Elite id=25 zone=HAND zonePos=4 cardId=NEW1_011 player=1]"
+             :name "Kor'kron Elite"
              :current_zone  "HAND"
              :current_zone_position 4
              :player        1
@@ -193,6 +195,7 @@
              }
             {
              :entity        "[name=The Coin id=68 zone=HAND zonePos=5 cardId=GAME_005 player=1]"
+             :name "The Coin"
              :current_zone  "HAND"
              :current_zone_position 5
              :player        1
@@ -201,6 +204,7 @@
              :zone_position 4}
             {
              :entity        "[name=N'Zoth's First Mate id=5 zone=HAND zonePos=3 cardId=OG_312 player=1]"
+             :name "N'Zoth's First Mate"
              :current_zone  "HAND"
              :zone          "PLAY"
              :id            5
@@ -213,6 +217,7 @@
              }
             {
              :entity                      "[name=Dread Corsair id=14 zone=HAND zonePos=2 cardId=NEW1_022 player=1]"
+             :name "Dread Corsair"
              :current_zone                "HAND"
              :player                      1
              :current_zone_position 2
@@ -223,6 +228,7 @@
              }
             {
              :entity       "[name=Garrosh Hellscream id=64 zone=PLAY zonePos=0 cardId=HERO_01 player=1]"
+             :name "Garrosh Hellscream"
              :current_zone "PLAY"
              :current_zone_position 0
              :card_id      "HERO_01"
