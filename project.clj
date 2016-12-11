@@ -50,7 +50,13 @@
                                 ["cljsbuild" "once" "dev-front"]]
             "descjop-once-prod" ["do"
                                  ["cljsbuild" "once" "prod-main"]
-                                 ["cljsbuild" "once" "prod-front"]]}
+                                 ["cljsbuild" "once" "prod-front"]]
+            "run-prod" ["do"
+                        ["descjop-once-prod"]
+                        ["shell" "cmd.exe" "/c" "electron" "app/prod/index.html"]]
+            "run-dev" ["do"
+                       ["descjop-once-dev"]
+                       ["shell" "cmd.exe" "/c" "electron" "app/dev/index.html"]]}
   :hooks [leiningen.cljsbuild]
   :cljsbuild {:builds
               {:test-main {:source-paths ["src_common" "src" "test"]
