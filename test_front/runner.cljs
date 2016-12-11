@@ -2,9 +2,6 @@
   (:require [doo.runner :refer-macros [doo-tests]]
             [hs-deck-helper-cljs-test-front.ipc]
 
-
-
-
             ))
 
 

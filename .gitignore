@@ -13,6 +13,8 @@ node_modules/*
 *.ipr
 *.iws
 electron/*
-app/*
+app/dev/js/*
+app/prod/js/*
+app/test/js/*
+app/test_front/js/*
 bower_components/*
-appbc/*

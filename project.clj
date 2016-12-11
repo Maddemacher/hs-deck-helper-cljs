@@ -28,9 +28,9 @@
                             ["shell" "cmd.exe" "/c" "grunt" "download-electron"]]
             "descjop-externs" ["do"
                                ["externs" "dev-main" "app/dev/js/externs.js"]
-                               ["externs" "test-main" "test/externs.js"]
+                               ["externs" "test-main" "app/test/externs.js"]
                                ["externs" "dev-front" "app/dev/js/externs_front.js"]
-                               ["externs" "test-front" "test_front/externs.js"]
+                               ["externs" "test-front" "app/test_front/externs.js"]
                                ["externs" "prod-main" "app/prod/js/externs.js"]
                                ["externs" "prod-front" "app/prod/js/externs_front.js"]]
             "descjop-externs-dev" ["do"
