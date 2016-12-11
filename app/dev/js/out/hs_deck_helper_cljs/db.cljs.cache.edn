@@ -1,2 +1,0 @@
-;; Analyzed by ClojureScript 1.7.228
-{:use-macros nil, :excludes #{}, :name hs-deck-helper-cljs.db, :imports nil, :requires nil, :uses nil, :defs {app-db {:name hs-deck-helper-cljs.db/app-db, :file "C:\\Git\\hs-deck-helper-cljs\\src\\hs_deck_helper_cljs\\db.cljs", :line 5, :column 1, :end-line 5, :end-column 12, :meta {:file "C:\\Git\\hs-deck-helper-cljs\\src\\hs_deck_helper_cljs\\db.cljs", :line 5, :column 6, :end-line 5, :end-column 12}}}, :require-macros nil, :cljs.analyzer/constants {:seen #{:beer-count}, :order [:beer-count]}, :doc nil}

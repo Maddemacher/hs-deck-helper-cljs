@@ -18,6 +18,8 @@
   :source-paths ["src_tools"]
   :aliases {"descjop-help" ["new" "descjop" "help"]
             "descjop-version" ["new" "descjop" "version"]
+            "descjop-test" ["doo" "node" "test-main"]
+            "descjop-test-front" ["doo" "electron" "test-front"]
             "descjop-init" ["do"
                             ["shell" "npm" "install"]
                             ["shell" "grunt" "download-electron"]]
@@ -26,7 +28,9 @@
                             ["shell" "cmd.exe" "/c" "grunt" "download-electron"]]
             "descjop-externs" ["do"
                                ["externs" "dev-main" "app/dev/js/externs.js"]
+                               ["externs" "test-main" "test/externs.js"]
                                ["externs" "dev-front" "app/dev/js/externs_front.js"]
+                               ["externs" "test-front" "test_front/externs.js"]
                                ["externs" "prod-main" "app/prod/js/externs.js"]
                                ["externs" "prod-front" "app/prod/js/externs_front.js"]]
             "descjop-externs-dev" ["do"
@@ -51,7 +55,7 @@
   :cljsbuild {:builds
               {:test-main {:source-paths ["src_common" "src" "test"]
                            :compiler {:output-to "app/test/js/cljsbuild-main.js"
-                                      :externs ["app/dev/js/externs.js"
+                                      :externs ["app/test/js/externs.js"
                                                 "node_modules/closurecompiler-externs/path.js"
                                                 "node_modules/closurecompiler-externs/process.js"]
                                       :main hs-deck-helper-cljs-test.runner
@@ -59,7 +63,14 @@
                                       :target :nodejs
                                       :output-dir "app/test/js/out/"
                                       }}
-              :dev-main {:source-paths ["src_common" "src"]
+               :test-front {:source-paths ["src_common" "src_front" "test_front"]
+                            :compiler {:output-to "app/test_front/js/cljsbuild-front-main.js"
+                                       :externs ["test_front/externs.js"]
+                                       :main hs-deck-helper-cljs-test-front.runner
+                                       :optimizations :none
+                                       :output-dir "app/test_front/js/out/"
+                                       }}
+               :dev-main {:source-paths ["src_common" "src"]
                           :incremental true
                           :jar true
                           :assert true
